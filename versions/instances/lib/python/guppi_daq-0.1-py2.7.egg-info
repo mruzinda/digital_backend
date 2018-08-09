@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: guppi_daq
+Version: 0.1
+Summary: GUPPI DAQ package
+Home-page: UNKNOWN
+Author: NRAO
+Author-email: UNKNOWN
+License: http://www.gnu.org/copyleft/gpl.html
+Description: Data acquisition Python package for the Green Bank Ultimate Pulsar Processing
+        Instrument (GUPPI).
+        
+Platform: any

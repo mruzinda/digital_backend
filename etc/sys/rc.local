@@ -1,0 +1,13 @@
+#!/bin/sh
+#
+# This script will be executed *after* all the other init scripts.
+# You can put your own initialization stuff in here if you don't
+# want to do the full Sys V style init stuff.
+
+# Sets IRQ affinities for network drivers
+/root/set_irq_affinity_cpulist.sh 6-7 eth2
+# THis is not the right way to do this, but for now...
+/root/set_irq_affinity_cpulist.sh 8-9 pci:0000:82
+
+
+touch /var/lock/subsys/local

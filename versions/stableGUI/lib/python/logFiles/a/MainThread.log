@@ -1,0 +1,26 @@
+FlagColorguard:: Adding  BANKA
+Player::Bank()
+Player::Bank(): self.simulate= False
+bank = BANKA filename = /home/groups/flag/dibas/etc/config/dibas.conf
+BankData (name=BANKA, has_roach=False, datahost=None, dataport=60000, dest_ip=168890568,dest_port=60000, katcp_ip=srbsr2-1, katcp_port=7147, synth=none, synth_port=/dev/ttyS1, synth_ref=1, synth_ref_freq=10000000, synth_vco_range=[2200, 4400], synth_rf_level=5, synth_options=[0, 0, 1, 0], mac_base=2207613190144, shmkvpairs={}, roach_kvpairs={}, i_am_master=True)
+tcp://0.0.0.0:6677
+FlagColorguard:: Adding  BANKB
+Player::Bank()
+Player::Bank(): self.simulate= False
+bank = BANKB filename = /home/groups/flag/dibas/etc/config/dibas.conf
+BankData (name=BANKB, has_roach=False, datahost=None, dataport=60000, dest_ip=168890569,dest_port=60000, katcp_ip=srbsr2-1, katcp_port=7147, synth=none, synth_port=/dev/ttyS1, synth_ref=1, synth_ref_freq=10000000, synth_vco_range=[2200, 4400], synth_rf_level=5, synth_options=[0, 0, 1, 0], mac_base=2207613190144, shmkvpairs={}, roach_kvpairs={}, i_am_master=False)
+tcp://0.0.0.0:6678
+FlagColorguard:: Adding  BANKC
+Player::Bank()
+Player::Bank(): self.simulate= False
+bank = BANKC filename = /home/groups/flag/dibas/etc/config/dibas.conf
+BankData (name=BANKC, has_roach=False, datahost=None, dataport=60000, dest_ip=168890570,dest_port=60000, katcp_ip=None, katcp_port=None, synth=None, synth_port=None, synth_ref=None, synth_ref_freq=None, synth_vco_range=None, synth_rf_level=None, synth_options=None, mac_base=2207613190144, shmkvpairs={}, roach_kvpairs={}, i_am_master=False)
+tcp://0.0.0.0:6679
+FlagColorguard:: Adding  BANKD
+Player::Bank()
+Player::Bank(): self.simulate= False
+bank = BANKD filename = /home/groups/flag/dibas/etc/config/dibas.conf
+BankData (name=BANKD, has_roach=False, datahost=None, dataport=60000, dest_ip=168890571,dest_port=60000, katcp_ip=None, katcp_port=None, synth=None, synth_port=None, synth_ref=None, synth_ref_freq=None, synth_vco_range=None, synth_rf_level=None, synth_options=None, mac_base=2207613190144, shmkvpairs={}, roach_kvpairs={}, i_am_master=False)
+tcp://0.0.0.0:6680
+FlagColorguard:: received signal 2
+FlagColorguard:: Exiting...

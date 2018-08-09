@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: vegas_hpc
+Version: 0.1
+Summary: VEGAS HPC package
+Home-page: UNKNOWN
+Author: NRAO
+Author-email: UNKNOWN
+License: http://www.gnu.org/copyleft/gpl.html
+Description: Data acquisition Python package for VEGAS.
+        
+Platform: any

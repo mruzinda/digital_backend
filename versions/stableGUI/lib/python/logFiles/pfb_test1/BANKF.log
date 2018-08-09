@@ -1,0 +1,46 @@
+New mode specified and/or bandwidth specified!
+set_mode(FLAG_CALCORR_MODE): Creating new BeamformerBackend
+BFBE: Backend():: Setting self.frequency to 1500.0
+
+BFBE: FlagPole:: Initializing shmem...
+BFBE: FlagPole:: instance_id=1
+BFBE: FlagPole:: status_key=411956f2
+BFBE: FlagPole:: status_semid: users_rblack_hashpipe_status_1
+hashpipe -p flag_x -I 1 -o BINDHOST=10.17.16.205 -o BINDPORT=60000 -o XID=5 -o GPUDEV=0 -o DATADIR=/lustre/gbtdata// -o PROJID=TGBT16A_508_01/TMP -o COVMODE=PAF_CAL -c 4 flag_net_thread -c 1 flag_transpose_thread -c 5 flag_correlator_thread
+initing  thread 'flag_net_thread' with databufs 0 and 1
+initing  thread 'flag_transpose_thread' with databufs 1 and 2
+initing  thread 'flag_correlator_thread' with databufs 2 and 3
+starting thread 'flag_correlator_thread' with databufs 2 and 3
+Found device 0: GeForce GTX 980 Ti
+Found device 1: GeForce GTX 980 Ti
+Using device 0: GeForce GTX 980 Ti
+starting thread 'flag_transpose_thread' with databufs 1 and 2
+starting thread 'flag_net_thread' with databufs 0 and 1
+NET: Starting Thread!!!
+BFBE: Command to fits writer >> /home/groups/flag/dibas/exec/x86_64-linux/bfFitsWriter -i 1 -m c
+set_mode(FLAG_CALCORR_MODE): beginning wait for DAQ program
+RUNNING PAF MODE
+/tmp/fits_fifo_rblack_1
+Using FITS Control FIFO: /tmp/fits_fifo_rblack_1
+bfFitsWrite started
+set_mode(FLAG_CALCORR_MODE): wait for DAQ program ended.
+[2017, 5, 24, 15, 7, 52, 0]
+BFBE: TSTAMP  2017_05_24_15:07:52
+BFBE: Writing CHANSEL=0
+BFBE: Weight file name unchanged.
+BFBE:  2017-05-24 15:07:36.613533 2017-05-24 15:07:52
+Net: Ending scan after mcnt = 941625
+NET: Moving back to ACQUIRE!
+BFBE: Sleeping for 14.431594 seconds...
+Start observations
+BfFitsThread::run, instance_id = 1
+HPC[15:7:36]:shmget key: 411956f2
+HPC[15:7:36]:vegas_status_attach sem_open w/ /users_rblack_hashpipe_status_1
+HPC[15:7:36]:bf_databuf shmget key: 811956f2
+HPC[15:7:36]:Setting bank name to B
+status_buf: INSTANCE=                    1                                                  BANKNAM = 'F       '                                                            BINDHOST= '10.17.16.205'                                                        BINDPORT=                60000                                                  XID     = '5       '                                                            GPUDEV  =                    0                                                  DATADIR = '/lustre/gbtdata//'                                                   PROJID  = 'TPAF17_1_04'                                                         COVMODE = 'PAF_CAL '                                                            NETSTAT = 'ACQUIRE '                                                            TRASTAT = 'init    '                                                            CORSTAT = 'init    '                                                            INTSTAT = 'start   '                                                            INTSYNC =                    0                                                  REQSTI  = '1.0     '                                                            ACTSTI  =             0.000000                                                  INTCOUNT=                    1                                                  CORREADY=                    1                                                  TRAREADY=                    1                                                  NETREADY=                    T                                                  MISSEDFE=                    0                                                  MISSEDPK=                    0                                                  CLEANA  =                    T                                                  CLEANB  =                    T                                                  NETMCNT =                    0                                                  STRTDMJD= '57897.630463'                                                        SCANLEN = '62.0    '                                                            TSTAMP  = '2017_05_24_15:07:52'                                                 WFLAG   = '0       '                                                            BWEIFILE= ''                                                                    CHANSEL = '0       '                                                            DISKSTAT= 'Init    '                                                            END                                                                                                                                                                                                                                                                                                                             
+HPC[15:7:36]:NCHAN not set in status memory
+63.0
+Joined thread 'flag_correlator_thread'
+Joined thread 'flag_transpose_thread'
+Joined thread 'flag_net_thread'

@@ -1,0 +1,21 @@
+New mode specified and/or bandwidth specified!
+set_mode(FLAG_RTBF_MODE): Creating new BeamformerBackend
+BFBE: Backend():: Setting self.frequency to 1500.0
+
+BFBE: FlagPole:: Initializing shmem...
+BFBE: FlagPole:: instance_id=3
+BFBE: FlagPole:: status_key=431997c4
+BFBE: FlagPole:: status_semid: users_mburnett_hashpipe_status_3
+hashpipe -p flag_b -I 3 -o BINDHOST=10.17.16.207 -o BINDPORT=60000 -o XID=7 -o GPUDEV=1 -o DATADIR=/lustre/gbtdata/TGBT16A_508_01/SIM/ -o PROJID=TGBT16A_508_01/TMP -o WEIGHTD=/home/groups/flag/hash/data/weights/tests/ULA/ -c 10 flag_net_thread -c 7 flag_transpose_thread -c 11 flag_beamform_thread
+BFBE: Command to fits writer >> /home/groups/flag/dibas/exec/x86_64-linux/bfFitsWriter -i 3 -m p
+set_mode(FLAG_RTBF_MODE): beginning wait for DAQ program
+set_mode(FLAG_RTBF_MODE): wait for DAQ program ended.
+Current mode is FLAG_RTBF_MODE
+BFBE: TSTAMP  2017_05_23_21:36:38
+BFBE: Writing CHANSEL=0
+ BFBE: Weight file name unchanged.
+BFBE:  2017-05-23 21:36:35.538060 2017-05-23 21:36:38
+BFBE: Sleeping for 1.473881 seconds...
+11
+BFBE: Command to fits writer >> /home/groups/flag/dibas/exec/x86_64-linux/bfFitsWriter -i 3 -m p
+ZMQJSONProxy.py:: Player rx a QUIT...

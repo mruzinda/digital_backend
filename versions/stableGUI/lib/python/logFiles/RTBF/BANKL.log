@@ -1,0 +1,2188 @@
+New mode specified and/or bandwidth specified!
+set_mode(FLAG_RTBF_MODE): Creating new BeamformerBackend
+ BFBE: Backend():: Setting self.frequency to 1500.0
+
+BFBE: FlagPole:: Initializing shmem...
+BFBE: FlagPole:: instance_id=3
+BFBE: FlagPole:: status_key=431997c4
+BFBE: FlagPole:: status_semid: users_mburnett_hashpipe_status_3
+hashpipe -p flag_b -I 3 -o BINDHOST=10.17.16.211 -o BINDPORT=60000 -o XID=11 -o GPUDEV=0 -o DATADIR=/lustre/projects/flag/ -o PROJID=TMP -o MODENAME=FLAG_RTBF_MODE -o WEIGHTD=/home/groups/flag/hash/data/weights/tests/ULA/ -c 4 flag_net_thread -c 1 flag_transpose_thread -c 5 flag_beamform_thread
+initing  thread 'flag_net_thread' with databufs 0 and 1
+initing  thread 'flag_transpose_thread' with databufs 1 and 2
+initing  thread 'flag_beamform_thread' with databufs 2 and 3
+starting thread 'flag_beamform_thread' with databufs 2 and 3
+RTB: Initializing the beamformer...
+RTB: Initializing beamformer weights...
+BF: Weight file name: /home/groups/flag/hash/data/weights/tests/ULA//weights.in
+In update_weights()...
+starting thread 'flag_transpose_thread' with databufs 1 and 2
+starting thread 'flag_net_thread' with databufs 0 and 1
+NET: Starting Thread!!!
+BFBE: Command to fits writer >> /home/groups/flag/dibas/exec/x86_64-linux/bfFitsWriter -i 3 -m p
+set_mode(FLAG_RTBF_MODE): beginning wait for DAQ program
+RUNNING PULSAR MODE
+/tmp/fits_fifo_mburnett_3
+Using FITS Control FIFO: /tmp/fits_fifo_mburnett_3
+bfFitsWrite started
+set_mode(FLAG_RTBF_MODE): wait for DAQ program ended.
+ Current mode is FLAG_RTBF_MODE
+BFBE: TSTAMP  2017_05_24_20:01:46
+ BFBE: Writing CHANSEL=0
+ BFBE: Weight file name unchanged.
+BFBE:  2017-05-24 20:01:40.553861 2017-05-24 20:01:46
+BFBE: Sleeping for 4.514808 seconds...
+Start observations
+Net: Ending scan after mcnt = 151875
+NET: Moving back to ACQUIRE!
+BfFitsThread::run, instance_id = 3
+HPC[20:1:40]:shmget key: 431997c4
+HPC[20:1:40]:vegas_status_attach sem_open w/ /users_mburnett_hashpipe_status_3
+HPC[20:1:40]:bf_databuf shmget key: 831997c4
+HPC[20:1:40]:Setting bank name to D
+status_buf: INSTANCE=                    3                                                  BANKNAM = 'L       '                                                            BINDHOST= '10.17.16.211'                                                        BINDPORT=                60000                                                  XID     = '11      '                                                            GPUDEV  = '0       '                                                            DATADIR = '/lustre/projects/flag/'                                              PROJID  = 'TMP     '                                                            MODENAME= 'FLAG_RTBF_MODE'                                                      WEIGHTD = '/home/groups/flag/hash/data/weights/tests/ULA/'                      NETSTAT = 'ACQUIRE '                                                            TRASTAT = 'init    '                                                            BEAMSTAT= 'init    '                                                            ELOFF0  =             0.000000                                                  AZOFF0  =             0.000000                                                  ELOFF1  =             0.000000                                                  AZOFF1  =            -2.000000                                                  ELOFF2  =             2.000000                                                  AZOFF2  =            -1.000000                                                  ELOFF3  =             2.000000                                                  AZOFF3  =             1.000000                                                  ELOFF4  =             0.000000                                                  AZOFF4  =             2.000000                                                  ELOFF5  =            -2.000000                                                  AZOFF5  =             1.000000                                                  ELOFF6  =            -2.000000                                                  AZOFF6  =            -1.000000                                                  BCALFILE= 'DUMMY2  '                                                            BALGORIT= 'ULA CFM w/ Chebwin 20dB'                                             BWFILE  = 'weights.in                                                      '    CORREADY=                    1                                                  TRAREADY=                    1                                                  NETREADY=                    T                                                  MISSEDFE=                    0                                                  MISSEDPK=                    0                                                  CLEANA  =                    T                                                  CLEANB  =                    T                                                  NETMCNT =                    0                                                  INTSTAT = 'start   '                                                            STRTDMJD= '57897.8345602'                                                       SCANLEN = '10      '                                                            TSTAMP  = '2017_05_24_20:01:46'                                                 REQSTI  = '1.0     '                                                            WFLAG   = '0       '                                                            BWEIFILE= ''                                                                    CHANSEL = '0       '                                                            DISKSTAT= 'Init    '                                                            END                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+HPC[20:1:40]:NCHAN not set in status memory
+HPC[20:1:40]:FITS: Received TSTAMP = 2017_05_24_20:01:46
+HPC[20:1:40]:FITS: Filename Stage 1: /lustre/projects/flag//TMP/BF/2017_05_24_20:01:46
+HPC[20:1:40]:FITS: Filename Stage 2: /lustre/projects/flag//TMP/BF/2017_05_24_20:01:46L
+HPC[20:1:40]:FITS: Filename Stage 3: /lustre/projects/flag//TMP/BF/2017_05_24_20:01:46L.fits
+HPC[20:1:40]:Opening file: /lustre/projects/flag//TMP/BF/2017_05_24_20:01:46L.fits
+HPC[20:1:40]:/lustre/projects/flag//TMP/BF/2017_05_24_20:01:46L.fits
+fitsio opened
+SCANLEN: 10
+mcnt: 0
+mcnt: 200
+mcnt: 400
+mcnt: 600
+mcnt: 800
+mcnt: 1000
+mcnt: 1200
+NET: Bad Block! mcnt = 2800, 963/1000
+NET: Bad Block! mcnt = 3000, 835/1000
+NET: Bad Block! mcnt = 3200, 876/1000
+NET: Bad Block! mcnt = 3400, 711/1000
+mcnt: 1400
+mcnt: 1600
+NET: Bad Block! mcnt = 3600, 860/1000
+NET: Bad Block! mcnt = 3800, 840/1000
+NET: Bad Block! mcnt = 4000, 728/1000
+NET: Bad Block! mcnt = 4200, 922/1000
+NET: Bad Block! mcnt = 4400, 801/1000
+mcnt: 1800
+NET: Bad Block! mcnt = 4600, 730/1000
+NET: Bad Block! mcnt = 4800, 963/1000
+mcnt: 2000
+NET: Bad Block! mcnt = 5000, 765/1000
+mcnt: 2200
+mcnt: 2400
+NET: Bad Block! mcnt = 5200, 722/1000
+NET: Bad Block! mcnt = 5600, 731/1000
+NET: Bad Block! mcnt = 5800, 719/1000
+mcnt: 2600
+mcnt: 2800
+NET: Bad Block! mcnt = 6200, 720/1000
+mcnt: 3000
+NET: Bad Block! mcnt = 6400, 734/1000
+mcnt: 3200
+mcnt: 3400
+NET: Bad Block! mcnt = 6800, 731/1000
+mcnt: 3600
+NET: Bad Block! mcnt = 7000, 734/1000
+mcnt: 3800
+NET: Bad Block! mcnt = 7400, 741/1000
+mcnt: 4000
+mcnt: 4200
+NET: Bad Block! mcnt = 7600, 484/1000
+mcnt: 4400
+mcnt: 4600
+NET: Bad Block! mcnt = 8000, 734/1000
+NET: Bad Block! mcnt = 8200, 728/1000
+mcnt: 4800
+mcnt: 5000
+NET: Bad Block! mcnt = 8600, 733/1000
+NET: Bad Block! mcnt = 8800, 740/1000
+mcnt: 5200
+mcnt: 5400
+mcnt: 5600
+mcnt: 5800
+NET: Bad Block! mcnt = 9200, 729/1000
+mcnt: 6000
+mcnt: 6200
+NET: Bad Block! mcnt = 9400, 958/1000
+mcnt: 6400
+NET: Bad Block! mcnt = 9600, 388/1000
+mcnt: 6600
+NET: Bad Block! mcnt = 10000, 736/1000
+NET: Bad Block! mcnt = 10200, 736/1000
+mcnt: 6800
+mcnt: 7000
+mcnt: 7200
+NET: Bad Block! mcnt = 10600, 739/1000
+mcnt: 7400
+mcnt: 7600
+NET: Bad Block! mcnt = 10800, 741/1000
+NET: Bad Block! mcnt = 11200, 745/1000
+mcnt: 7800
+mcnt: 8000
+mcnt: 8200
+NET: Bad Block! mcnt = 11400, 741/1000
+NET: Bad Block! mcnt = 11800, 734/1000
+mcnt: 8400
+mcnt: 8600
+NET: Bad Block! mcnt = 12000, 743/1000
+mcnt: 8800
+mcnt: 9000
+NET: Bad Block! mcnt = 12400, 732/1000
+NET: Bad Block! mcnt = 12600, 737/1000
+mcnt: 9200
+mcnt: 9400
+mcnt: 9600
+NET: Bad Block! mcnt = 13000, 740/1000
+NET: Bad Block! mcnt = 13200, 738/1000
+mcnt: 9800
+mcnt: 10000
+mcnt: 10200
+NET: Bad Block! mcnt = 13600, 738/1000
+mcnt: 10400
+NET: Bad Block! mcnt = 13800, 772/1000
+NET: Bad Block! mcnt = 14000, 961/1000
+mcnt: 10600
+mcnt: 10800
+mcnt: 11000
+mcnt: 11200
+NET: Bad Block! mcnt = 14200, 733/1000
+NET: Bad Block! mcnt = 14400, 812/1000
+NET: Bad Block! mcnt = 14600, 924/1000
+NET: Bad Block! mcnt = 14800, 712/1000
+NET: Bad Block! mcnt = 15000, 859/1000
+mcnt: 11400
+mcnt: 11600
+NET: Bad Block! mcnt = 15200, 886/1000
+mcnt: 11800
+mcnt: 12000
+NET: Bad Block! mcnt = 15400, 738/1000
+mcnt: 12200
+NET: Bad Block! mcnt = 15600, 893/1000
+mcnt: 12400
+NET: Bad Block! mcnt = 15800, 850/1000
+NET: Bad Block! mcnt = 16000, 744/1000
+NET: Bad Block! mcnt = 16200, 918/1000
+mcnt: 12600
+mcnt: 12800
+mcnt: 13000
+mcnt: 13200
+NET: Bad Block! mcnt = 16400, 811/1000
+NET: Bad Block! mcnt = 16600, 744/1000
+NET: Bad Block! mcnt = 16800, 973/1000
+mcnt: 13400
+mcnt: 13600
+NET: Bad Block! mcnt = 17000, 774/1000
+NET: Bad Block! mcnt = 17200, 697/1000
+NET: Bad Block! mcnt = 17400, 946/1000
+NET: Bad Block! mcnt = 17600, 736/1000
+mcnt: 13800
+mcnt: 14000
+mcnt: 14200
+mcnt: 14400
+NET: Bad Block! mcnt = 17800, 683/1000
+NET: Bad Block! mcnt = 18000, 959/1000
+NET: Bad Block! mcnt = 18200, 699/1000
+mcnt: 14600
+mcnt: 14800
+mcnt: 15000
+NET: Bad Block! mcnt = 18400, 679/1000
+mcnt: 15200
+NET: Bad Block! mcnt = 18600, 949/1000
+mcnt: 15400
+NET: Bad Block! mcnt = 18800, 660/1000
+mcnt: 15600
+mcnt: 15800
+NET: Bad Block! mcnt = 19000, 655/1000
+NET: Bad Block! mcnt = 19400, 699/1000
+mcnt: 16000
+mcnt: 16200
+NET: Bad Block! mcnt = 19600, 641/1000
+NET: Bad Block! mcnt = 20000, 673/1000
+mcnt: 16400
+mcnt: 16600
+mcnt: 16800
+NET: Bad Block! mcnt = 20200, 631/1000
+mcnt: 17000
+mcnt: 17200
+NET: Bad Block! mcnt = 20600, 618/1000
+mcnt: 17400
+NET: Bad Block! mcnt = 20800, 646/1000
+mcnt: 17600
+NET: Bad Block! mcnt = 21200, 995/1000
+mcnt: 17800
+mcnt: 18000
+mcnt: 18200
+mcnt: 18400
+mcnt: 18600
+mcnt: 18800
+mcnt: 19000
+mcnt: 19200
+mcnt: 19400
+mcnt: 19600
+mcnt: 19800
+mcnt: 20000
+mcnt: 20200
+mcnt: 20400
+mcnt: 20600
+mcnt: 20800
+mcnt: 21000
+mcnt: 21200
+mcnt: 21400
+NET: Bad Block! mcnt = 24600, 506/1000
+NET: Bad Block! mcnt = 24800, 834/1000
+NET: Bad Block! mcnt = 25000, 881/1000
+mcnt: 21600
+mcnt: 21800
+mcnt: 22000
+NET: Bad Block! mcnt = 25200, 499/1000
+NET: Bad Block! mcnt = 25400, 873/1000
+NET: Bad Block! mcnt = 25600, 419/1000
+NET: Bad Block! mcnt = 25800, 910/1000
+NET: Bad Block! mcnt = 26000, 805/1000
+mcnt: 22200
+mcnt: 22400
+mcnt: 22600
+mcnt: 22800
+NET: Bad Block! mcnt = 6200, 720/1000
+NET: Bad Block! mcnt = 26400, 540/1000
+mcnt: 23000
+mcnt: 23200
+NET: Bad Block! mcnt = 26800, 267/1000
+NET: Bad Block! mcnt = 27000, 893/1000
+NET: Bad Block! mcnt = 27200, 670/1000
+mcnt: 23400
+mcnt: 23600
+mcnt: 23800
+mcnt: 24000
+NET: Bad Block! mcnt = 27400, 135/1000
+NET: Bad Block! mcnt = 7600, 484/1000
+mcnt: 24200
+mcnt: 24400
+NET: Bad Block! mcnt = 27800, 395/1000
+mcnt: 24600
+NET: Bad Block! mcnt = 28000, 460/1000
+NET: Bad Block! mcnt = 28200, 952/1000
+mcnt: 24800
+mcnt: 25000
+mcnt: 25200
+NET: Bad Block! mcnt = 28400, 893/1000
+NET: Bad Block! mcnt = 28600, 370/1000
+NET: Bad Block! mcnt = 28800, 430/1000
+NET: Bad Block! mcnt = 29000, 5/1000
+NET: Bad Block! mcnt = 9200, 729/1000
+NET: Bad Block! mcnt = 29400, 395/1000
+mcnt: 25400
+mcnt: 25600
+mcnt: 25800
+mcnt: 26000
+mcnt: 6200
+NET: Bad Block! mcnt = 29600, 460/1000
+NET: Bad Block! mcnt = 29800, 596/1000
+mcnt: 26400
+mcnt: 26600
+NET: Bad Block! mcnt = 30000, 472/1000
+NET: Bad Block! mcnt = 30200, 777/1000
+NET: Bad Block! mcnt = 30400, 370/1000
+mcnt: 26800
+mcnt: 27000
+NET: Bad Block! mcnt = 30600, 385/1000
+mcnt: 27200
+NET: Bad Block! mcnt = 30800, 50/1000
+mcnt: 27400
+mcnt: 7600
+mcnt: 27800
+mcnt: 28000
+NET: Bad Block! mcnt = 11200, 745/1000
+NET: Bad Block! mcnt = 31400, 209/1000
+NET: Bad Block! mcnt = 31600, 645/1000
+NET: Bad Block! mcnt = 31800, 596/1000
+NET: Bad Block! mcnt = 32000, 472/1000
+NET: Bad Block! mcnt = 32200, 485/1000
+mcnt: 28200
+mcnt: 28400
+mcnt: 28600
+mcnt: 28800
+mcnt: 29000
+NET: Bad Block! mcnt = 32400, 547/1000
+NET: Bad Block! mcnt = 32600, 115/1000
+mcnt: 9200
+NET: Bad Block! mcnt = 32800, 385/1000
+mcnt: 29400
+mcnt: 29600
+NET: Bad Block! mcnt = 33000, 50/1000
+NET: Bad Block! mcnt = 13200, 738/1000
+mcnt: 29800
+mcnt: 30000
+mcnt: 30200
+NET: Bad Block! mcnt = 33600, 1/1000
+NET: Bad Block! mcnt = 33800, 853/1000
+mcnt: 30400
+mcnt: 30600
+NET: Bad Block! mcnt = 34000, 16/1000
+mcnt: 30800
+NET: Bad Block! mcnt = 34200, 994/1000
+NET: Bad Block! mcnt = 34400, 58/1000
+mcnt: 11000
+NET: Bad Block! mcnt = 34600, 544/1000
+mcnt: 11200
+mcnt: 31400
+NET: Bad Block! mcnt = 34800, 488/1000
+NET: Bad Block! mcnt = 35000, 115/1000
+mcnt: 31600
+NET: Bad Block! mcnt = 35200, 260/1000
+mcnt: 31800
+mcnt: 32000
+NET: Bad Block! mcnt = 35400, 125/1000
+NET: Bad Block! mcnt = 35600, 50/1000
+mcnt: 32200
+mcnt: 32400
+NET: Bad Block! mcnt = 15800, 850/1000
+NET: Bad Block! mcnt = 16000, 744/1000
+NET: Bad Block! mcnt = 36200, 1/1000
+mcnt: 32600
+mcnt: 32800
+mcnt: 33000
+NET: Bad Block! mcnt = 36400, 849/1000
+mcnt: 13200
+NET: Bad Block! mcnt = 36600, 20/1000
+NET: Bad Block! mcnt = 36800, 485/1000
+mcnt: 13400
+NET: Bad Block! mcnt = 37000, 567/1000
+mcnt: 33600
+mcnt: 33800
+NET: Bad Block! mcnt = 17200, 697/1000
+mcnt: 34000
+NET: Bad Block! mcnt = 37400, 563/1000
+mcnt: 34200
+NET: Bad Block! mcnt = 37600, 468/1000
+mcnt: 34400
+NET: Bad Block! mcnt = 37800, 115/1000
+mcnt: 34600
+NET: Bad Block! mcnt = 38000, 260/1000
+mcnt: 34800
+mcnt: 35000
+NET: Bad Block! mcnt = 38200, 71/1000
+NET: Bad Block! mcnt = 38400, 104/1000
+NET: Bad Block! mcnt = 18600, 949/1000
+mcnt: 35200
+mcnt: 35400
+NET: Bad Block! mcnt = 18800, 660/1000
+mcnt: 35600
+NET: Bad Block! mcnt = 39000, 1/1000
+NET: Bad Block! mcnt = 39200, 1/1000
+NET: Bad Block! mcnt = 39400, 704/1000
+mcnt: 15800
+mcnt: 16000
+NET: Bad Block! mcnt = 39600, 164/1000
+NET: Bad Block! mcnt = 39800, 314/1000
+mcnt: 36200
+mcnt: 36400
+NET: Bad Block! mcnt = 40000, 171/1000
+NET: Bad Block! mcnt = 40200, 567/1000
+mcnt: 36600
+mcnt: 36800
+NET: Bad Block! mcnt = 40600, 534/1000
+NET: Bad Block! mcnt = 40800, 497/1000
+mcnt: 37000
+mcnt: 17200
+mcnt: 37400
+mcnt: 37600
+NET: Bad Block! mcnt = 41200, 374/1000
+mcnt: 37800
+mcnt: 38000
+mcnt: 38200
+NET: Bad Block! mcnt = 41600, 95/1000
+NET: Bad Block! mcnt = 41800, 79/1000
+mcnt: 38400
+mcnt: 18600
+mcnt: 18800
+mcnt: 39000
+NET: Bad Block! mcnt = 42400, 1/1000
+mcnt: 39200
+NET: Bad Block! mcnt = 42600, 1/1000
+mcnt: 39400
+mcnt: 39600
+mcnt: 39800
+NET: Bad Block! mcnt = 42800, 98/1000
+NET: Bad Block! mcnt = 43000, 606/1000
+NET: Bad Block! mcnt = 43200, 164/1000
+mcnt: 40000
+mcnt: 40200
+NET: Bad Block! mcnt = 43400, 225/1000
+mcnt: 20400
+mcnt: 40600
+NET: Bad Block! mcnt = 43600, 260/1000
+NET: Bad Block! mcnt = 43800, 567/1000
+mcnt: 40800
+NET: Bad Block! mcnt = 44000, 215/1000
+mcnt: 21000
+mcnt: 41200
+NET: Bad Block! mcnt = 44200, 778/1000
+NET: Bad Block! mcnt = 44400, 39/1000
+NET: Bad Block! mcnt = 44600, 375/1000
+NET: Bad Block! mcnt = 44800, 96/1000
+mcnt: 21400
+mcnt: 41600
+NET: Bad Block! mcnt = 45000, 79/1000
+NET: Bad Block! mcnt = 25200, 499/1000
+mcnt: 41800
+mcnt: 22000
+NET: Bad Block! mcnt = 25400, 873/1000
+NET: Bad Block! mcnt = 45600, 1/1000
+NET: Bad Block! mcnt = 45800, 46/1000
+mcnt: 22200
+mcnt: 42400
+NET: Bad Block! mcnt = 46000, 411/1000
+mcnt: 42600
+mcnt: 42800
+NET: Bad Block! mcnt = 46200, 412/1000
+mcnt: 43000
+NET: Bad Block! mcnt = 46400, 225/1000
+NET: Bad Block! mcnt = 46600, 260/1000
+mcnt: 43200
+mcnt: 43400
+NET: Bad Block! mcnt = 46800, 585/1000
+mcnt: 43600
+mcnt: 43800
+NET: Bad Block! mcnt = 47000, 792/1000
+NET: Bad Block! mcnt = 47200, 222/1000
+mcnt: 44000
+mcnt: 44200
+NET: Bad Block! mcnt = 47400, 375/1000
+mcnt: 44400
+NET: Bad Block! mcnt = 47600, 96/1000
+mcnt: 44600
+NET: Bad Block! mcnt = 47800, 79/1000
+NET: Bad Block! mcnt = 28000, 460/1000
+mcnt: 44800
+mcnt: 45000
+NET: Bad Block! mcnt = 28200, 952/1000
+NET: Bad Block! mcnt = 48400, 47/1000
+NET: Bad Block! mcnt = 48600, 521/1000
+NET: Bad Block! mcnt = 48800, 527/1000
+mcnt: 25200
+mcnt: 25400
+mcnt: 45600
+mcnt: 45800
+mcnt: 46000
+NET: Bad Block! mcnt = 49000, 75/1000
+NET: Bad Block! mcnt = 49200, 545/1000
+mcnt: 46200
+NET: Bad Block! mcnt = 49400, 647/1000
+mcnt: 46400
+mcnt: 46600
+NET: Bad Block! mcnt = 49600, 787/1000
+mcnt: 46800
+mcnt: 47000
+NET: Bad Block! mcnt = 49800, 276/1000
+NET: Bad Block! mcnt = 50000, 79/1000
+mcnt: 47200
+NET: Bad Block! mcnt = 30200, 777/1000
+mcnt: 47400
+mcnt: 47600
+NET: Bad Block! mcnt = 30400, 370/1000
+mcnt: 47800
+NET: Bad Block! mcnt = 50600, 47/1000
+NET: Bad Block! mcnt = 50800, 521/1000
+NET: Bad Block! mcnt = 51000, 602/1000
+NET: Bad Block! mcnt = 51200, 35/1000
+mcnt: 28000
+mcnt: 28200
+mcnt: 48400
+mcnt: 48600
+NET: Bad Block! mcnt = 51600, 944/1000
+NET: Bad Block! mcnt = 51800, 276/1000
+NET: Bad Block! mcnt = 52000, 79/1000
+NET: Bad Block! mcnt = 32200, 485/1000
+mcnt: 48800
+mcnt: 49000
+NET: Bad Block! mcnt = 52400, 48/1000
+NET: Bad Block! mcnt = 52600, 370/1000
+mcnt: 49200
+mcnt: 49400
+mcnt: 49600
+NET: Bad Block! mcnt = 52800, 753/1000
+NET: Bad Block! mcnt = 53000, 344/1000
+mcnt: 49800
+mcnt: 50000
+NET: Bad Block! mcnt = 53200, 691/1000
+mcnt: 30200
+mcnt: 30400
+NET: Bad Block! mcnt = 53400, 626/1000
+mcnt: 50600
+NET: Bad Block! mcnt = 53600, 673/1000
+NET: Bad Block! mcnt = 33800, 853/1000
+mcnt: 50800
+mcnt: 51000
+NET: Bad Block! mcnt = 54000, 48/1000
+NET: Bad Block! mcnt = 54200, 490/1000
+NET: Bad Block! mcnt = 54400, 977/1000
+NET: Bad Block! mcnt = 34600, 544/1000
+mcnt: 51200
+mcnt: 51400
+mcnt: 51600
+mcnt: 51800
+NET: Bad Block! mcnt = 54800, 857/1000
+mcnt: 52000
+NET: Bad Block! mcnt = 55000, 994/1000
+mcnt: 32200
+NET: Bad Block! mcnt = 55200, 187/1000
+mcnt: 52400
+NET: Bad Block! mcnt = 55400, 87/1000
+mcnt: 52600
+NET: Bad Block! mcnt = 55600, 610/1000
+NET: Bad Block! mcnt = 55800, 770/1000
+mcnt: 52800
+mcnt: 53000
+NET: Bad Block! mcnt = 56000, 507/1000
+NET: Bad Block! mcnt = 56400, 619/1000
+mcnt: 53200
+mcnt: 53400
+mcnt: 53600
+NET: Bad Block! mcnt = 56600, 610/1000
+NET: Bad Block! mcnt = 56800, 630/1000
+NET: Bad Block! mcnt = 57000, 997/1000
+NET: Bad Block! mcnt = 57200, 650/1000
+mcnt: 33800
+mcnt: 54000
+mcnt: 54200
+mcnt: 54400
+mcnt: 34600
+NET: Bad Block! mcnt = 57400, 619/1000
+mcnt: 54800
+NET: Bad Block! mcnt = 57600, 865/1000
+mcnt: 55000
+mcnt: 55200
+NET: Bad Block! mcnt = 57800, 375/1000
+NET: Bad Block! mcnt = 58000, 355/1000
+mcnt: 55400
+mcnt: 55600
+mcnt: 55800
+NET: Bad Block! mcnt = 58600, 926/1000
+NET: Bad Block! mcnt = 58800, 865/1000
+mcnt: 56000
+mcnt: 56200
+NET: Bad Block! mcnt = 59000, 773/1000
+mcnt: 56400
+mcnt: 56600
+mcnt: 56800
+mcnt: 57000
+mcnt: 57200
+mcnt: 57400
+NET: Bad Block! mcnt = 59800, 506/1000
+NET: Bad Block! mcnt = 60000, 980/1000
+mcnt: 57600
+NET: Bad Block! mcnt = 60400, 850/1000
+mcnt: 57800
+mcnt: 58000
+NET: Bad Block! mcnt = 60600, 999/1000
+mcnt: 58200
+mcnt: 58400
+mcnt: 58600
+mcnt: 58800
+mcnt: 59000
+NET: Bad Block! mcnt = 61600, 947/1000
+mcnt: 59200
+mcnt: 59400
+mcnt: 59600
+mcnt: 59800
+mcnt: 60000
+mcnt: 60200
+mcnt: 60400
+mcnt: 60600
+mcnt: 60800
+mcnt: 61000
+mcnt: 61200
+mcnt: 61400
+mcnt: 61600
+mcnt: 61800
+mcnt: 62000
+mcnt: 62200
+mcnt: 62400
+mcnt: 62600
+mcnt: 62800
+mcnt: 63000
+mcnt: 63200
+mcnt: 63400
+mcnt: 63600
+mcnt: 63800
+mcnt: 64000
+mcnt: 64200
+mcnt: 64400
+mcnt: 64600
+mcnt: 64800
+mcnt: 65000
+mcnt: 65200
+mcnt: 65400
+mcnt: 65600
+mcnt: 65800
+mcnt: 66000
+mcnt: 66200
+mcnt: 66400
+mcnt: 66600
+mcnt: 66800
+mcnt: 67000
+mcnt: 67200
+mcnt: 67400
+mcnt: 67600
+mcnt: 67800
+mcnt: 68000
+mcnt: 68200
+mcnt: 68400
+mcnt: 68600
+mcnt: 68800
+mcnt: 69000
+mcnt: 69200
+mcnt: 69400
+mcnt: 69600
+mcnt: 69800
+mcnt: 70000
+mcnt: 70200
+mcnt: 70400
+mcnt: 70600
+mcnt: 70800
+mcnt: 71000
+mcnt: 71200
+mcnt: 71400
+mcnt: 71600
+mcnt: 71800
+mcnt: 72000
+mcnt: 72200
+mcnt: 72400
+mcnt: 72600
+mcnt: 72800
+mcnt: 73000
+mcnt: 73200
+mcnt: 73400
+mcnt: 73600
+mcnt: 73800
+mcnt: 74000
+mcnt: 74200
+mcnt: 74400
+mcnt: 74600
+mcnt: 74800
+mcnt: 75000
+mcnt: 75200
+mcnt: 75400
+mcnt: 75600
+mcnt: 75800
+mcnt: 76000
+mcnt: 76200
+mcnt: 76400
+mcnt: 76600
+mcnt: 76800
+mcnt: 77000
+mcnt: 77200
+mcnt: 77400
+mcnt: 77600
+mcnt: 77800
+mcnt: 78000
+mcnt: 78200
+mcnt: 78400
+mcnt: 78600
+mcnt: 78800
+mcnt: 79000
+mcnt: 79200
+mcnt: 79400
+mcnt: 79600
+mcnt: 79800
+mcnt: 80000
+mcnt: 80200
+mcnt: 80400
+mcnt: 80600
+mcnt: 80800
+mcnt: 81000
+mcnt: 81200
+mcnt: 81400
+mcnt: 81600
+mcnt: 81800
+mcnt: 82000
+mcnt: 82200
+mcnt: 82400
+mcnt: 82600
+mcnt: 82800
+mcnt: 83000
+mcnt: 83200
+mcnt: 83400
+mcnt: 83600
+mcnt: 83800
+mcnt: 84000
+mcnt: 84200
+mcnt: 84400
+mcnt: 84600
+mcnt: 84800
+mcnt: 85000
+mcnt: 85200
+mcnt: 85400
+mcnt: 85600
+mcnt: 85800
+mcnt: 86000
+mcnt: 86200
+mcnt: 86400
+mcnt: 86600
+mcnt: 86800
+mcnt: 87000
+mcnt: 87200
+mcnt: 87400
+mcnt: 87600
+mcnt: 87800
+mcnt: 88000
+mcnt: 88200
+mcnt: 88400
+mcnt: 88600
+mcnt: 88800
+mcnt: 89000
+mcnt: 89200
+mcnt: 89400
+mcnt: 89600
+mcnt: 89800
+mcnt: 90000
+mcnt: 90200
+mcnt: 90400
+mcnt: 90600
+mcnt: 90800
+mcnt: 91000
+mcnt: 91200
+mcnt: 91400
+mcnt: 91600
+mcnt: 91800
+mcnt: 92000
+mcnt: 92200
+mcnt: 92400
+mcnt: 92600
+mcnt: 92800
+mcnt: 93000
+mcnt: 93200
+mcnt: 93400
+mcnt: 93600
+mcnt: 93800
+mcnt: 94000
+mcnt: 94200
+mcnt: 94400
+mcnt: 94600
+mcnt: 94800
+mcnt: 95000
+mcnt: 95200
+mcnt: 95400
+mcnt: 95600
+mcnt: 95800
+mcnt: 96000
+mcnt: 96200
+mcnt: 96400
+mcnt: 96600
+mcnt: 96800
+mcnt: 97000
+mcnt: 97200
+mcnt: 97400
+mcnt: 97600
+mcnt: 97800
+mcnt: 98000
+mcnt: 98200
+mcnt: 98400
+mcnt: 98600
+mcnt: 98800
+mcnt: 99000
+mcnt: 99200
+mcnt: 99400
+mcnt: 99600
+mcnt: 99800
+mcnt: 100000
+mcnt: 100200
+mcnt: 100400
+mcnt: 100600
+mcnt: 100800
+mcnt: 101000
+mcnt: 101200
+mcnt: 101400
+mcnt: 101600
+mcnt: 101800
+mcnt: 102000
+mcnt: 102200
+mcnt: 102400
+mcnt: 102600
+mcnt: 102800
+mcnt: 103000
+mcnt: 103200
+mcnt: 103400
+mcnt: 103600
+mcnt: 103800
+mcnt: 104000
+mcnt: 104200
+mcnt: 104400
+mcnt: 104600
+mcnt: 104800
+mcnt: 105000
+mcnt: 105200
+mcnt: 105400
+mcnt: 105600
+mcnt: 105800
+mcnt: 106000
+mcnt: 106200
+mcnt: 106400
+mcnt: 106600
+mcnt: 106800
+mcnt: 107000
+mcnt: 107200
+mcnt: 107400
+mcnt: 107600
+mcnt: 107800
+mcnt: 108000
+mcnt: 108200
+mcnt: 108400
+mcnt: 108600
+mcnt: 108800
+mcnt: 109000
+mcnt: 109200
+mcnt: 109400
+mcnt: 109600
+mcnt: 109800
+mcnt: 110000
+mcnt: 110200
+mcnt: 110400
+mcnt: 110600
+mcnt: 110800
+mcnt: 111000
+mcnt: 111200
+mcnt: 111400
+mcnt: 111600
+mcnt: 111800
+mcnt: 112000
+mcnt: 112200
+mcnt: 112400
+mcnt: 112600
+mcnt: 112800
+mcnt: 113000
+mcnt: 113200
+mcnt: 113400
+mcnt: 113600
+mcnt: 113800
+mcnt: 114000
+mcnt: 114200
+mcnt: 114400
+mcnt: 114600
+mcnt: 114800
+mcnt: 115000
+mcnt: 115200
+mcnt: 115400
+mcnt: 115600
+mcnt: 115800
+mcnt: 116000
+mcnt: 116200
+mcnt: 116400
+mcnt: 116600
+mcnt: 116800
+mcnt: 117000
+mcnt: 117200
+mcnt: 117400
+mcnt: 117600
+mcnt: 117800
+mcnt: 118000
+mcnt: 118200
+mcnt: 118400
+mcnt: 118600
+mcnt: 118800
+mcnt: 119000
+mcnt: 119200
+mcnt: 119400
+mcnt: 119600
+mcnt: 119800
+mcnt: 120000
+mcnt: 120200
+mcnt: 120400
+mcnt: 120600
+mcnt: 120800
+mcnt: 121000
+mcnt: 121200
+mcnt: 121400
+mcnt: 121600
+mcnt: 121800
+mcnt: 122000
+mcnt: 122200
+mcnt: 122400
+mcnt: 122600
+mcnt: 122800
+mcnt: 123000
+mcnt: 123200
+mcnt: 123400
+mcnt: 123600
+mcnt: 123800
+mcnt: 124000
+mcnt: 124200
+mcnt: 124400
+mcnt: 124600
+mcnt: 124800
+mcnt: 125000
+mcnt: 125200
+mcnt: 125400
+mcnt: 125600
+mcnt: 125800
+mcnt: 126000
+mcnt: 126200
+mcnt: 126400
+mcnt: 126600
+mcnt: 126800
+mcnt: 127000
+mcnt: 127200
+mcnt: 127400
+mcnt: 127600
+mcnt: 127800
+mcnt: 128000
+mcnt: 128200
+mcnt: 128400
+mcnt: 128600
+mcnt: 128800
+mcnt: 129000
+mcnt: 129200
+mcnt: 129400
+mcnt: 129600
+mcnt: 129800
+mcnt: 130000
+mcnt: 130200
+mcnt: 130400
+mcnt: 130600
+mcnt: 130800
+mcnt: 131000
+mcnt: 131200
+mcnt: 131400
+mcnt: 131600
+mcnt: 131800
+mcnt: 132000
+mcnt: 132200
+mcnt: 132400
+mcnt: 132600
+mcnt: 132800
+mcnt: 133000
+mcnt: 133200
+mcnt: 133400
+mcnt: 133600
+mcnt: 133800
+mcnt: 134000
+mcnt: 134200
+mcnt: 134400
+mcnt: 134600
+mcnt: 134800
+mcnt: 135000
+mcnt: 135200
+mcnt: 135400
+mcnt: 135600
+mcnt: 135800
+mcnt: 136000
+mcnt: 136200
+mcnt: 136400
+mcnt: 136600
+mcnt: 136800
+mcnt: 137000
+mcnt: 137200
+mcnt: 137400
+mcnt: 137600
+mcnt: 137800
+mcnt: 138000
+mcnt: 138200
+mcnt: 138400
+mcnt: 138600
+mcnt: 138800
+mcnt: 139000
+mcnt: 139200
+mcnt: 139400
+mcnt: 139600
+mcnt: 139800
+mcnt: 140000
+mcnt: 140200
+mcnt: 140400
+mcnt: 140600
+mcnt: 140800
+mcnt: 141000
+mcnt: 141200
+mcnt: 141400
+mcnt: 141600
+mcnt: 141800
+mcnt: 142000
+mcnt: 142200
+mcnt: 142400
+mcnt: 142600
+mcnt: 142800
+mcnt: 143000
+mcnt: 143200
+mcnt: 143400
+mcnt: 143600
+mcnt: 143800
+mcnt: 144000
+mcnt: 144200
+mcnt: 144400
+mcnt: 144600
+mcnt: 144800
+mcnt: 145000
+mcnt: 145200
+mcnt: 145400
+mcnt: 145600
+mcnt: 145800
+mcnt: 146000
+mcnt: 146200
+mcnt: 146400
+mcnt: 146600
+mcnt: 146800
+mcnt: 147000
+mcnt: 147200
+mcnt: 147400
+mcnt: 147600
+mcnt: 147800
+mcnt: 148000
+mcnt: 148200
+mcnt: 148400
+mcnt: 148600
+mcnt: 148800
+mcnt: 149000
+NET: CLEANUP condition met!
+mcnt: 149200
+mcnt: 149400
+mcnt: 149600
+mcnt: 149800
+mcnt: 150000
+mcnt: 150200
+mcnt: 150400
+mcnt: 150600
+mcnt: 150800
+mcnt: 151000
+mcnt: 151200
+mcnt: 151400
+mcnt: 151600
+mcnt: 151800
+11
+NET: Informing other threads of cleanup condition
+NET: All other threads have been informed
+TRA: Entering CLEANUP state 
+TRA: Finished CLEANUP, returning to ACQUIRE
+BF: Entering CLEANUP state
+BF: Finished CLEANUP, returning to ACQUIRE
+NET: CLEANUP complete; returning to IDLE
+Stop observations
+BfFitsThread::run exiting with scan_finished=1 run=1
+	We wrote 760 lines
+	It took an average of 13293.29 µs to complete each loop
+	It took an average of 1573.63 µs to write each row to FITS
+HPC[20:2:0]:BfFitsIO::close
+FITS: waiting for thread to join...
+FITS: thread has joined!
+bfFitsWriter exiting cleanly at Wed May 24 16:02:00 2017
+
+BFBE: Command to fits writer >> /home/groups/flag/dibas/exec/x86_64-linux/bfFitsWriter -i 3 -m p
+RUNNING PULSAR MODE
+/tmp/fits_fifo_mburnett_3
+Using FITS Control FIFO: /tmp/fits_fifo_mburnett_3
+bfFitsWrite started
+Current mode is FLAG_RTBF_MODE
+BFBE: TSTAMP  2017_05_24_20:07:21
+BFBE: Writing CHANSEL=0
+BFBE: Weight file name unchanged.
+BFBE:  2017-05-24 20:07:15.743558 2017-05-24 20:07:21
+Net: Ending scan after mcnt = 151875
+NET: Moving back to ACQUIRE!
+BFBE: Sleeping for 4.315741 seconds...
+Start observations
+BfFitsThread::run, instance_id = 3
+HPC[20:7:15]:shmget key: 431997c4
+HPC[20:7:15]:vegas_status_attach sem_open w/ /users_mburnett_hashpipe_status_3
+HPC[20:7:15]:bf_databuf shmget key: 831997c4
+HPC[20:7:15]:Setting bank name to D
+status_buf: INSTANCE=                    3                                                  BANKNAM = 'L       '                                                            BINDHOST= '10.17.16.211'                                                        BINDPORT=                60000                                                  XID     = '11      '                                                            GPUDEV  = '0       '                                                            DATADIR = '/lustre/projects/flag/'                                              PROJID  = 'TMP     '                                                            MODENAME= 'FLAG_RTBF_MODE'                                                      WEIGHTD = '/home/groups/flag/hash/data/weights/tests/ULA/'                      NETSTAT = 'ACQUIRE '                                                            TRASTAT = 'ACQUIRE '                                                            BEAMSTAT= 'ACQUIRE '                                                            ELOFF0  =             0.000000                                                  AZOFF0  =             0.000000                                                  ELOFF1  =             0.000000                                                  AZOFF1  =            -2.000000                                                  ELOFF2  =             2.000000                                                  AZOFF2  =            -1.000000                                                  ELOFF3  =             2.000000                                                  AZOFF3  =             1.000000                                                  ELOFF4  =             0.000000                                                  AZOFF4  =             2.000000                                                  ELOFF5  =            -2.000000                                                  AZOFF5  =             1.000000                                                  ELOFF6  =            -2.000000                                                  AZOFF6  =            -1.000000                                                  BCALFILE= 'DUMMY2  '                                                            BALGORIT= 'ULA CFM w/ Chebwin 20dB'                                             BWFILE  = 'weights.in                                                      '    CORREADY=                    1                                                  TRAREADY=                    1                                                  NETREADY=                    T                                                  MISSEDFE=                    0                                                  MISSEDPK=                    0                                                  CLEANA  =                    T                                                  CLEANB  =                    T                                                  NETMCNT =                    0                                                  INTSTAT = 'start   '                                                            STRTDMJD= '57897.8384375'                                                       SCANLEN = '10      '                                                            TSTAMP  = '2017_05_24_20:07:21'                                                 REQSTI  = '1.0     '                                                            WFLAG   = '0       '                                                            BWEIFILE= ''                                                                    CHANSEL = '0       '                                                            DISKSTAT= 'Init    '                                                            DSKBLKIN=                    0                                                  SCANREM = 'scan terminated'                                                     TRAMCNT =               151800                                                  BEAMMCNT=               151800                                                  NETERR  = 'Late Packet! - 168960'                                               END                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+HPC[20:7:15]:NCHAN not set in status memory
+HPC[20:7:15]:FITS: Received TSTAMP = 2017_05_24_20:07:21
+HPC[20:7:15]:FITS: Filename Stage 1: /lustre/projects/flag//TMP/BF/2017_05_24_20:07:21
+HPC[20:7:15]:FITS: Filename Stage 2: /lustre/projects/flag//TMP/BF/2017_05_24_20:07:21L
+HPC[20:7:15]:FITS: Filename Stage 3: /lustre/projects/flag//TMP/BF/2017_05_24_20:07:21L.fits
+HPC[20:7:15]:Opening file: /lustre/projects/flag//TMP/BF/2017_05_24_20:07:21L.fits
+HPC[20:7:15]:/lustre/projects/flag//TMP/BF/2017_05_24_20:07:21L.fits
+fitsio opened
+SCANLEN: 10
+mcnt: 0
+mcnt: 200
+mcnt: 400
+mcnt: 600
+mcnt: 800
+mcnt: 1000
+mcnt: 1200
+mcnt: 1400
+mcnt: 1600
+mcnt: 1800
+mcnt: 2000
+mcnt: 2200
+mcnt: 2400
+mcnt: 2600
+mcnt: 2800
+mcnt: 3000
+mcnt: 3200
+mcnt: 3400
+mcnt: 3600
+mcnt: 3800
+mcnt: 4000
+mcnt: 4200
+mcnt: 4400
+mcnt: 4600
+mcnt: 4800
+mcnt: 5000
+mcnt: 5200
+mcnt: 5400
+mcnt: 5600
+mcnt: 5800
+mcnt: 6000
+mcnt: 6200
+mcnt: 6400
+mcnt: 6600
+mcnt: 6800
+mcnt: 7000
+mcnt: 7200
+mcnt: 7400
+mcnt: 7600
+mcnt: 7800
+mcnt: 8000
+mcnt: 8200
+mcnt: 8400
+mcnt: 8600
+mcnt: 8800
+mcnt: 9000
+mcnt: 9200
+mcnt: 9400
+mcnt: 9600
+mcnt: 9800
+mcnt: 10000
+mcnt: 10200
+mcnt: 10400
+mcnt: 10600
+mcnt: 10800
+mcnt: 11000
+mcnt: 11200
+mcnt: 11400
+mcnt: 11600
+mcnt: 11800
+mcnt: 12000
+mcnt: 12200
+mcnt: 12400
+mcnt: 12600
+mcnt: 12800
+mcnt: 13000
+mcnt: 13200
+mcnt: 13400
+mcnt: 13600
+mcnt: 13800
+mcnt: 14000
+mcnt: 14200
+mcnt: 14400
+mcnt: 14600
+mcnt: 14800
+mcnt: 15000
+mcnt: 15200
+mcnt: 15400
+mcnt: 15600
+mcnt: 15800
+mcnt: 16000
+mcnt: 16200
+mcnt: 16400
+mcnt: 16600
+mcnt: 16800
+mcnt: 17000
+mcnt: 17200
+mcnt: 17400
+mcnt: 17600
+mcnt: 17800
+mcnt: 18000
+mcnt: 18200
+mcnt: 18400
+mcnt: 18600
+mcnt: 18800
+mcnt: 19000
+mcnt: 19200
+mcnt: 19400
+mcnt: 19600
+mcnt: 19800
+mcnt: 20000
+mcnt: 20200
+mcnt: 20400
+mcnt: 20600
+mcnt: 20800
+mcnt: 21000
+mcnt: 21200
+mcnt: 21400
+mcnt: 21600
+mcnt: 21800
+mcnt: 22000
+mcnt: 22200
+mcnt: 22400
+mcnt: 22600
+mcnt: 22800
+mcnt: 23000
+mcnt: 23200
+mcnt: 23400
+mcnt: 23600
+mcnt: 23800
+mcnt: 24000
+mcnt: 24200
+mcnt: 24400
+mcnt: 24600
+mcnt: 24800
+mcnt: 25000
+mcnt: 25200
+mcnt: 25400
+mcnt: 25600
+mcnt: 25800
+mcnt: 26000
+mcnt: 26200
+mcnt: 26400
+mcnt: 26600
+mcnt: 26800
+mcnt: 27000
+mcnt: 27200
+mcnt: 27400
+mcnt: 27600
+mcnt: 27800
+mcnt: 28000
+mcnt: 28200
+mcnt: 28400
+mcnt: 28600
+mcnt: 28800
+mcnt: 29000
+mcnt: 29200
+mcnt: 29400
+mcnt: 29600
+mcnt: 29800
+mcnt: 30000
+mcnt: 30200
+mcnt: 30400
+mcnt: 30600
+mcnt: 30800
+mcnt: 31000
+mcnt: 31200
+mcnt: 31400
+mcnt: 31600
+mcnt: 31800
+mcnt: 32000
+mcnt: 32200
+mcnt: 32400
+mcnt: 32600
+mcnt: 32800
+mcnt: 33000
+mcnt: 33200
+mcnt: 33400
+mcnt: 33600
+mcnt: 33800
+mcnt: 34000
+mcnt: 34200
+mcnt: 34400
+mcnt: 34600
+mcnt: 34800
+mcnt: 35000
+mcnt: 35200
+mcnt: 35400
+mcnt: 35600
+mcnt: 35800
+mcnt: 36000
+mcnt: 36200
+mcnt: 36400
+mcnt: 36600
+mcnt: 36800
+mcnt: 37000
+mcnt: 37200
+mcnt: 37400
+mcnt: 37600
+mcnt: 37800
+mcnt: 38000
+mcnt: 38200
+mcnt: 38400
+mcnt: 38600
+mcnt: 38800
+mcnt: 39000
+mcnt: 39200
+mcnt: 39400
+mcnt: 39600
+mcnt: 39800
+mcnt: 40000
+mcnt: 40200
+mcnt: 40400
+mcnt: 40600
+mcnt: 40800
+mcnt: 41000
+mcnt: 41200
+mcnt: 41400
+mcnt: 41600
+mcnt: 41800
+mcnt: 42000
+mcnt: 42200
+mcnt: 42400
+mcnt: 42600
+mcnt: 42800
+mcnt: 43000
+mcnt: 43200
+mcnt: 43400
+mcnt: 43600
+mcnt: 43800
+mcnt: 44000
+mcnt: 44200
+mcnt: 44400
+mcnt: 44600
+mcnt: 44800
+mcnt: 45000
+mcnt: 45200
+mcnt: 45400
+mcnt: 45600
+mcnt: 45800
+mcnt: 46000
+mcnt: 46200
+mcnt: 46400
+mcnt: 46600
+mcnt: 46800
+mcnt: 47000
+mcnt: 47200
+mcnt: 47400
+mcnt: 47600
+mcnt: 47800
+mcnt: 48000
+mcnt: 48200
+mcnt: 48400
+mcnt: 48600
+mcnt: 48800
+mcnt: 49000
+mcnt: 49200
+mcnt: 49400
+mcnt: 49600
+mcnt: 49800
+mcnt: 50000
+mcnt: 50200
+mcnt: 50400
+mcnt: 50600
+mcnt: 50800
+mcnt: 51000
+mcnt: 51200
+mcnt: 51400
+mcnt: 51600
+mcnt: 51800
+mcnt: 52000
+mcnt: 52200
+mcnt: 52400
+mcnt: 52600
+mcnt: 52800
+mcnt: 53000
+mcnt: 53200
+mcnt: 53400
+mcnt: 53600
+mcnt: 53800
+mcnt: 54000
+mcnt: 54200
+mcnt: 54400
+mcnt: 54600
+mcnt: 54800
+mcnt: 55000
+mcnt: 55200
+mcnt: 55400
+mcnt: 55600
+mcnt: 55800
+mcnt: 56000
+mcnt: 56200
+mcnt: 56400
+mcnt: 56600
+mcnt: 56800
+mcnt: 57000
+mcnt: 57200
+mcnt: 57400
+mcnt: 57600
+mcnt: 57800
+mcnt: 58000
+mcnt: 58200
+mcnt: 58400
+mcnt: 58600
+mcnt: 58800
+mcnt: 59000
+mcnt: 59200
+mcnt: 59400
+mcnt: 59600
+mcnt: 59800
+mcnt: 60000
+mcnt: 60200
+mcnt: 60400
+mcnt: 60600
+mcnt: 60800
+mcnt: 61000
+mcnt: 61200
+mcnt: 61400
+mcnt: 61600
+mcnt: 61800
+mcnt: 62000
+mcnt: 62200
+mcnt: 62400
+mcnt: 62600
+mcnt: 62800
+mcnt: 63000
+mcnt: 63200
+mcnt: 63400
+mcnt: 63600
+mcnt: 63800
+mcnt: 64000
+mcnt: 64200
+mcnt: 64400
+mcnt: 64600
+mcnt: 64800
+mcnt: 65000
+mcnt: 65200
+mcnt: 65400
+mcnt: 65600
+mcnt: 65800
+mcnt: 66000
+mcnt: 66200
+mcnt: 66400
+mcnt: 66600
+mcnt: 66800
+mcnt: 67000
+mcnt: 67200
+mcnt: 67400
+mcnt: 67600
+mcnt: 67800
+mcnt: 68000
+mcnt: 68200
+mcnt: 68400
+mcnt: 68600
+mcnt: 68800
+mcnt: 69000
+mcnt: 69200
+mcnt: 69400
+mcnt: 69600
+mcnt: 69800
+mcnt: 70000
+mcnt: 70200
+mcnt: 70400
+mcnt: 70600
+mcnt: 70800
+mcnt: 71000
+mcnt: 71200
+mcnt: 71400
+mcnt: 71600
+mcnt: 71800
+mcnt: 72000
+mcnt: 72200
+mcnt: 72400
+mcnt: 72600
+mcnt: 72800
+mcnt: 73000
+mcnt: 73200
+mcnt: 73400
+mcnt: 73600
+mcnt: 73800
+mcnt: 74000
+mcnt: 74200
+mcnt: 74400
+mcnt: 74600
+mcnt: 74800
+mcnt: 75000
+mcnt: 75200
+mcnt: 75400
+mcnt: 75600
+mcnt: 75800
+mcnt: 76000
+mcnt: 76200
+mcnt: 76400
+mcnt: 76600
+mcnt: 76800
+mcnt: 77000
+mcnt: 77200
+mcnt: 77400
+mcnt: 77600
+mcnt: 77800
+mcnt: 78000
+mcnt: 78200
+mcnt: 78400
+mcnt: 78600
+mcnt: 78800
+mcnt: 79000
+mcnt: 79200
+mcnt: 79400
+mcnt: 79600
+mcnt: 79800
+mcnt: 80000
+mcnt: 80200
+mcnt: 80400
+mcnt: 80600
+mcnt: 80800
+mcnt: 81000
+mcnt: 81200
+mcnt: 81400
+mcnt: 81600
+mcnt: 81800
+mcnt: 82000
+mcnt: 82200
+mcnt: 82400
+mcnt: 82600
+mcnt: 82800
+mcnt: 83000
+mcnt: 83200
+mcnt: 83400
+mcnt: 83600
+mcnt: 83800
+mcnt: 84000
+mcnt: 84200
+mcnt: 84400
+mcnt: 84600
+mcnt: 84800
+mcnt: 85000
+mcnt: 85200
+mcnt: 85400
+mcnt: 85600
+mcnt: 85800
+mcnt: 86000
+mcnt: 86200
+mcnt: 86400
+mcnt: 86600
+mcnt: 86800
+mcnt: 87000
+mcnt: 87200
+mcnt: 87400
+mcnt: 87600
+mcnt: 87800
+mcnt: 88000
+mcnt: 88200
+mcnt: 88400
+mcnt: 88600
+mcnt: 88800
+mcnt: 89000
+mcnt: 89200
+mcnt: 89400
+mcnt: 89600
+mcnt: 89800
+mcnt: 90000
+mcnt: 90200
+mcnt: 90400
+mcnt: 90600
+mcnt: 90800
+mcnt: 91000
+mcnt: 91200
+mcnt: 91400
+NET: Bad Block! mcnt = 92600, 844/1000
+NET: Bad Block! mcnt = 92800, 777/1000
+mcnt: 91600
+mcnt: 91800
+mcnt: 92000
+mcnt: 92200
+NET: Bad Block! mcnt = 93600, 626/1000
+mcnt: 92400
+mcnt: 92600
+mcnt: 92800
+NET: Bad Block! mcnt = 94000, 710/1000
+NET: Bad Block! mcnt = 94200, 998/1000
+mcnt: 93000
+mcnt: 93200
+NET: Bad Block! mcnt = 94400, 915/1000
+mcnt: 93400
+NET: Bad Block! mcnt = 94600, 665/1000
+mcnt: 93600
+mcnt: 93800
+mcnt: 94000
+NET: Bad Block! mcnt = 95600, 911/1000
+mcnt: 94200
+mcnt: 94400
+mcnt: 94600
+NET: Bad Block! mcnt = 96000, 969/1000
+mcnt: 94800
+mcnt: 95000
+NET: Bad Block! mcnt = 96200, 717/1000
+mcnt: 95200
+mcnt: 95400
+NET: Bad Block! mcnt = 97000, 717/1000
+mcnt: 95600
+NET: Bad Block! mcnt = 97200, 872/1000
+mcnt: 95800
+NET: Bad Block! mcnt = 97400, 263/1000
+mcnt: 96000
+mcnt: 96200
+mcnt: 96400
+mcnt: 96600
+NET: Bad Block! mcnt = 97800, 909/1000
+NET: Bad Block! mcnt = 98000, 962/1000
+mcnt: 96800
+mcnt: 97000
+mcnt: 97200
+NET: Bad Block! mcnt = 98400, 889/1000
+mcnt: 97400
+mcnt: 97600
+mcnt: 97800
+NET: Bad Block! mcnt = 99000, 732/1000
+mcnt: 98000
+mcnt: 98200
+NET: Bad Block! mcnt = 99200, 915/1000
+NET: Bad Block! mcnt = 99600, 925/1000
+mcnt: 98400
+mcnt: 98600
+mcnt: 98800
+NET: Bad Block! mcnt = 100000, 857/1000
+NET: Bad Block! mcnt = 100200, 916/1000
+mcnt: 99000
+mcnt: 99200
+mcnt: 99400
+mcnt: 99600
+NET: Bad Block! mcnt = 100400, 781/1000
+mcnt: 99800
+mcnt: 100000
+NET: Bad Block! mcnt = 100800, 854/1000
+mcnt: 100200
+NET: Bad Block! mcnt = 101000, 808/1000
+mcnt: 100400
+mcnt: 100600
+NET: Bad Block! mcnt = 101400, 884/1000
+NET: Bad Block! mcnt = 101600, 924/1000
+NET: Bad Block! mcnt = 101800, 975/1000
+NET: Bad Block! mcnt = 102000, 923/1000
+mcnt: 100800
+mcnt: 101000
+mcnt: 101200
+mcnt: 101400
+NET: Bad Block! mcnt = 102200, 744/1000
+NET: Bad Block! mcnt = 102400, 582/1000
+NET: Bad Block! mcnt = 102800, 880/1000
+mcnt: 101600
+mcnt: 101800
+mcnt: 102000
+mcnt: 102200
+NET: Bad Block! mcnt = 103000, 938/1000
+NET: Bad Block! mcnt = 103200, 672/1000
+mcnt: 102400
+mcnt: 102600
+mcnt: 102800
+NET: Bad Block! mcnt = 103400, 953/1000
+mcnt: 103000
+mcnt: 103200
+NET: Bad Block! mcnt = 103600, 860/1000
+NET: Bad Block! mcnt = 103800, 772/1000
+mcnt: 103400
+NET: Bad Block! mcnt = 104000, 702/1000
+mcnt: 103600
+NET: Bad Block! mcnt = 104200, 815/1000
+NET: Bad Block! mcnt = 104400, 999/1000
+mcnt: 103800
+NET: Bad Block! mcnt = 104600, 862/1000
+NET: Bad Block! mcnt = 104800, 993/1000
+mcnt: 104000
+mcnt: 104200
+mcnt: 104400
+mcnt: 104600
+NET: Bad Block! mcnt = 105200, 954/1000
+mcnt: 104800
+mcnt: 105000
+mcnt: 105200
+NET: Bad Block! mcnt = 105600, 992/1000
+mcnt: 105400
+NET: Bad Block! mcnt = 105800, 825/1000
+mcnt: 105600
+NET: Bad Block! mcnt = 106000, 646/1000
+mcnt: 105800
+mcnt: 106000
+mcnt: 106200
+NET: Bad Block! mcnt = 106800, 985/1000
+NET: Bad Block! mcnt = 107000, 992/1000
+mcnt: 106400
+mcnt: 106600
+mcnt: 106800
+NET: Bad Block! mcnt = 107400, 940/1000
+NET: Bad Block! mcnt = 107600, 914/1000
+NET: Bad Block! mcnt = 107800, 678/1000
+mcnt: 107000
+mcnt: 107200
+mcnt: 107400
+NET: Bad Block! mcnt = 108000, 840/1000
+NET: Bad Block! mcnt = 108200, 955/1000
+mcnt: 107600
+mcnt: 107800
+mcnt: 108000
+NET: Bad Block! mcnt = 108800, 952/1000
+mcnt: 108200
+mcnt: 108400
+mcnt: 108600
+NET: Bad Block! mcnt = 109000, 627/1000
+NET: Bad Block! mcnt = 109200, 770/1000
+mcnt: 108800
+mcnt: 109000
+NET: Bad Block! mcnt = 109600, 865/1000
+mcnt: 109200
+mcnt: 109400
+NET: Bad Block! mcnt = 109800, 857/1000
+NET: Bad Block! mcnt = 110000, 967/1000
+mcnt: 109600
+mcnt: 109800
+NET: Bad Block! mcnt = 110200, 817/1000
+NET: Bad Block! mcnt = 110400, 765/1000
+NET: Bad Block! mcnt = 110600, 965/1000
+mcnt: 110000
+mcnt: 110200
+mcnt: 110400
+mcnt: 110600
+NET: Bad Block! mcnt = 111000, 844/1000
+NET: Bad Block! mcnt = 111200, 757/1000
+mcnt: 110800
+mcnt: 111000
+mcnt: 111200
+NET: Bad Block! mcnt = 111600, 905/1000
+NET: Bad Block! mcnt = 111800, 792/1000
+mcnt: 111400
+NET: Bad Block! mcnt = 112000, 704/1000
+NET: Bad Block! mcnt = 112200, 680/1000
+mcnt: 111600
+mcnt: 111800
+mcnt: 112000
+NET: Bad Block! mcnt = 112400, 710/1000
+mcnt: 112200
+mcnt: 112400
+mcnt: 112600
+mcnt: 112800
+NET: Bad Block! mcnt = 113400, 682/1000
+mcnt: 113000
+mcnt: 113200
+NET: Bad Block! mcnt = 113600, 824/1000
+NET: Bad Block! mcnt = 113800, 686/1000
+mcnt: 113400
+NET: Bad Block! mcnt = 114000, 851/1000
+mcnt: 113600
+mcnt: 113800
+mcnt: 114000
+mcnt: 114200
+mcnt: 114400
+mcnt: 114600
+mcnt: 114800
+mcnt: 115000
+NET: Bad Block! mcnt = 115600, 966/1000
+mcnt: 115200
+mcnt: 115400
+mcnt: 115600
+NET: Bad Block! mcnt = 116000, 750/1000
+mcnt: 115800
+mcnt: 116000
+mcnt: 116200
+NET: Bad Block! mcnt = 117000, 819/1000
+mcnt: 116400
+mcnt: 116600
+mcnt: 116800
+mcnt: 117000
+NET: Bad Block! mcnt = 117400, 811/1000
+mcnt: 117200
+NET: Bad Block! mcnt = 117600, 876/1000
+mcnt: 117400
+NET: Bad Block! mcnt = 117800, 630/1000
+NET: Bad Block! mcnt = 118200, 972/1000
+mcnt: 117600
+mcnt: 117800
+mcnt: 118000
+NET: Bad Block! mcnt = 118400, 904/1000
+mcnt: 118200
+mcnt: 118400
+NET: Bad Block! mcnt = 118600, 835/1000
+mcnt: 118600
+mcnt: 118800
+NET: Bad Block! mcnt = 120000, 910/1000
+mcnt: 119000
+mcnt: 119200
+mcnt: 119400
+NET: Bad Block! mcnt = 120200, 849/1000
+NET: Bad Block! mcnt = 120400, 702/1000
+NET: Bad Block! mcnt = 120600, 996/1000
+mcnt: 119600
+mcnt: 119800
+mcnt: 120000
+NET: Bad Block! mcnt = 120800, 417/1000
+mcnt: 120200
+mcnt: 120400
+mcnt: 120600
+mcnt: 120800
+NET: Bad Block! mcnt = 121600, 506/1000
+NET: Bad Block! mcnt = 121800, 898/1000
+mcnt: 121000
+mcnt: 121200
+mcnt: 121400
+NET: Bad Block! mcnt = 122400, 772/1000
+NET: Bad Block! mcnt = 122600, 890/1000
+mcnt: 121600
+mcnt: 121800
+mcnt: 122000
+mcnt: 122200
+NET: Bad Block! mcnt = 123200, 530/1000
+NET: Bad Block! mcnt = 123400, 175/1000
+mcnt: 122400
+mcnt: 122600
+NET: Bad Block! mcnt = 123600, 801/1000
+NET: Bad Block! mcnt = 123800, 970/1000
+mcnt: 122800
+mcnt: 123000
+mcnt: 123200
+NET: Bad Block! mcnt = 124200, 832/1000
+NET: Bad Block! mcnt = 124400, 766/1000
+NET: Bad Block! mcnt = 124800, 798/1000
+mcnt: 123400
+mcnt: 123600
+mcnt: 123800
+mcnt: 124000
+mcnt: 124200
+NET: Bad Block! mcnt = 125200, 989/1000
+NET: Bad Block! mcnt = 125600, 517/1000
+mcnt: 124400
+mcnt: 124600
+mcnt: 124800
+NET: Bad Block! mcnt = 125800, 990/1000
+mcnt: 125000
+NET: Bad Block! mcnt = 126000, 838/1000
+mcnt: 125200
+mcnt: 125400
+NET: Bad Block! mcnt = 126200, 715/1000
+NET: Bad Block! mcnt = 126400, 786/1000
+mcnt: 125600
+mcnt: 125800
+mcnt: 126000
+NET: Bad Block! mcnt = 127200, 903/1000
+mcnt: 126200
+mcnt: 126400
+mcnt: 126600
+NET: Bad Block! mcnt = 127400, 603/1000
+NET: Bad Block! mcnt = 127600, 955/1000
+mcnt: 126800
+mcnt: 127000
+mcnt: 127200
+mcnt: 127400
+NET: Bad Block! mcnt = 128400, 733/1000
+mcnt: 127600
+mcnt: 127800
+mcnt: 128000
+NET: Bad Block! mcnt = 129200, 722/1000
+mcnt: 128200
+mcnt: 128400
+mcnt: 128600
+NET: Bad Block! mcnt = 129400, 795/1000
+mcnt: 128800
+mcnt: 129000
+mcnt: 129200
+NET: Bad Block! mcnt = 130000, 756/1000
+mcnt: 129400
+mcnt: 129600
+mcnt: 129800
+NET: Bad Block! mcnt = 130800, 980/1000
+mcnt: 130000
+mcnt: 130200
+mcnt: 130400
+NET: Bad Block! mcnt = 131000, 941/1000
+NET: Bad Block! mcnt = 131200, 842/1000
+mcnt: 130600
+mcnt: 130800
+mcnt: 131000
+mcnt: 131200
+mcnt: 131400
+mcnt: 131600
+mcnt: 131800
+mcnt: 132000
+NET: Bad Block! mcnt = 132600, 931/1000
+mcnt: 132200
+mcnt: 132400
+mcnt: 132600
+mcnt: 132800
+mcnt: 133000
+NET: Bad Block! mcnt = 133200, 598/1000
+mcnt: 133200
+mcnt: 133400
+NET: Bad Block! mcnt = 133600, 908/1000
+NET: Bad Block! mcnt = 133800, 745/1000
+mcnt: 133600
+mcnt: 133800
+NET: Bad Block! mcnt = 134000, 959/1000
+mcnt: 134000
+NET: Bad Block! mcnt = 134400, 919/1000
+mcnt: 134200
+NET: Bad Block! mcnt = 134600, 950/1000
+mcnt: 134400
+NET: Bad Block! mcnt = 135000, 697/1000
+mcnt: 134600
+NET: Bad Block! mcnt = 135200, 859/1000
+NET: Bad Block! mcnt = 135400, 391/1000
+mcnt: 134800
+mcnt: 135000
+mcnt: 135200
+mcnt: 135400
+mcnt: 135600
+NET: Bad Block! mcnt = 136200, 418/1000
+NET: Bad Block! mcnt = 136400, 913/1000
+NET: Bad Block! mcnt = 136600, 892/1000
+mcnt: 135800
+mcnt: 136000
+mcnt: 136200
+mcnt: 136400
+mcnt: 136600
+mcnt: 136800
+mcnt: 137000
+mcnt: 137200
+mcnt: 137400
+mcnt: 137600
+mcnt: 137800
+mcnt: 138000
+mcnt: 138200
+mcnt: 138400
+mcnt: 138600
+mcnt: 138800
+mcnt: 139000
+mcnt: 139200
+mcnt: 139400
+mcnt: 139600
+mcnt: 139800
+mcnt: 140000
+mcnt: 140200
+mcnt: 140400
+mcnt: 140600
+mcnt: 140800
+mcnt: 141000
+mcnt: 141200
+mcnt: 141400
+mcnt: 141600
+mcnt: 141800
+mcnt: 142000
+mcnt: 142200
+mcnt: 142400
+mcnt: 142600
+mcnt: 142800
+mcnt: 143000
+mcnt: 143200
+mcnt: 143400
+mcnt: 143600
+mcnt: 143800
+mcnt: 144000
+mcnt: 144200
+mcnt: 144400
+mcnt: 144600
+mcnt: 144800
+mcnt: 145000
+mcnt: 145200
+mcnt: 145400
+mcnt: 145600
+mcnt: 145800
+mcnt: 146000
+mcnt: 146200
+mcnt: 146400
+mcnt: 146600
+mcnt: 146800
+mcnt: 147000
+mcnt: 147200
+mcnt: 147400
+mcnt: 147600
+mcnt: 147800
+NET: Bad Block! mcnt = 150600, 991/1000
+mcnt: 148000
+mcnt: 148200
+mcnt: 148400
+mcnt: 148600
+mcnt: 148800
+mcnt: 149000
+mcnt: 149200
+NET: Bad Block! mcnt = 151200, 930/1000
+mcnt: 149400
+11NET: Bad Block! mcnt = 151400, 938/1000
+
+NET: Bad Block! mcnt = 151600, 407/1000
+mcnt: 149600
+mcnt: 149800
+NET: CLEANUP condition met!
+mcnt: 150000
+mcnt: 150200
+mcnt: 150400
+mcnt: 150600
+mcnt: 150800
+mcnt: 151000
+mcnt: 151200
+mcnt: 151400
+mcnt: 151600
+mcnt: 151800
+NET: Informing other threads of cleanup condition
+NET: All other threads have been informed
+TRA: Entering CLEANUP state 
+TRA: Finished CLEANUP, returning to ACQUIRE
+BF: Entering CLEANUP state
+BF: Finished CLEANUP, returning to ACQUIRE
+NET: CLEANUP complete; returning to IDLE
+Stop observations
+BfFitsThread::run exiting with scan_finished=1 run=1
+	We wrote 760 lines
+	It took an average of 13348.13 µs to complete each loop
+	It took an average of 1715.19 µs to write each row to FITS
+HPC[20:7:35]:BfFitsIO::close
+FITS: waiting for thread to join...
+FITS: thread has joined!
+bfFitsWriter exiting cleanly at Wed May 24 16:07:35 2017
+
+BFBE: Command to fits writer >> /home/groups/flag/dibas/exec/x86_64-linux/bfFitsWriter -i 3 -m p
+RUNNING PULSAR MODE
+/tmp/fits_fifo_mburnett_3
+Using FITS Control FIFO: /tmp/fits_fifo_mburnett_3
+bfFitsWrite started
+New mode specified and/or bandwidth specified!
+Not reformatting buffers
+stop_hpc(): sending 'quit'
+Joined thread 'flag_beamform_thread'
+Joined thread 'flag_transpose_thread'
+Joined thread 'flag_net_thread'
+set_mode(FLAG_CALCORR_MODE): cleaned up old backend.
+set_mode(FLAG_CALCORR_MODE): Creating new BeamformerBackend
+BFBE: Backend():: Setting self.frequency to 1500.0
+
+BFBE: FlagPole:: Initializing shmem...
+BFBE: FlagPole:: instance_id=3
+BFBE: FlagPole:: status_key=431997c4
+BFBE: FlagPole:: status_semid: users_mburnett_hashpipe_status_3
+hashpipe -p flag_x -I 3 -o BINDHOST=10.17.16.211 -o BINDPORT=60000 -o XID=11 -o GPUDEV=0 -o DATADIR=/lustre/projects/flag/ -o PROJID=TMP -o MODENAME=FLAG_CALCORR_MODE -o COVMODE=PAF_CAL -c 4 flag_net_thread -c 1 flag_transpose_thread -c 5 flag_correlator_thread
+initing  thread 'flag_net_thread' with databufs 0 and 1
+initing  thread 'flag_transpose_thread' with databufs 1 and 2
+initing  thread 'flag_correlator_thread' with databufs 2 and 3
+starting thread 'flag_correlator_thread' with databufs 2 and 3
+Found device 0: GeForce GTX 980 Ti
+Found device 1: GeForce GTX 980 Ti
+Using device 0: GeForce GTX 980 Ti
+starting thread 'flag_transpose_thread' with databufs 1 and 2
+starting thread 'flag_net_thread' with databufs 0 and 1
+NET: Starting Thread!!!
+BFBE: Command to fits writer >> /home/groups/flag/dibas/exec/x86_64-linux/bfFitsWriter -i 3 -m c
+set_mode(FLAG_CALCORR_MODE): beginning wait for DAQ program
+RUNNING PAF MODE
+/tmp/fits_fifo_mburnett_3
+Using FITS Control FIFO: /tmp/fits_fifo_mburnett_3
+bfFitsWrite started
+set_mode(FLAG_CALCORR_MODE): wait for DAQ program ended.
+Current mode is FLAG_CALCORR_MODE
+BFBE: TSTAMP  2017_05_24_20:19:16
+BFBE: Writing CHANSEL=0
+BFBE: Weight file name unchanged.
+BFBE:  2017-05-24 20:19:10.835486 2017-05-24 20:19:16
+Net: Ending scan after mcnt = 151875
+NET: Moving back to ACQUIRE!
+BFBE: Sleeping for 4.241448 seconds...
+Start observations
+BfFitsThread::run, instance_id = 3
+HPC[20:19:10]:shmget key: 431997c4
+HPC[20:19:10]:vegas_status_attach sem_open w/ /users_mburnett_hashpipe_status_3
+HPC[20:19:10]:bf_databuf shmget key: 831997c4
+HPC[20:19:10]:Setting bank name to D
+status_buf: INSTANCE=                    3                                                  BANKNAM = 'L       '                                                            BINDHOST= '10.17.16.211'                                                        BINDPORT=                60000                                                  XID     = '11      '                                                            GPUDEV  =                    0                                                  DATADIR = '/lustre/projects/flag/'                                              PROJID  = 'TMP     '                                                            MODENAME= 'FLAG_CALCORR_MODE'                                                   COVMODE = 'PAF_CAL '                                                            NETSTAT = 'ACQUIRE '                                                            TRASTAT = 'init    '                                                            CORSTAT = 'init    '                                                            INTSTAT = 'start   '                                                            INTSYNC =                    0                                                  REQSTI  = '1.0     '                                                            ACTSTI  =             0.000000                                                  INTCOUNT=                    1                                                  CORREADY=                    1                                                  TRAREADY=                    1                                                  NETREADY=                    T                                                  MISSEDFE=                    0                                                  MISSEDPK=                    0                                                  CLEANA  =                    T                                                  CLEANB  =                    T                                                  NETMCNT =                    0                                                  STRTDMJD= '57897.846713'                                                        SCANLEN = '10      '                                                            TSTAMP  = '2017_05_24_20:19:16'                                                 WFLAG   = '0       '                                                            BWEIFILE= ''                                                                    CHANSEL = '0       '                                                            DISKSTAT= 'Init    '                                                            END                                                                                                                                                                                                                                             
+HPC[20:19:10]:NCHAN not set in status memory
+HPC[20:19:10]:FITS: Received TSTAMP = 2017_05_24_20:19:16
+HPC[20:19:10]:FITS: Filename Stage 1: /lustre/projects/flag//TMP/BF/2017_05_24_20:19:16
+HPC[20:19:10]:FITS: Filename Stage 2: /lustre/projects/flag//TMP/BF/2017_05_24_20:19:16L
+HPC[20:19:10]:FITS: Filename Stage 3: /lustre/projects/flag//TMP/BF/2017_05_24_20:19:16L.fits
+HPC[20:19:10]:Opening file: /lustre/projects/flag//TMP/BF/2017_05_24_20:19:16L.fits
+HPC[20:19:10]:/lustre/projects/flag//TMP/BF/2017_05_24_20:19:16L.fits
+fitsio opened
+SCANLEN: 10
+mcnt: 0
+mcnt: 15200
+NET: Bad Block! mcnt = 27800, 812/1000
+NET: Bad Block! mcnt = 28200, 727/1000
+NET: Bad Block! mcnt = 28600, 779/1000
+NET: Bad Block! mcnt = 28800, 808/1000
+NET: Bad Block! mcnt = 29000, 919/1000
+NET: Bad Block! mcnt = 29200, 130/1000
+NET: Bad Block! mcnt = 29600, 649/1000
+NET: Bad Block! mcnt = 29800, 808/1000
+NET: Bad Block! mcnt = 30000, 860/1000
+NET: Bad Block! mcnt = 30200, 369/1000
+NET: Bad Block! mcnt = 30400, 820/1000
+NET: Bad Block! mcnt = 30600, 248/1000
+NET: Bad Block! mcnt = 30800, 721/1000
+NET: Bad Block! mcnt = 31000, 674/1000
+NET: Bad Block! mcnt = 31400, 43/1000
+NET: Bad Block! mcnt = 31600, 958/1000
+NET: Bad Block! mcnt = 31800, 110/1000
+NET: Bad Block! mcnt = 32000, 766/1000
+NET: Bad Block! mcnt = 32200, 629/1000
+NET: Bad Block! mcnt = 32400, 726/1000
+NET: Bad Block! mcnt = 32600, 317/1000
+NET: Bad Block! mcnt = 32800, 265/1000
+NET: Bad Block! mcnt = 33000, 803/1000
+NET: Bad Block! mcnt = 33400, 765/1000
+mcnt: 30400
+NET: Bad Block! mcnt = 33600, 605/1000
+NET: Bad Block! mcnt = 33800, 734/1000
+NET: Bad Block! mcnt = 34000, 333/1000
+NET: Bad Block! mcnt = 34200, 265/1000
+NET: Bad Block! mcnt = 34400, 675/1000
+NET: Bad Block! mcnt = 34600, 128/1000
+NET: Bad Block! mcnt = 35000, 765/1000
+NET: Bad Block! mcnt = 35200, 525/1000
+NET: Bad Block! mcnt = 35400, 814/1000
+NET: Bad Block! mcnt = 35600, 333/1000
+NET: Bad Block! mcnt = 35800, 265/1000
+NET: Bad Block! mcnt = 36000, 523/1000
+NET: Bad Block! mcnt = 36200, 280/1000
+NET: Bad Block! mcnt = 36600, 271/1000
+NET: Bad Block! mcnt = 37000, 214/1000
+NET: Bad Block! mcnt = 37200, 619/1000
+NET: Bad Block! mcnt = 37400, 333/1000
+NET: Bad Block! mcnt = 37600, 265/1000
+NET: Bad Block! mcnt = 37800, 520/1000
+NET: Bad Block! mcnt = 38000, 283/1000
+NET: Bad Block! mcnt = 38400, 174/1000
+NET: Bad Block! mcnt = 38600, 505/1000
+NET: Bad Block! mcnt = 38800, 806/1000
+NET: Bad Block! mcnt = 39200, 295/1000
+NET: Bad Block! mcnt = 39400, 656/1000
+NET: Bad Block! mcnt = 39600, 265/1000
+NET: Bad Block! mcnt = 39800, 520/1000
+NET: Bad Block! mcnt = 40000, 283/1000
+NET: Bad Block! mcnt = 40400, 19/1000
+NET: Bad Block! mcnt = 40600, 155/1000
+NET: Bad Block! mcnt = 40800, 531/1000
+NET: Bad Block! mcnt = 41000, 780/1000
+NET: Bad Block! mcnt = 41400, 295/1000
+NET: Bad Block! mcnt = 41600, 656/1000
+NET: Bad Block! mcnt = 41800, 265/1000
+NET: Bad Block! mcnt = 42000, 520/1000
+NET: Bad Block! mcnt = 42200, 283/1000
+NET: Bad Block! mcnt = 42400, 20/1000
+NET: Bad Block! mcnt = 42600, 155/1000
+NET: Bad Block! mcnt = 43000, 934/1000
+NET: Bad Block! mcnt = 43200, 411/1000
+NET: Bad Block! mcnt = 43400, 562/1000
+NET: Bad Block! mcnt = 43600, 765/1000
+NET: Bad Block! mcnt = 43800, 658/1000
+NET: Bad Block! mcnt = 44200, 174/1000
+NET: Bad Block! mcnt = 44400, 480/1000
+NET: Bad Block! mcnt = 44800, 428/1000
+NET: Bad Block! mcnt = 45000, 245/1000
+NET: Bad Block! mcnt = 45400, 353/1000
+NET: Bad Block! mcnt = 45600, 480/1000
+NET: Bad Block! mcnt = 45800, 900/1000
+NET: Bad Block! mcnt = 46000, 692/1000
+NET: Bad Block! mcnt = 46200, 696/1000
+mcnt: 45600
+NET: Bad Block! mcnt = 46600, 690/1000
+NET: Bad Block! mcnt = 46800, 998/1000
+NET: Bad Block! mcnt = 47000, 942/1000
+mcnt: 60800
+mcnt: 76000
+mcnt: 91200
+mcnt: 106400
+mcnt: 121600
+mcnt: 136800
+NET: CLEANUP condition met!
+11
+NET: Informing other threads of cleanup condition
+NET: All other threads have been informed
+TRA: Entering CLEANUP state 
+TRA: Finished CLEANUP, returning to ACQUIRE
+COR: Cleanup condition met!
+COR: In Cleanup
+NET: CLEANUP complete; returning to IDLE
+Stop observations
+BfFitsThread::run exiting with scan_finished=1 run=1
+	We wrote 10 lines
+	It took an average of 147061.90 µs to complete each loop
+	It took an average of 5708.97 µs to write each row to FITS
+HPC[20:19:30]:BfFitsIO::close
+FITS: waiting for thread to join...
+FITS: thread has joined!
+bfFitsWriter exiting cleanly at Wed May 24 16:19:30 2017
+
+BFBE: Command to fits writer >> /home/groups/flag/dibas/exec/x86_64-linux/bfFitsWriter -i 3 -m c
+RUNNING PAF MODE
+/tmp/fits_fifo_mburnett_3
+Using FITS Control FIFO: /tmp/fits_fifo_mburnett_3
+bfFitsWrite started
+ZMQJSONProxy.py:: Player rx a QUIT...
+Joined thread 'flag_correlator_thread'
+Joined thread 'flag_transpose_thread'
+Joined thread 'flag_net_thread'

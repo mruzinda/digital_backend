@@ -1,0 +1,20 @@
+#! /bin/bash
+
+echo "Starting BANKA on flag3"
+ssh -fq $USER@flag3 "source ~/.bash_profile; player BANKA"
+echo "Starting BANKB on flag3"
+ssh -fq $USER@flag3 "source ~/.bash_profile; player BANKB"
+echo "Starting BANKC on flag3"
+ssh -fq $USER@flag3 "source ~/.bash_profile; player BANKC"
+echo "Starting BANKD on flag3"
+ssh -fq $USER@flag3 "source ~/.bash_profile; player BANKD"
+
+echo "Starting BANKE on flag2"
+ssh -fq $USER@flag2 "source ~/.bash_profile; player BANKE"
+echo "Starting BANKF on flag2"
+ssh -fq $USER@flag2 "source ~/.bash_profile; player BANKF"
+echo "Starting BANKG on flag2"
+ssh -fq $USER@flag2 "source ~/.bash_profile; player BANKG"
+echo "Starting BANKH on flag2"
+ssh -fq $USER@flag2 "source ~/.bash_profile; player BANKH"
+

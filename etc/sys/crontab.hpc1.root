@@ -1,0 +1,3 @@
+# Crontab for HPC1.  This one is considered the "master" for dibas.
+0 6 * * * rsync -a /home/dibas hpc2:/home/backups/dibas
+9 6 * * * rsync -a /opt/dibas hpc2:/home/backups/opt

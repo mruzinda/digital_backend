@@ -1,0 +1,252 @@
+ZMQJSONProxy.py:: Player rx a QUIT...
+New mode specified and/or bandwidth specified!
+set_mode(FLAG_CALCORR_MODE): Creating new BeamformerBackend
+BFBE: Backend():: Setting self.frequency to 1500.0
+
+BFBE: FlagPole:: Initializing shmem...
+BFBE: FlagPole:: instance_id=0
+BFBE: FlagPole:: status_key=401997c4
+BFBE: FlagPole:: status_semid: users_mburnett_hashpipe_status_0
+hashpipe -p flag_x -I 0 -o BINDHOST=10.17.16.208 -o BINDPORT=60000 -o XID=8 -o GPUDEV=0 -o DATADIR=/lustre/projects/flag/ -o PROJID=TGBT16A_508_01/TMP -o MODENAME=FLAG_CALCORR_MODE -o COVMODE=PAF_CAL -c 0 flag_net_thread -c 1 flag_transpose_thread -c 2 flag_correlator_thread
+initing  thread 'flag_net_thread' with databufs 0 and 1
+initing  thread 'flag_transpose_thread' with databufs 1 and 2
+initing  thread 'flag_correlator_thread' with databufs 2 and 3
+starting thread 'flag_correlator_thread' with databufs 2 and 3
+Found device 0: GeForce GTX 980 Ti
+Found device 1: GeForce GTX 980 Ti
+Using device 0: GeForce GTX 980 Ti
+starting thread 'flag_transpose_thread' with databufs 1 and 2
+starting thread 'flag_net_thread' with databufs 0 and 1
+NET: Starting Thread!!!
+BFBE: Command to fits writer >> /home/groups/flag/dibas/exec/x86_64-linux/bfFitsWriter -i 0 -m c
+set_mode(FLAG_CALCORR_MODE): beginning wait for DAQ program
+RUNNING PAF MODE
+/tmp/fits_fifo_mburnett_0
+Using FITS Control FIFO: /tmp/fits_fifo_mburnett_0
+bfFitsWrite started
+set_mode(FLAG_CALCORR_MODE): wait for DAQ program ended.
+Current mode is FLAG_CALCORR_MODE
+BFBE: TSTAMP  2017_05_24_18:59:06
+BFBE: Writing CHANSEL=0
+BFBE: Weight file name unchanged.
+BFBE:  2017-05-24 18:59:00.389154 2017-05-24 18:59:06
+Net: Ending scan after mcnt = 151875
+NET: Moving back to ACQUIRE!
+BFBE: Sleeping for 4.680426 seconds...
+Start observations
+BfFitsThread::run, instance_id = 0
+HPC[18:59:0]:shmget key: 401997c4
+HPC[18:59:0]:vegas_status_attach sem_open w/ /users_mburnett_hashpipe_status_0
+HPC[18:59:0]:bf_databuf shmget key: 801997c4
+HPC[18:59:0]:Setting bank name to A
+status_buf: INSTANCE=                    0                                                  BANKNAM = 'I       '                                                            BINDHOST= '10.17.16.208'                                                        BINDPORT=                60000                                                  XID     = '8       '                                                            GPUDEV  =                    0                                                  DATADIR = '/lustre/projects/flag/'                                              PROJID  = 'TGBT16A_508_01/TMP'                                                  MODENAME= 'FLAG_CALCORR_MODE'                                                   COVMODE = 'PAF_CAL '                                                            NETSTAT = 'ACQUIRE '                                                            TRASTAT = 'init    '                                                            CORSTAT = 'init    '                                                            INTSTAT = 'start   '                                                            INTSYNC =                    0                                                  REQSTI  = '1.0     '                                                            ACTSTI  =             0.000000                                                  INTCOUNT=                    1                                                  CORREADY=                    1                                                  TRAREADY=                    1                                                  NETREADY=                    T                                                  MISSEDFE=                    0                                                  MISSEDPK=                    0                                                  CLEANA  =                    T                                                  CLEANB  =                    T                                                  NETMCNT =                    0                                                  STRTDMJD= '57897.7910417'                                                       SCANLEN = '10      '                                                            TSTAMP  = '2017_05_24_18:59:06'                                                 WFLAG   = '0       '                                                            BWEIFILE= ''                                                                    CHANSEL = '0       '                                                            DISKSTAT= 'Init    '                                                            END                                                                                                                                                                                                                                             
+HPC[18:59:0]:NCHAN not set in status memory
+HPC[18:59:0]:FITS: Received TSTAMP = 2017_05_24_18:59:06
+HPC[18:59:0]:FITS: Filename Stage 1: /lustre/projects/flag//TGBT16A_508_01/TMP/BF/2017_05_24_18:59:06
+HPC[18:59:0]:FITS: Filename Stage 2: /lustre/projects/flag//TGBT16A_508_01/TMP/BF/2017_05_24_18:59:06I
+HPC[18:59:0]:FITS: Filename Stage 3: /lustre/projects/flag//TGBT16A_508_01/TMP/BF/2017_05_24_18:59:06I.fits
+HPC[18:59:0]:Opening file: /lustre/projects/flag//TGBT16A_508_01/TMP/BF/2017_05_24_18:59:06I.fits
+HPC[18:59:0]:/lustre/projects/flag//TGBT16A_508_01/TMP/BF/2017_05_24_18:59:06I.fits
+fitsio opened
+SCANLEN: 10
+mcnt: 0
+NET: Bad Block! mcnt = 5000, 954/1000
+NET: Bad Block! mcnt = 5200, 925/1000
+NET: Bad Block! mcnt = 5400, 842/1000
+NET: Bad Block! mcnt = 5600, 954/1000
+NET: Bad Block! mcnt = 5800, 886/1000
+NET: Bad Block! mcnt = 6000, 996/1000
+NET: Bad Block! mcnt = 6200, 615/1000
+NET: Bad Block! mcnt = 6400, 860/1000
+NET: Bad Block! mcnt = 6800, 851/1000
+NET: Bad Block! mcnt = 7000, 863/1000
+NET: Bad Block! mcnt = 7400, 858/1000
+NET: Bad Block! mcnt = 7600, 842/1000
+NET: Bad Block! mcnt = 8000, 852/1000
+NET: Bad Block! mcnt = 8200, 879/1000
+NET: Bad Block! mcnt = 8400, 977/1000
+NET: Bad Block! mcnt = 8600, 865/1000
+NET: Bad Block! mcnt = 8800, 921/1000
+NET: Bad Block! mcnt = 9000, 940/1000
+NET: Bad Block! mcnt = 9200, 846/1000
+NET: Bad Block! mcnt = 9400, 954/1000
+NET: Bad Block! mcnt = 9600, 902/1000
+NET: Bad Block! mcnt = 10400, 986/1000
+NET: Bad Block! mcnt = 10800, 857/1000
+NET: Bad Block! mcnt = 11000, 864/1000
+NET: Bad Block! mcnt = 11400, 870/1000
+NET: Bad Block! mcnt = 11600, 865/1000
+NET: Bad Block! mcnt = 12000, 872/1000
+NET: Bad Block! mcnt = 12200, 867/1000
+NET: Bad Block! mcnt = 12600, 867/1000
+NET: Bad Block! mcnt = 12800, 868/1000
+NET: Bad Block! mcnt = 13200, 867/1000
+NET: Bad Block! mcnt = 13400, 879/1000
+NET: Bad Block! mcnt = 13600, 951/1000
+NET: Bad Block! mcnt = 13800, 640/1000
+NET: Bad Block! mcnt = 14000, 870/1000
+NET: Bad Block! mcnt = 14400, 867/1000
+NET: Bad Block! mcnt = 14600, 864/1000
+NET: Bad Block! mcnt = 15000, 867/1000
+NET: Bad Block! mcnt = 15200, 870/1000
+NET: Bad Block! mcnt = 15600, 863/1000
+NET: Bad Block! mcnt = 15800, 867/1000
+NET: Bad Block! mcnt = 16200, 860/1000
+NET: Bad Block! mcnt = 16400, 890/1000
+NET: Bad Block! mcnt = 16600, 970/1000
+NET: Bad Block! mcnt = 17200, 888/1000
+NET: Bad Block! mcnt = 17600, 709/1000
+NET: Bad Block! mcnt = 17800, 765/1000
+NET: Bad Block! mcnt = 18200, 795/1000
+NET: Bad Block! mcnt = 18400, 893/1000
+mcnt: 15200
+NET: Bad Block! mcnt = 18800, 946/1000
+NET: Bad Block! mcnt = 19000, 947/1000
+NET: Bad Block! mcnt = 19400, 910/1000
+NET: Bad Block! mcnt = 19600, 908/1000
+NET: Bad Block! mcnt = 20000, 960/1000
+NET: Bad Block! mcnt = 20200, 948/1000
+NET: Bad Block! mcnt = 20400, 985/1000
+NET: Bad Block! mcnt = 20600, 619/1000
+NET: Bad Block! mcnt = 30000, 854/1000
+NET: Bad Block! mcnt = 30600, 712/1000
+NET: Bad Block! mcnt = 30800, 997/1000
+NET: Bad Block! mcnt = 31200, 797/1000
+NET: Bad Block! mcnt = 31400, 240/1000
+NET: Bad Block! mcnt = 31600, 472/1000
+NET: Bad Block! mcnt = 31800, 904/1000
+NET: Bad Block! mcnt = 32400, 130/1000
+NET: Bad Block! mcnt = 32600, 472/1000
+NET: Bad Block! mcnt = 32800, 910/1000
+mcnt: 30400
+NET: Bad Block! mcnt = 33000, 994/1000
+NET: Bad Block! mcnt = 33200, 230/1000
+NET: Bad Block! mcnt = 33400, 873/1000
+NET: Bad Block! mcnt = 33600, 27/1000
+NET: Bad Block! mcnt = 33800, 472/1000
+NET: Bad Block! mcnt = 34000, 910/1000
+NET: Bad Block! mcnt = 34200, 193/1000
+NET: Bad Block! mcnt = 34600, 827/1000
+NET: Bad Block! mcnt = 34800, 104/1000
+NET: Bad Block! mcnt = 35000, 472/1000
+NET: Bad Block! mcnt = 35200, 158/1000
+NET: Bad Block! mcnt = 35400, 752/1000
+NET: Bad Block! mcnt = 35600, 193/1000
+NET: Bad Block! mcnt = 35800, 710/1000
+NET: Bad Block! mcnt = 36000, 675/1000
+NET: Bad Block! mcnt = 36200, 546/1000
+NET: Bad Block! mcnt = 36400, 50/1000
+NET: Bad Block! mcnt = 36600, 571/1000
+NET: Bad Block! mcnt = 36800, 9/1000
+NET: Bad Block! mcnt = 37000, 752/1000
+NET: Bad Block! mcnt = 37200, 193/1000
+NET: Bad Block! mcnt = 37400, 344/1000
+NET: Bad Block! mcnt = 37600, 960/1000
+NET: Bad Block! mcnt = 37800, 327/1000
+NET: Bad Block! mcnt = 38000, 300/1000
+NET: Bad Block! mcnt = 38200, 50/1000
+NET: Bad Block! mcnt = 38400, 571/1000
+NET: Bad Block! mcnt = 38600, 9/1000
+NET: Bad Block! mcnt = 38800, 365/1000
+NET: Bad Block! mcnt = 39000, 567/1000
+NET: Bad Block! mcnt = 39200, 263/1000
+NET: Bad Block! mcnt = 39400, 94/1000
+NET: Bad Block! mcnt = 39600, 395/1000
+NET: Bad Block! mcnt = 39800, 825/1000
+NET: Bad Block! mcnt = 40000, 367/1000
+NET: Bad Block! mcnt = 40200, 50/1000
+NET: Bad Block! mcnt = 20400, 985/1000
+NET: Bad Block! mcnt = 40600, 570/1000
+NET: Bad Block! mcnt = 40800, 9/1000
+NET: Bad Block! mcnt = 41000, 325/1000
+NET: Bad Block! mcnt = 41200, 410/1000
+NET: Bad Block! mcnt = 41400, 206/1000
+NET: Bad Block! mcnt = 41600, 348/1000
+NET: Bad Block! mcnt = 41800, 340/1000
+NET: Bad Block! mcnt = 42000, 55/1000
+NET: Bad Block! mcnt = 42200, 825/1000
+NET: Bad Block! mcnt = 42400, 417/1000
+NET: Bad Block! mcnt = 43000, 578/1000
+NET: Bad Block! mcnt = 43200, 291/1000
+NET: Bad Block! mcnt = 43400, 614/1000
+NET: Bad Block! mcnt = 43600, 36/1000
+NET: Bad Block! mcnt = 43800, 348/1000
+NET: Bad Block! mcnt = 44000, 395/1000
+NET: Bad Block! mcnt = 44200, 189/1000
+NET: Bad Block! mcnt = 44600, 53/1000
+NET: Bad Block! mcnt = 44800, 534/1000
+NET: Bad Block! mcnt = 45000, 382/1000
+NET: Bad Block! mcnt = 45200, 605/1000
+NET: Bad Block! mcnt = 45400, 489/1000
+NET: Bad Block! mcnt = 45600, 443/1000
+NET: Bad Block! mcnt = 45800, 640/1000
+NET: Bad Block! mcnt = 46000, 947/1000
+NET: Bad Block! mcnt = 46200, 597/1000
+NET: Bad Block! mcnt = 46400, 835/1000
+NET: Bad Block! mcnt = 46600, 762/1000
+mcnt: 45600
+mcnt: 60800
+mcnt: 76000
+mcnt: 91200
+NET: Bad Block! mcnt = 95600, 822/1000
+NET: Bad Block! mcnt = 96000, 704/1000
+NET: Bad Block! mcnt = 96200, 980/1000
+NET: Bad Block! mcnt = 96400, 776/1000
+NET: Bad Block! mcnt = 96800, 750/1000
+NET: Bad Block! mcnt = 97000, 980/1000
+NET: Bad Block! mcnt = 97200, 121/1000
+NET: Bad Block! mcnt = 97400, 800/1000
+NET: Bad Block! mcnt = 97800, 805/1000
+NET: Bad Block! mcnt = 98000, 780/1000
+NET: Bad Block! mcnt = 98200, 121/1000
+NET: Bad Block! mcnt = 98400, 152/1000
+NET: Bad Block! mcnt = 98600, 876/1000
+NET: Bad Block! mcnt = 99000, 697/1000
+NET: Bad Block! mcnt = 99200, 660/1000
+NET: Bad Block! mcnt = 99400, 121/1000
+NET: Bad Block! mcnt = 99600, 152/1000
+NET: Bad Block! mcnt = 99800, 185/1000
+NET: Bad Block! mcnt = 100400, 538/1000
+NET: Bad Block! mcnt = 100600, 510/1000
+NET: Bad Block! mcnt = 100800, 121/1000
+NET: Bad Block! mcnt = 101000, 152/1000
+NET: Bad Block! mcnt = 101200, 185/1000
+NET: Bad Block! mcnt = 101400, 996/1000
+NET: Bad Block! mcnt = 101800, 917/1000
+NET: Bad Block! mcnt = 102000, 256/1000
+NET: Bad Block! mcnt = 102200, 275/1000
+NET: Bad Block! mcnt = 102400, 62/1000
+NET: Bad Block! mcnt = 102600, 980/1000
+NET: Bad Block! mcnt = 103200, 524/1000
+NET: Bad Block! mcnt = 103400, 503/1000
+mcnt: 106400
+mcnt: 121600
+mcnt: 136800
+NET: CLEANUP condition met!
+11
+NET: Informing other threads of cleanup condition
+NET: All other threads have been informed
+TRA: Entering CLEANUP state 
+TRA: Finished CLEANUP, returning to ACQUIRE
+COR: Cleanup condition met!
+COR: In Cleanup
+NET: CLEANUP complete; returning to IDLE
+Stop observations
+FITS: waiting for thread to join...
+BfFitsThread::run exiting with scan_finished=1 run=0
+	We wrote 10 lines
+	It took an average of 169118.08 µs to complete each loop
+	It took an average of 1847.24 µs to write each row to FITS
+HPC[18:59:20]:BfFitsIO::close
+FITS: thread has joined!
+bfFitsWriter exiting cleanly at Wed May 24 14:59:20 2017
+
+BFBE: Command to fits writer >> /home/groups/flag/dibas/exec/x86_64-linux/bfFitsWriter -i 0 -m c
+RUNNING PAF MODE
+/tmp/fits_fifo_mburnett_0
+Using FITS Control FIFO: /tmp/fits_fifo_mburnett_0
+bfFitsWrite started
+ZMQJSONProxy.py:: Player rx a QUIT...
+Joined thread 'flag_correlator_thread'
+Joined thread 'flag_transpose_thread'
+Joined thread 'flag_net_thread'

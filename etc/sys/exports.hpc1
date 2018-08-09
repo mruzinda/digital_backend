@@ -1,0 +1,3 @@
+/opt/dibas  172.0.0.0/8(rw,sync,no_root_squash)
+#/opt/dibas  172.16.0.0/24(rw,sync,no_root_squash)
+/home/dibas 172.16.0.0/24(rw,sync,no_root_squash)

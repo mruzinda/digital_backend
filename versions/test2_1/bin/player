@@ -1,0 +1,6 @@
+#! /bin/bash
+if test "${DIBAS_DIR}zz" = zz; then
+	echo "Loading dibas.bash environment..."
+    . /opt/dibas/dibas.bash
+fi
+python $DIBAS_DIR/lib/python/player.py $@

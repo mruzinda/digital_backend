@@ -1,0 +1,3 @@
+Works with sim1 and FLAG-Beamformer-Devel version 5.0.0.
+
+Works with multiple instances.  But so far, just banks A, and B.  TBF: need to refactor.

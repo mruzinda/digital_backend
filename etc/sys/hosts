@@ -1,0 +1,57 @@
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+#Infiniband ports
+172.16.0.253	oss1
+172.16.0.254	mds
+172.16.0.1  hpc1
+172.16.0.2  hpc2
+172.16.0.3  hpc3
+172.16.0.4  hpc4
+172.16.0.5  hpc5
+172.16.0.6  hpc6
+172.16.0.7  hpc7
+172.16.0.8  hpc8
+172.16.0.9  hpc9
+
+#The HPC machine 10 gbe ports
+172.17.0.1  hpc1-10
+172.17.0.2  hpc2-10
+172.17.0.3  hpc3-10
+172.17.0.4  hpc4-10
+172.17.0.5  hpc5-10
+172.17.0.6  hpc6-10
+172.17.0.7  hpc7-10
+172.17.0.8  hpc8-10
+172.17.0.9  hpc9-10
+
+# The roach 10 gbe ports
+172.17.0.10 dibasr2-1-10-0
+172.17.0.11 dibasr2-1-10-1
+172.17.0.12 dibasr2-1-10-2
+172.17.0.13 dibasr2-1-10-3
+172.17.0.14 dibasr2-1-10-4
+172.17.0.15 dibasr2-1-10-5
+172.17.0.16 dibasr2-1-10-6
+172.17.0.17 dibasr2-1-10-7
+172.17.0.18 dibasr2-2-10-0
+172.17.0.19 dibasr2-3-10-0
+
+#The HPC machines' internal network ports to the roaches
+ 
+172.18.0.1  hpc1-1
+172.18.0.2  hpc2-1
+172.18.0.3  hpc3-1
+172.18.0.4  hpc4-1
+172.18.0.5  hpc5-1
+172.18.0.6  hpc6-1
+172.18.0.7  hpc7-1
+172.18.0.8  hpc8-1
+172.18.0.9  hpc9-1
+# Three roaches
+172.18.0.11  dibasr2-1
+172.18.0.12  dibasr2-2
+172.18.0.13  dibasr2-3
+
+#  10 gbe network switch
+172.18.0.20  turboiron
+

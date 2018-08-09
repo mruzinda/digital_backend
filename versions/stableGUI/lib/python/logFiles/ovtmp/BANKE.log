@@ -1,0 +1,139 @@
+ZMQJSONProxy.py:: Player rx a QUIT...
+New mode specified and/or bandwidth specified!
+set_mode(FLAG_CALCORR_MODE): Creating new BeamformerBackend
+BFBE: Backend():: Setting self.frequency to 1500.0
+
+BFBE: FlagPole:: Initializing shmem...
+BFBE: FlagPole:: instance_id=0
+BFBE: FlagPole:: status_key=401997c4
+BFBE: FlagPole:: status_semid: users_mburnett_hashpipe_status_0
+hashpipe -p flag_x -I 0 -o BINDHOST=10.17.16.204 -o BINDPORT=60000 -o XID=4 -o GPUDEV=0 -o DATADIR=/lustre/gbtdata/TGBT16A_508_01/SIM/ -o PROJID=TGBT16A_508_01/TMP -o MODENAME=FLAG_CALCORR_MODE -o COVMODE=PAF_CAL -c 0 flag_net_thread -c 1 flag_transpose_thread -c 2 flag_correlator_thread
+initing  thread 'flag_net_thread' with databufs 0 and 1
+initing  thread 'flag_transpose_thread' with databufs 1 and 2
+initing  thread 'flag_correlator_thread' with databufs 2 and 3
+starting thread 'flag_correlator_thread' with databufs 2 and 3
+Found device 0: GeForce GTX 980 Ti
+Found device 1: GeForce GTX 980 Ti
+Using device 0: GeForce GTX 980 Ti
+starting thread 'flag_transpose_thread' with databufs 1 and 2
+starting thread 'flag_net_thread' with databufs 0 and 1
+NET: Starting Thread!!!
+BFBE: Command to fits writer >> /home/groups/flag/dibas/exec/x86_64-linux/bfFitsWriter -i 0 -m c
+set_mode(FLAG_CALCORR_MODE): beginning wait for DAQ program
+RUNNING PAF MODE
+/tmp/fits_fifo_mburnett_0
+Using FITS Control FIFO: /tmp/fits_fifo_mburnett_0
+bfFitsWrite started
+set_mode(FLAG_CALCORR_MODE): wait for DAQ program ended.
+Current mode is FLAG_CALCORR_MODE
+BFBE: TSTAMP  2017_05_24_18:48:11
+BFBE: Writing CHANSEL=0
+BFBE: Weight file name unchanged.
+BFBE:  2017-05-24 18:48:05.651670 2017-05-24 18:48:11
+Net: Ending scan after mcnt = 911250
+NET: Moving back to ACQUIRE!
+Start observations
+BFBE: Sleeping for 4.429169 seconds...
+BfFitsThread::run, instance_id = 0
+HPC[18:48:5]:shmget key: 401997c4
+HPC[18:48:5]:vegas_status_attach sem_open w/ /users_mburnett_hashpipe_status_0
+HPC[18:48:5]:bf_databuf shmget key: 801997c4
+HPC[18:48:5]:Setting bank name to A
+status_buf: INSTANCE=                    0                                                  BANKNAM = 'E       '                                                            BINDHOST= '10.17.16.204'                                                        BINDPORT=                60000                                                  XID     = '4       '                                                            GPUDEV  =                    0                                                  DATADIR = '/lustre/gbtdata/TGBT16A_508_01/SIM/'                                 PROJID  = 'TGBT16A_508_01/TMP'                                                  MODENAME= 'FLAG_CALCORR_MODE'                                                   COVMODE = 'PAF_CAL '                                                            NETSTAT = 'ACQUIRE '                                                            TRASTAT = 'init    '                                                            CORSTAT = 'init    '                                                            INTSTAT = 'start   '                                                            INTSYNC =                    0                                                  REQSTI  = '1.0     '                                                            ACTSTI  =             0.000000                                                  INTCOUNT=                    1                                                  CORREADY=                    1                                                  TRAREADY=                    1                                                  NETREADY=                    T                                                  MISSEDFE=                    0                                                  MISSEDPK=                    0                                                  CLEANA  =                    T                                                  CLEANB  =                    T                                                  NETMCNT =                    0                                                  STRTDMJD= '57897.7834606'                                                       SCANLEN = '60      '                                                            TSTAMP  = '2017_05_24_18:48:11'                                                 WFLAG   = '0       '                                                            BWEIFILE= ''                                                                    CHANSEL = '0       '                                                            DISKSTAT= 'Init    '                                                            END                                                                                                                                                                                                                                             
+HPC[18:48:5]:NCHAN not set in status memory
+HPC[18:48:5]:FITS: Received TSTAMP = 2017_05_24_18:48:11
+HPC[18:48:5]:FITS: Filename Stage 1: /lustre/gbtdata/TGBT16A_508_01/SIM//TGBT16A_508_01/TMP/BF/2017_05_24_18:48:11
+HPC[18:48:5]:FITS: Filename Stage 2: /lustre/gbtdata/TGBT16A_508_01/SIM//TGBT16A_508_01/TMP/BF/2017_05_24_18:48:11E
+HPC[18:48:5]:FITS: Filename Stage 3: /lustre/gbtdata/TGBT16A_508_01/SIM//TGBT16A_508_01/TMP/BF/2017_05_24_18:48:11E.fits
+HPC[18:48:5]:Opening file: /lustre/gbtdata/TGBT16A_508_01/SIM//TGBT16A_508_01/TMP/BF/2017_05_24_18:48:11E.fits
+HPC[18:48:5]:/lustre/gbtdata/TGBT16A_508_01/SIM//TGBT16A_508_01/TMP/BF/2017_05_24_18:48:11E.fits
+fitsio opened
+SCANLEN: 60
+mcnt: 0
+mcnt: 15200
+mcnt: 30400
+mcnt: 45600
+mcnt: 60800
+mcnt: 76000
+mcnt: 91200
+mcnt: 106400
+mcnt: 121600
+mcnt: 136800
+mcnt: 152000
+mcnt: 167200
+mcnt: 182400
+mcnt: 197600
+mcnt: 212800
+mcnt: 228000
+mcnt: 243200
+mcnt: 258400
+mcnt: 273600
+mcnt: 288800
+mcnt: 304000
+mcnt: 319200
+mcnt: 334400
+mcnt: 349600
+mcnt: 364800
+mcnt: 380000
+mcnt: 395200
+mcnt: 410400
+mcnt: 425600
+mcnt: 440800
+mcnt: 456000
+mcnt: 471200
+mcnt: 486400
+mcnt: 501600
+mcnt: 516800
+mcnt: 532000
+mcnt: 547200
+mcnt: 562400
+mcnt: 577600
+mcnt: 592800
+mcnt: 608000
+mcnt: 623200
+mcnt: 638400
+mcnt: 653600
+mcnt: 668800
+mcnt: 684000
+mcnt: 699200
+mcnt: 714400
+mcnt: 729600
+mcnt: 744800
+mcnt: 760000
+mcnt: 775200
+mcnt: 790400
+mcnt: 805600
+mcnt: 820800
+mcnt: 836000
+mcnt: 851200
+mcnt: 866400
+mcnt: 881600
+mcnt: 896800
+NET: CLEANUP condition met!
+61
+NET: Informing other threads of cleanup condition
+NET: All other threads have been informed
+TRA: Entering CLEANUP state 
+TRA: Finished CLEANUP, returning to ACQUIRE
+COR: Cleanup condition met!
+COR: In Cleanup
+NET: CLEANUP complete; returning to IDLE
+Stop observations
+FITS: waiting for thread to join...
+BfFitsThread::run exiting with scan_finished=1 run=0
+	We wrote 60 lines
+	It took an average of 246558.99 µs to complete each loop
+	It took an average of 920.50 µs to write each row to FITS
+HPC[18:49:15]:BfFitsIO::close
+FITS: thread has joined!
+bfFitsWriter exiting cleanly at Wed May 24 14:49:15 2017
+
+BFBE: Command to fits writer >> /home/groups/flag/dibas/exec/x86_64-linux/bfFitsWriter -i 0 -m c
+RUNNING PAF MODE
+/tmp/fits_fifo_mburnett_0
+Using FITS Control FIFO: /tmp/fits_fifo_mburnett_0
+bfFitsWrite started
+ZMQJSONProxy.py:: Player rx a QUIT...
+Joined thread 'flag_correlator_thread'
+Joined thread 'flag_transpose_thread'
+Joined thread 'flag_net_thread'

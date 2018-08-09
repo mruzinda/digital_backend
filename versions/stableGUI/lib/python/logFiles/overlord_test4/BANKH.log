@@ -1,0 +1,119 @@
+New mode specified and/or bandwidth specified!
+set_mode(FLAG_CALCORR_MODE): Creating new BeamformerBackend
+BFBE: Backend():: Setting self.frequency to 1500.0
+
+BFBE: FlagPole:: Initializing shmem...
+BFBE: FlagPole:: instance_id=3
+BFBE: FlagPole:: status_key=43194300
+BFBE: FlagPole:: status_semid: users_mruzinda_hashpipe_status_3
+hashpipe -p flag_x -I 3 -o BINDHOST=10.17.16.207 -o BINDPORT=60000 -o XID=7 -o GPUDEV=1 -o DATADIR=/lustre/flag/ -o PROJID=TMP -o MODENAME=FLAG_CALCORR_MODE -o COVMODE=PAF_CAL -c 10 flag_net_thread -c 7 flag_transpose_thread -c 11 flag_correlator_thread
+HASH: Initing  thread 'flag_net_thread' with databufs 0 and 1
+HASH: Initing  thread 'flag_transpose_thread' with databufs 1 and 2
+HASH: Initing  thread 'flag_correlator_thread' with databufs 2 and 3
+HASH: starting thread 'flag_correlator_thread' with databufs 2 and 3
+HASH: Clearning input buffer for flag_correlator_thread ...
+HASH: Clearning output buffer for flag_correlator_thread ...
+HASH: Making call to flag_correlator_thread ...
+Found device 0: GeForce GTX 980 Ti
+Found device 1: GeForce GTX 980 Ti
+Using device 1: GeForce GTX 980 Ti
+HASH: starting thread 'flag_transpose_thread' with databufs 1 and 2
+HASH: Clearning input buffer for flag_transpose_thread ...
+HASH: Clearning output buffer for flag_transpose_thread ...
+HASH: Making call to flag_transpose_thread ...
+HASH: starting thread 'flag_net_thread' with databufs 0 and 1
+HASH: Clearning output buffer for flag_net_thread ...
+HASH: Making call to flag_net_thread ...
+NET: Starting Thread!!!
+BFBE: Command to fits writer >> /home/groups/flag/dibas/exec/x86_64-linux/bfFitsWriter -i 3 -m c
+set_mode(FLAG_CALCORR_MODE): beginning wait for DAQ program
+RUNNING PAF MODE
+/tmp/fits_fifo_mruzinda_3
+Using FITS Control FIFO: /tmp/fits_fifo_mruzinda_3
+bfFitsWrite started
+set_mode(FLAG_CALCORR_MODE): wait for DAQ program ended.
+Current mode is FLAG_CALCORR_MODE
+BFBE: TSTAMP  2018_05_15_22:45:16
+BFBE: Writing CHANSEL=0
+ BFBE: Weight file name unchanged.
+BFBE:  2018-05-15 22:45:10.561320 2018-05-15 22:45:16
+Net: Ending scan after mcnt = 911250
+NET: Moving back to ACQUIRE!
+BFBE: Sleeping for 4.467826 seconds...Start observations
+
+BfFitsThread::run, instance_id = 3
+HPC[22:45:10]:shmget key: 43194300
+HPC[22:45:10]:vegas_status_attach sem_open w/ /users_mruzinda_hashpipe_status_3
+HPC[22:45:10]:bf_databuf shmget key: 83194300
+HPC[22:45:10]:Setting bank name to D
+status_buf: INSTANCE=                    3                                                  BANKNAM = 'H       '                                                            BINDHOST= '10.17.16.207'                                                        BINDPORT=                60000                                                  XID     = '7       '                                                            GPUDEV  =                    1                                                  DATADIR = '/lustre/flag/'                                                       PROJID  = 'TMP     '                                                            MODENAME= 'FLAG_CALCORR_MODE'                                                   COVMODE = 'PAF_CAL '                                                            NETSTAT = 'ACQUIRE '                                                            TRASTAT = 'init    '                                                            CORSTAT = 'init    '                                                            INTSTAT = 'start   '                                                            INTSYNC =                    0                                                  REQSTI  = '0.5     '                                                            ACTSTI  =             0.000000                                                  INTCOUNT=                    1                                                  CORREADY=                    1                                                  TRAREADY=                    1                                                  NETREADY=                    T                                                  MISSEDFE=                    0                                                  MISSEDPK=                    0                                                  CLEANA  =                    T                                                  CLEANB  =                    T                                                  NETMCNT =                    0                                                  STRTDMJD= '58253.9481019'                                                       SCANLEN = '60      '                                                            TSTAMP  = '2018_05_15_22:45:16'                                                 WFLAG   = '0       '                                                            BWEIFILE= ''                                                                    CHANSEL = '0       '                                                            MASTRCMD= 'START   '                                                            DISKSTAT= 'Init    '                                                            END                                                                                                                                                             
+HPC[22:45:10]:NCHAN not set in status memory
+HPC[22:45:10]:FITS: Received TSTAMP = 2018_05_15_22:45:16
+HPC[22:45:10]:FITS: Filename: /lustre/flag//TMP/BF/2018_05_15_22:45:16H.fits
+HPC[22:45:10]:Opening file: /lustre/flag//TMP/BF/2018_05_15_22:45:16H.fits
+HPC[22:45:10]:/lustre/flag//TMP/BF/2018_05_15_22:45:16H.fits
+fitsio opened
+SCANLEN: 60
+TRA: WARNING!!!!!!!!! - Time = 22.370001 ms
+TRA: WARNING!!!!!!!!! - Time = 23.434999 ms
+TRA: WARNING!!!!!!!!! - Time = 20.260000 ms
+TRA: WARNING!!!!!!!!! - Time = 24.134001 ms
+TRA: WARNING!!!!!!!!! - Time = 17.073999 ms
+TRA: WARNING!!!!!!!!! - Time = 17.114000 ms
+NET: Bad Block! mcnt = 1400, 506/1000
+NET: Bad Block! mcnt = 1600, 535/1000
+NET: Bad Block! mcnt = 1800, 465/1000
+TRA: WARNING!!!!!!!!! - Time = 16.889000 ms
+NET: Bad Block! mcnt = 2000, 302/1000
+NET: Bad Block! mcnt = 2200, 698/1000
+TRA: WARNING!!!!!!!!! - Time = 13.897000 ms
+NET: Bad Block! mcnt = 2400, 618/1000
+TRA: WARNING!!!!!!!!! - Time = 16.497000 ms
+NET: Bad Block! mcnt = 2600, 382/1000
+TRA: WARNING!!!!!!!!! - Time = 16.980000 ms
+NET: Bad Block! mcnt = 2800, 506/1000
+NET: Bad Block! mcnt = 3000, 535/1000
+TRA: WARNING!!!!!!!!! - Time = 17.337000 ms
+NET: Bad Block! mcnt = 3200, 171/1000
+NET: Bad Block! mcnt = 3400, 596/1000
+NET: Bad Block! mcnt = 3600, 506/1000
+TRA: WARNING!!!!!!!!! - Time = 25.284000 ms
+NET: Bad Block! mcnt = 3800, 599/1000
+NET: Bad Block! mcnt = 4000, 404/1000
+TRA: WARNING!!!!!!!!! - Time = 10.547000 ms
+NET: Bad Block! mcnt = 4200, 312/1000
+NET: Bad Block! mcnt = 4400, 382/1000
+NET: Bad Block! mcnt = 4600, 505/1000
+NET: Bad Block! mcnt = 4800, 11/1000
+NET: Bad Block! mcnt = 5000, 525/1000
+NET: Bad Block! mcnt = 5200, 171/1000
+NET: Bad Block! mcnt = 5400, 386/1000
+TRA: WARNING!!!!!!!!! - Time = 10.463000 ms
+NET: Bad Block! mcnt = 5600, 211/1000
+NET: Bad Block! mcnt = 5800, 200/1000
+NET: Bad Block! mcnt = 6000, 399/1000
+TRA: WARNING!!!!!!!!! - Time = 10.851000 ms
+NET: Bad Block! mcnt = 6200, 386/1000
+NET: Bad Block! mcnt = 6400, 512/1000
+NET: Bad Block! mcnt = 6600, 203/1000
+TRA: WARNING!!!!!!!!! - Time = 10.478000 ms
+NET: Bad Block! mcnt = 6800, 498/1000
+TRA: WARNING!!!!!!!!! - Time = 10.493000 ms
+NET: Bad Block! mcnt = 7000, 400/1000
+NET: Bad Block! mcnt = 7200, 525/1000
+61
+BfFitsThread::run exiting with scan_finished=1 run=1
+	We wrote 0 lines
+	It took an average of -nan µs to complete each loop
+	It took an average of -nan µs to write each row to FITS
+HPC[17:40:30]:BfFitsIO::close
+writer thread exited unexpectedly
+NET: Exiting thread loop...
+HASH: Finished run function for flag_net_thread ...
+COR: Cleaning gpu context...
+HASH: Finished run function for flag_correlator_thread ...
+HASH: Joined thread 'flag_correlator_thread'
+TRA: Exiting loop...
+HASH: Finished run function for flag_transpose_thread ...
+HASH: Joined thread 'flag_transpose_thread'
+HASH: Joined thread 'flag_net_thread'

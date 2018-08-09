@@ -1,0 +1,99 @@
+.
+|-- bin
+|   |-- dealer
+|   |-- dibas_status
+|   |-- init_status_memory
+|   |-- player
+|   |-- re_create_data_buffers
+|   `-- x86_64-linux
+|       `-- check_vegas_status
+|-- exec
+|   `-- x86_64-linux
+|       `-- bfFitsWriter
+|-- lib
+|   |-- python
+|   |   |-- Backend.py
+|   |   |-- BeamformerBackend.py
+|   |   |-- ConfigData.py
+|   |   |-- dealer.py
+|   |   |-- dibas_status_monitor.py
+|   |   |-- dibas_utils.py
+|   |   |-- GuppiBackend.py
+|   |   |-- GuppiCODDBackend.py
+|   |   |-- guppi_daq
+|   |   |   |-- astro_utils.py
+|   |   |   |-- astro_utils.pyc
+|   |   |   |-- GBTStatus.py
+|   |   |   |-- GBTStatus.pyc
+|   |   |   |-- guppi2_utils.py
+|   |   |   |-- guppi2_utils.pyc
+|   |   |   |-- guppi_load_design.py
+|   |   |   |-- guppi_load_design.pyc
+|   |   |   |-- guppi_set_params_gbt.py
+|   |   |   |-- guppi_set_params_gbt.pyc
+|   |   |   |-- guppi_set_params_parspec.py
+|   |   |   |-- guppi_set_params_parspec.pyc
+|   |   |   |-- guppi_set_params.py
+|   |   |   |-- guppi_set_params.pyc
+|   |   |   |-- guppi_set_scannum.py
+|   |   |   |-- guppi_set_scannum.pyc
+|   |   |   |-- guppi_simple_monitor.py
+|   |   |   |-- guppi_simple_monitor.pyc
+|   |   |   |-- guppi_status_monitor.py
+|   |   |   |-- guppi_status_monitor.pyc
+|   |   |   |-- guppi_utils.py
+|   |   |   |-- guppi_utils.pyc
+|   |   |   |-- __init__.py
+|   |   |   |-- __init__.pyc
+|   |   |   |-- plot_adc_hist.py
+|   |   |   |-- plot_adc_hist.pyc
+|   |   |   |-- possem.py
+|   |   |   |-- possem.pyc
+|   |   |   |-- psr_constants.py
+|   |   |   `-- psr_constants.pyc
+|   |   |-- guppi_daq-0.1-py2.7.egg-info
+|   |   |-- hashpipe_key.py
+|   |   |-- i2c.py
+|   |   |-- lbw_mixer_funcs.py
+|   |   |-- ModeScriptExamples.py
+|   |   |-- player.py
+|   |   |-- _possem.so
+|   |   |-- set_arp.py
+|   |   |-- valon_katcp.py
+|   |   |-- VegasBackend.py
+|   |   |-- VegasHBWBackend.py
+|   |   |-- vegas_hpc
+|   |   |   |-- astro_utils.py
+|   |   |   |-- astro_utils.pyc
+|   |   |   |-- GBTStatus.py
+|   |   |   |-- GBTStatus.pyc
+|   |   |   |-- __init__.py
+|   |   |   |-- __init__.pyc
+|   |   |   |-- possem.py
+|   |   |   |-- possem.pyc
+|   |   |   |-- psr_constants.py
+|   |   |   |-- psr_constants.pyc
+|   |   |   |-- VegasServer.py
+|   |   |   |-- VegasServer.pyc
+|   |   |   |-- vegas_set_params.py
+|   |   |   |-- vegas_set_params.pyc
+|   |   |   |-- vegas_simple_monitor.py
+|   |   |   |-- vegas_simple_monitor.pyc
+|   |   |   |-- vegas_status_monitor.py
+|   |   |   |-- vegas_status_monitor.pyc
+|   |   |   |-- vegas_utils.py
+|   |   |   |-- vegas_utils.pyc
+|   |   |   |-- vtest.py
+|   |   |   `-- vtest.pyc
+|   |   |-- vegas_hpc-0.1-py2.7.egg-info
+|   |   |-- VegasL1LBWBackend.py
+|   |   |-- VegasL8LBWBackend.py
+|   |   |-- VegasLBWBackend.py
+|   |   |-- vegas_ssg.py
+|   |   `-- ZMQJSONProxy.py
+|   `-- x86_64-linux
+|-- tree1.txt
+|-- tree2.txt
+`-- tree3.txt
+
+9 directories, 87 files

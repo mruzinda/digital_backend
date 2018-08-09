@@ -1,0 +1,89 @@
+ZMQJSONProxy.py:: Player rx a QUIT...
+New mode specified and/or bandwidth specified!
+set_mode(FLAG_CALCORR_MODE): Creating new BeamformerBackend
+BFBE: Backend():: Setting self.frequency to 1500.0
+
+BFBE: FlagPole:: Initializing shmem...
+BFBE: FlagPole:: instance_id=3
+BFBE: FlagPole:: status_key=431997c4
+BFBE: FlagPole:: status_semid: users_mburnett_hashpipe_status_3
+hashpipe -p flag_x -I 3 -o BINDHOST=10.17.16.215 -o BINDPORT=60000 -o XID=15 -o GPUDEV=1 -o DATADIR=/lustre/projects/flag/ -o PROJID=TGBT16A_508_01/TMP -o MODENAME=FLAG_CALCORR_MODE -o COVMODE=PAF_CAL -c 10 flag_net_thread -c 7 flag_transpose_thread -c 11 flag_correlator_thread
+initing  thread 'flag_net_thread' with databufs 0 and 1
+initing  thread 'flag_transpose_thread' with databufs 1 and 2
+initing  thread 'flag_correlator_thread' with databufs 2 and 3
+starting thread 'flag_correlator_thread' with databufs 2 and 3
+Found device 0: GeForce GTX 780 Ti
+Found device 1: GeForce GTX 780 Ti
+Using device 1: GeForce GTX 780 Ti
+starting thread 'flag_transpose_thread' with databufs 1 and 2
+starting thread 'flag_net_thread' with databufs 0 and 1
+NET: Starting Thread!!!
+BFBE: Command to fits writer >> /home/groups/flag/dibas/exec/x86_64-linux/bfFitsWriter -i 3 -m c
+set_mode(FLAG_CALCORR_MODE): beginning wait for DAQ program
+RUNNING PAF MODE
+/tmp/fits_fifo_mburnett_3
+Using FITS Control FIFO: /tmp/fits_fifo_mburnett_3
+bfFitsWrite started
+set_mode(FLAG_CALCORR_MODE): wait for DAQ program ended.
+Current mode is FLAG_CALCORR_MODE
+BFBE: TSTAMP  2017_05_24_18:59:06
+BFBE: Writing CHANSEL=0
+BFBE: Weight file name unchanged.
+BFBE:  2017-05-24 18:59:00.516653 2017-05-24 18:59:06
+Net: Ending scan after mcnt = 151875
+NET: Moving back to ACQUIRE!
+Start observations
+BFBE: Sleeping for 4.565201 seconds...
+BfFitsThread::run, instance_id = 3
+HPC[18:59:0]:shmget key: 431997c4
+HPC[18:59:0]:vegas_status_attach sem_open w/ /users_mburnett_hashpipe_status_3
+HPC[18:59:0]:bf_databuf shmget key: 831997c4
+HPC[18:59:0]:Setting bank name to D
+status_buf: INSTANCE=                    3                                                  BANKNAM = 'P       '                                                            BINDHOST= '10.17.16.215'                                                        BINDPORT=                60000                                                  XID     = '15      '                                                            GPUDEV  =                    1                                                  DATADIR = '/lustre/projects/flag/'                                              PROJID  = 'TGBT16A_508_01/TMP'                                                  MODENAME= 'FLAG_CALCORR_MODE'                                                   COVMODE = 'PAF_CAL '                                                            NETSTAT = 'ACQUIRE '                                                            TRASTAT = 'init    '                                                            CORSTAT = 'init    '                                                            INTSTAT = 'start   '                                                            INTSYNC =                    0                                                  REQSTI  = '1.0     '                                                            ACTSTI  =             0.000000                                                  INTCOUNT=                    1                                                  CORREADY=                    1                                                  TRAREADY=                    1                                                  NETREADY=                    T                                                  MISSEDFE=                    0                                                  MISSEDPK=                    0                                                  CLEANA  =                    T                                                  CLEANB  =                    T                                                  NETMCNT =                    0                                                  STRTDMJD= '57897.7910417'                                                       SCANLEN = '10      '                                                            TSTAMP  = '2017_05_24_18:59:06'                                                 WFLAG   = '0       '                                                            BWEIFILE= ''                                                                    CHANSEL = '0       '                                                            DISKSTAT= 'Init    '                                                            END                                                                                                                                                                                                                                             
+HPC[18:59:0]:NCHAN not set in status memory
+HPC[18:59:0]:FITS: Received TSTAMP = 2017_05_24_18:59:06
+HPC[18:59:0]:FITS: Filename Stage 1: /lustre/projects/flag//TGBT16A_508_01/TMP/BF/2017_05_24_18:59:06
+HPC[18:59:0]:FITS: Filename Stage 2: /lustre/projects/flag//TGBT16A_508_01/TMP/BF/2017_05_24_18:59:06P
+HPC[18:59:0]:FITS: Filename Stage 3: /lustre/projects/flag//TGBT16A_508_01/TMP/BF/2017_05_24_18:59:06P.fits
+HPC[18:59:0]:Opening file: /lustre/projects/flag//TGBT16A_508_01/TMP/BF/2017_05_24_18:59:06P.fits
+HPC[18:59:0]:/lustre/projects/flag//TGBT16A_508_01/TMP/BF/2017_05_24_18:59:06P.fits
+fitsio opened
+SCANLEN: 10
+mcnt: 0
+mcnt: 15200
+mcnt: 30400
+mcnt: 45600
+mcnt: 60800
+mcnt: 76000
+mcnt: 91200
+mcnt: 106400
+mcnt: 121600
+mcnt: 136800
+11
+NET: CLEANUP condition met!
+NET: Informing other threads of cleanup condition
+NET: All other threads have been informed
+TRA: Entering CLEANUP state 
+TRA: Finished CLEANUP, returning to ACQUIRE
+COR: Cleanup condition met!
+COR: In Cleanup
+NET: CLEANUP complete; returning to IDLE
+Stop observations
+FITS: waiting for thread to join...
+BfFitsThread::run exiting with scan_finished=1 run=0
+	We wrote 10 lines
+	It took an average of 228386.94 µs to complete each loop
+	It took an average of 2396.58 µs to write each row to FITS
+HPC[18:59:20]:BfFitsIO::close
+FITS: thread has joined!
+bfFitsWriter exiting cleanly at Wed May 24 14:59:20 2017
+
+BFBE: Command to fits writer >> /home/groups/flag/dibas/exec/x86_64-linux/bfFitsWriter -i 3 -m c
+RUNNING PAF MODE
+/tmp/fits_fifo_mburnett_3
+Using FITS Control FIFO: /tmp/fits_fifo_mburnett_3
+bfFitsWrite started
+ZMQJSONProxy.py:: Player rx a QUIT...
+Joined thread 'flag_correlator_thread'
+Joined thread 'flag_transpose_thread'
+Joined thread 'flag_net_thread'

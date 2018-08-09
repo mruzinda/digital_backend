@@ -1,0 +1,102 @@
+FlagColorguard:: Adding  BANKA
+Player::Bank()
+Player::Bank(): self.simulate= False
+bank = BANKA filename = /home/groups/flag/dibas/etc/config/dibas.conf
+BankData (name=BANKA, has_roach=False, datahost=None, dataport=60000, dest_ip=168890568,dest_port=60000, katcp_ip=srbsr2-1, katcp_port=7147, synth=none, synth_port=/dev/ttyS1, synth_ref=1, synth_ref_freq=10000000, synth_vco_range=[2200, 4400], synth_rf_level=5, synth_options=[0, 0, 1, 0], mac_base=2207613190144, shmkvpairs={}, roach_kvpairs={}, i_am_master=True)
+tcp://0.0.0.0:6677
+FlagColorguard:: Adding  BANKB
+Player::Bank()
+Player::Bank(): self.simulate= False
+bank = BANKB filename = /home/groups/flag/dibas/etc/config/dibas.conf
+BankData (name=BANKB, has_roach=False, datahost=None, dataport=60000, dest_ip=168890569,dest_port=60000, katcp_ip=srbsr2-1, katcp_port=7147, synth=none, synth_port=/dev/ttyS1, synth_ref=1, synth_ref_freq=10000000, synth_vco_range=[2200, 4400], synth_rf_level=5, synth_options=[0, 0, 1, 0], mac_base=2207613190144, shmkvpairs={}, roach_kvpairs={}, i_am_master=False)
+tcp://0.0.0.0:6678
+FlagColorguard:: Adding  BANKC
+Player::Bank()
+Player::Bank(): self.simulate= False
+bank = BANKC filename = /home/groups/flag/dibas/etc/config/dibas.conf
+BankData (name=BANKC, has_roach=False, datahost=None, dataport=60000, dest_ip=168890570,dest_port=60000, katcp_ip=None, katcp_port=None, synth=None, synth_port=None, synth_ref=None, synth_ref_freq=None, synth_vco_range=None, synth_rf_level=None, synth_options=None, mac_base=2207613190144, shmkvpairs={}, roach_kvpairs={}, i_am_master=False)
+tcp://0.0.0.0:6679
+FlagColorguard:: Adding  BANKD
+Player::Bank()
+Player::Bank(): self.simulate= False
+bank = BANKD filename = /home/groups/flag/dibas/etc/config/dibas.conf
+BankData (name=BANKD, has_roach=False, datahost=None, dataport=60000, dest_ip=168890571,dest_port=60000, katcp_ip=None, katcp_port=None, synth=None, synth_port=None, synth_ref=None, synth_ref_freq=None, synth_vco_range=None, synth_rf_level=None, synth_options=None, mac_base=2207613190144, shmkvpairs={}, roach_kvpairs={}, i_am_master=False)
+tcp://0.0.0.0:6680
+FlagColorguard:: Adding  BANKM
+Player::Bank():: Adding  BANKEr::Bank(): self.simulate= 
+False
+layer::Bank()
+Player::Bank(): self.simulate= False
+FlagColorguard:: Adding  BANKI
+Player::Bank()
+Player::Bank(): self.simulate= False
+bank = BANKE ank =filename = ANKM home/groups/flag/dibas/etc/config/dibas.conf
+ilename = /home/groups/flag/dibas/etc/config/dibas.conf
+BankData (name=BANKE, has_roach=False, datahost=None, dataport=60000, dest_ip=168890572,dest_port=60000, katcp_ip=None, katcp_port=None, synth=None, synth_port=None, synth_ref=None, synth_ref_freq=None, synth_vco_range=None, synth_rf_level=None, synth_options=None, mac_base=2207613190144, shmkvpairs={}, roach_kvpairs={}, i_am_master=False)
+BankData (name=BANKM, has_roach=False, datahost=None, dataport=60000, dest_ip=168890580,dest_port=60000, katcp_ip=None, katcp_port=None, synth=None, synth_port=None, synth_ref=None, synth_ref_freq=None, synth_vco_range=None, synth_rf_level=None, synth_options=None, mac_base=2207613190144, shmkvpairs={}, roach_kvpairs={}, i_am_master=False)tcp://0.0.0.0:6681tcp://0.0.0.0:6689
+bank =lorguard:: Adding  lagColorguard:: Adding BBANKF ANKN
+filename =Player::Bank()Player::Bank()/home/groups/flag/dibas/etc/config/dibas.conf
+
+layer::Bank(): self.simulate= layer::Bank(): self.simulate=False
+alse
+bank = BANKN filename = ank = /home/groups/flag/dibas/etc/config/dibas.confBANKF filename = BankData (name=BANKI, has_roach=False, datahost=None, dataport=60000, dest_ip=168890576,dest_port=60000, katcp_ip=None, katcp_port=None, synth=None, synth_port=None, synth_ref=None, synth_ref_freq=None, synth_vco_range=None, synth_rf_level=None, synth_options=None, mac_base=2207613190144, shmkvpairs={}, roach_kvpairs={}, i_am_master=False)/home/groups/flag/dibas/etc/config/dibas.conf
+FlagColorguard:: Adding  cp://0.0.0.0:6685BANKQ
+Player::Bank()
+lagColorguard:: Adding  Player::Bank(): self.simulate= ANKJFalsePlayer::Bank()
+Player::Bank(): self.simulate= False
+BankData (name=BANKN, has_roach=False, datahost=None, dataport=60000, dest_ip=168890581,dest_port=60000, katcp_ip=None, katcp_port=None, synth=None, synth_port=None, synth_ref=None, synth_ref_freq=None, synth_vco_range=None, synth_rf_level=None, synth_options=None, mac_base=2207613190144, shmkvpairs={}, roach_kvpairs={}, i_am_master=False)
+tcp://0.0.0.0:6690KF, has_roach=False, datahost=None, dataport=60000, dest_ip=168890573,dest_port=60000, katcp_ip=None, katcp_port=None, synth=None, synth_port=None, synth_ref=None, synth_ref_freq=None, synth_vco_range=None, synth_rf_level=None, synth_options=None, mac_base=2207613190144, shmkvpairs={}, roach_kvpairs={}, i_am_master=False)
+bank =tcp://0.0.0.0:6682
+ANKJolorguard:: Adding  FlagColorguard:: Adding 
+ /home/groups/flag/dibas/etc/config/dibas.confPlayer::Bank()
+
+Player::Bank()
+layer::Bank(): self.simulate=Player::Bank(): self.simulate= alseFalse
+bank = BANKQ filename = /home/groups/flag/dibas/etc/config/dibas.conf
+BankData (name=BANKJ, has_roach=False, datahost=None, dataport=60000, dest_ip=168890577,dest_port=60000, katcp_ip=None, katcp_port=None, synth=None, synth_port=None, synth_ref=None, synth_ref_freq=None, synth_vco_range=None, synth_rf_level=None, synth_options=None, mac_base=2207613190144, shmkvpairs={}, roach_kvpairs={}, i_am_master=False)bank =
+ BANKOBANKG cp://0.0.0.0:6686filename = /home/groups/flag/dibas/etc/config/dibas.confFlagColorguard:: Adding 
+ BANKK
+Player::Bank()
+Player::Bank(): self.simulate= False
+BankData (name=BANKQ, has_roach=False, datahost=None, dataport=60000, dest_ip=168890584,dest_port=60000, katcp_ip=None, katcp_port=None, synth=None, synth_port=None, synth_ref=None, synth_ref_freq=None, synth_vco_range=None, synth_rf_level=None, synth_options=None, mac_base=2207613190144, shmkvpairs={}, roach_kvpairs={}, i_am_master=False)
+tcp://0.0.0.0:6693
+FlagColorguard:: Adding  ank =BANKRBankData (name=BANKO, has_roach=False, datahost=None, dataport=60000, dest_ip=168890582,dest_port=60000, katcp_ip=None, katcp_port=None, synth=None, synth_port=None, synth_ref=None, synth_ref_freq=None, synth_vco_range=None, synth_rf_level=None, synth_options=None, mac_base=2207613190144, shmkvpairs={}, roach_kvpairs={}, i_am_master=False)B nkData (name=BANKG, has_roach=False, datahost=None, dataport=60000, dest_ip=168890574,dest_port=60000, katcp_ip=None, katcp_port=None, synth=None, synth_port=None, synth_ref=None, synth_ref_freq=None, synth_vco_range=None, synth_rf_level=None, synth_options=None, mac_base=2207613190144, shmkvpairs={}, roach_kvpairs={}, i_am_master=False)Player::Bank()
+tcp://0.0.0.0:6691dibas/etc/config/dibas.confPlayer::Bank(): self.simulate=
+ FalseFFlagColorguard:: Adding  BANKH
+ANKPPlayer::Bank()
+layer::Bank()
+layer::Bank(): self.simulate= Falser::Bank(): self.simulate=
+False
+bank = BANKR filename = /home/groups/flag/dibas/etc/config/dibas.conf
+bank = BANKHbank = filename = ANKP home/groups/flag/dibas/etc/config/dibas.conffilename = ankData (name=BANKK, has_roach=False, datahost=None, dataport=60000, dest_ip=168890578,dest_port=60000, katcp_ip=None, katcp_port=None, synth=None, synth_port=None, synth_ref=None, synth_ref_freq=None, synth_vco_range=None, synth_rf_level=None, synth_options=None, mac_base=2207613190144, shmkvpairs={}, roach_kvpairs={}, i_am_master=False)/home/groups/flag/dibas/etc/config/dibas.conftcp://0.0.0.0:6687
+FlagColorguard:: Adding  BANKL
+Player::Bank()
+Player::Bank(): self.simulate= False
+BankData (name=BANKR, has_roach=False, datahost=None, dataport=60000, dest_ip=168890585,dest_port=60000, katcp_ip=None, katcp_port=None, synth=None, synth_port=None, synth_ref=None, synth_ref_freq=None, synth_vco_range=None, synth_rf_level=None, synth_options=None, mac_base=2207613190144, shmkvpairs={}, roach_kvpairs={}, i_am_master=False)
+tcp://0.0.0.0:6694
+FlagColorguard:: Adding  BANKS
+Player::Bank()
+Player::Bank(): self.simulate= False
+BankData (name=BANKH, has_roach=False, datahost=None, dataport=60000, dest_ip=168890575,dest_port=60000, katcp_ip=None, katcp_port=None, synth=None, synth_port=None, synth_ref=None, synth_ref_freq=None, synth_vco_range=None, synth_rf_level=None, synth_options=None, mac_base=2207613190144, shmkvpairs={}, roach_kvpairs={}, i_am_master=False)bank = BankDtcp://0.0.0.0:6684as_roach=False, datahost=None, dataport=60000, dest_ip=168890583,dest_port=60000, katcp_ip=None, katcp_port=None, synth=None, synth_port=None, synth_ref=None, synth_ref_freq=None, synth_vco_range=None, synth_rf_level=None, synth_options=None, mac_base=2207613190144, shmkvpairs={}, roach_kvpairs={}, i_am_master=False) 
+filename = tcp://0.0.0.0:6692dibas/etc/config/dibas.conf
+bank = BANKS filename = /home/groups/flag/dibas/etc/config/dibas.conf
+BankData (name=BANKL, has_roach=False, datahost=None, dataport=60000, dest_ip=168890579,dest_port=60000, katcp_ip=None, katcp_port=None, synth=None, synth_port=None, synth_ref=None, synth_ref_freq=None, synth_vco_range=None, synth_rf_level=None, synth_options=None, mac_base=2207613190144, shmkvpairs={}, roach_kvpairs={}, i_am_master=False)
+tcp://0.0.0.0:6688
+BankData (name=BANKS, has_roach=False, datahost=None, dataport=60000, dest_ip=168890586,dest_port=60000, katcp_ip=None, katcp_port=None, synth=None, synth_port=None, synth_ref=None, synth_ref_freq=None, synth_vco_range=None, synth_rf_level=None, synth_options=None, mac_base=2207613190144, shmkvpairs={}, roach_kvpairs={}, i_am_master=False)
+tcp://0.0.0.0:6695
+FlagColorguard:: Adding  BANKT
+Player::Bank()
+Player::Bank(): self.simulate= False
+bank = BANKT filename = /home/groups/flag/dibas/etc/config/dibas.conf
+BankData (name=BANKT, has_roach=False, datahost=None, dataport=60000, dest_ip=168890587,dest_port=60000, katcp_ip=None, katcp_port=None, synth=None, synth_port=None, synth_ref=None, synth_ref_freq=None, synth_vco_range=None, synth_rf_level=None, synth_options=None, mac_base=2207613190144, shmkvpairs={}, roach_kvpairs={}, i_am_master=False)
+tcp://0.0.0.0:6696
+FlagColorguard:: received signal 2
+FlagColorguard:: Exiting...
+FlagColorguard:: received signal 2
+FlagColorguard:: Exiting...
+FlagColorguard:: received signal 2
+FlagColorguard:: Exiting...
+FlagColorguard:: received signal 2
+FlagColorguard:: Exiting...
+FlagColorguard:: received signal 2
+FlagColorguard:: Exiting...

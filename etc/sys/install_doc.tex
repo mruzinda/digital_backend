@@ -1,0 +1,550 @@
+\documentclass[11pt]{article}
+
+\usepackage{graphicx}
+\usepackage{amssymb,amsmath}
+
+\begin{document}
+
+\title{Installation of DIBAS software and HPC Tuning}
+\author{Ramon Creager \\ Paul Demorest \\ John Ford }
+
+\maketitle
+
+\begin{abstract}
+  This is the installation documentation for the DIBAS system
+  installed at the SHAO 65 meter telecope.  It includes the outline of
+  the steps to install the software, as well as configure the HPC
+  systems for successful data acquisition.
+
+\end{abstract}
+
+
+%\chapter{First Chapter}
+
+\section{Introduction}
+
+THe DIBAS system is a complex mixture of FPGAs and high performance
+computer systems containing GPUs, and a disk storage system, all
+connected with high-speed networking equipment.  THis document is
+divided into sections for the hardware installation and configuration,
+and for the software installation.  Much of the information in this
+document was derived from discussions with SHAO personnel, and is not
+specified in any requirements document.
+
+\section{Hardware Installation, Checkout, and Startup}
+This section deals with installing the hardware, connecting the
+subsystems together, and checking that the basic requirements are met
+for successful operation.  The three main components of the system are
+the shielded rack, the HPC systems, and the disk storage system.
+
+\subsection{DIBAS shielded Rack}
+
+THe DIBAS rack itself is installed in the room with the IF and
+recorder equipment.  It was installed at the far end of the line of
+racks, next to HPCs 1 through 8, which are in rack 7.  The UPS for the
+rack is installed in Rack 6, with the Lustre nodes and HPC 9.  The
+power for the system was set up by:
+\begin{itemize}
+\item The power supply cord was connected to the UPS.
+\item The voltage on the power pins was checked with a voltmeter.
+\item The power cords of all of the internal power supplies were
+  disconnected from the internal power distribution
+\item The power supply cord was connected to the rack and the circuit
+  breaker turned on
+\item The voltage on the power distribution system was checked with a
+  voltmeter.
+\item The power supplies were all connected to the power distribution
+  inside the rack.
+\item The DC power supplies were verified to be correct:
+\begin{itemize}
+\item +5 volts for the analog systems was checked and adjusted.
+\item +15 volts for the analog systems was checked
+\item +12 volts for the ROACH boards was checked
+\end{itemize}
+\end{itemize}
+
+The reference signal connections (10 MHz and 1 PPS) were examined with
+an oscilloscope for conformance with the specifications. and then they were connected to the top of the rack. 
+
+The IFs for ROACH \#1 were connected to the X band receiver, and the ADC histograms were used to balance the system with attenuators on top of the rack.
+
+The 10 Gb Ethernet switch was installed in the rack.  An IP address for this switch was assigned so that it could be managed via the network.  The switch's hostname is 'turboiron'.
+
+Data connections were made to the roach boards from the 10 Gb Ethernet
+switch as well as to and the HPC machines 1-9 using fiber cables and
+10 gb SFP+ modules.  
+
+\subsection{HPC systems}
+The HPC machines were already installed in the system when the NRAO
+team arrived.  They had been set up and configured to use the Lustre
+storage system over the Infiniband network.
+
+\subsubsection{Networking}
+
+Three networks are defined in the DIBAS system, each with its own network number:
+\begin{itemize}
+\item The QDR Infiniband network (172.16.0.0)
+\item The 10 Gb Ethernet (172.17.0.0)
+\item The 1 Gb network (172.18.0.0)
+\item The gateway connection to the telescope control system (172.18.0.100)
+\end{itemize}
+See the hosts file on any HPCx machine for all of the host names and numbers.
+
+The Infiniband connections were already in place when we arrived, and no further work was done on that connection.
+
+Data connections were made to the HPC machines 1-9 using fiber cables
+and 10 gb SFP+ modules.  The original modules supplied by SHAO as part
+of the HPC machines were Intel dual-use 1 and 10 GbE modules, and
+would not link up at 10 gb.  They were replaced with new modules
+during system testing that worked well in the Mellanox cards and the
+Brocade Turboiron switch.  10 Gbe bandwidth tests were conducted with
+'udp\_recv' and 'udp\_send' to verify that the links were up and working
+at 10 gb speeds.
+
+The 1 Gb data connections were connected to an Ethernet switch in the
+bottom of the HPC rack, and that switch was connected through a fiber
+into the DIBAS rack.  This 1 Gb switch also provides the routing
+connection to the telescope control network so that DIBAS can be
+controlled by the telescope control system.
+
+\subsection{System Configuration and Tuning}
+Configuration changes to the HPC systems included modifications to
+allow the ROACH boards to boot and mount their file systems, and to
+maximize the performance of the high-speed network links.
+
+A cron job has also been installed on HPC1 to copy directories
+containing software installed during this startup.  /opt/dibas and
+/home/dibas are rsync'ed to hpc2:/home/backups every morning at around
+6:00.  The crontab file is in /opt/dibas/etc/sys.
+
+\subsubsection{ROACH Support}
+Support for booting the ROACH boards was installed in HPC1.  This
+support consists of a configuration for \emph{dnsmasq}, a program that
+supports the DHCP and bootp protocols that is supplied with Red Hat
+Enterprise Linux.  The configuration file is in /etc/dnsmasq.conf.
+The file is backed up in /opt/dibas/etc/sys for future reference.  The
+main data needed to create this file is the MAC addresses of the ROACH
+boards and the location of the kernel and file systems.
+
+The kernels for the ROACH systems is located in
+/opt/dibas/fpga/tftpboot/ uImage-current.  Other useful files in that
+directory include the boot loader for the ROACH 2 system.
+
+The root file system for the ROACHs is in /opt/dibas/fpga/filesystems/
+dibasr2.  This file system has all of the FPGA personalities in it.
+
+These files are exported via NFS for the ROACHs to use by the
+/etc/exports file.  A copy of this file is in /opt/dibas/etc/sys.
+
+\subsubsection{Network Tuning}
+Tuning was done on the 10 Gb Ethernet networking to support the
+required high-speed packet processing for DIBAS.  The Mellanox
+performance tuning guidelines were followed and lines added to the
+sysctl file.  The interrupt affinities and core mappings were also
+done.
+
+\subsubsection{Memory and Application Core Configuration}
+The HPC systems are dual-cpu NUMA systems, so it is important that
+tasks for the data acquistion systems run in the CPU nearest the
+shared memory.  In order to accomplish this, the shared memory
+allocation programs were changed to always allocate the shared memory
+block on NUMA node 1, which is the node that the 10 GbE NIC card is physically 
+attached to.  This ensures that the NIC card can speedily access the
+shared memory.  The driver was pinned to cores 6 and 7, which are on
+NUMA node 1.  The Infiniband driver was pinned to cores 8 and 9.  The
+mellanox scripts set\_irq\_affinity\_cpulist.sh is used to set the
+affinity for the drivers.
+
+The threads of the data acquisition program are pinned to certain
+cores as well.  These mappings are in a configuration file in
+/opt/dibas/etc/config/ guppi\_threads.conf.  In the case of these
+threads, we have specified multiple cores in the mask, which allowes
+the threads to migrate around on the same NUMA node somewhat.
+
+\section{Disk Storage Subsystem}
+
+This system was already installed and working.  Some optimizing and
+other work was performed by SHAO personnel while we installed the rest
+of the systems.  No other work was done on the disk storage subsystem.
+The system currently does not support the full bandwidth available
+through DIBAS in coherent search mode, incoherent search mode, and raw
+mode, but can support up to 300 MB/s data rates, which is more than
+required for most observations, but we exceeded these rates while
+testing DIBAS.  The following shows how to calculate the data rates so
+that the system will not lose data.
+
+The accumulaton length specifies how many samples are averaged togther
+to form each output power spectrum in search mode.  Accumulation length
+is calculated from bandwidth and number of channels:
+\begin{equation}
+        N_{acc} = \frac{\delta t B}{N_{chan}}
+\end{equation}
+Note that the requested $\delta t$ value will be rounded by the control
+software so that the resulting $N_{acc}$ is a power of two.
+
+The final output data rate to disk for search modes can then be
+calculated using the following formula:
+\begin{equation}
+        R_{\mathrm{MB/s}} = 4 \frac{B_{\mathrm{MHz}}}{N_{acc}}
+        = 4 \frac{N_{chan}}{\delta t_{\mu\mathrm{s}}}
+\end{equation}
+Parameters should be chosen so that the data rate stays below the
+maximum supported by the lustre file system.  As of this writing,
+about 300 MB/s is the maximum speed available from the Lustre
+hardware.
+
+\section{Software Installation, checkout, and startup}
+Software installation consists of two different types: Operating
+system supported code installed with the \emph{yum} package manager,
+and source code installed by hand.
+\subsection{Operating system supported software}
+This code consists of packages maintained and installed via the
+\emph{yum} package manager.  The yum packages installed for DIBAS over
+the initial installation are given in Appendix \ref{app:yum}.
+
+\subsection{Source code installed by hand}
+In addition to the packages installed with \emph{yum}, many other
+packages were installed.  Some of these were Python modules, and some
+were third-party libraries.  All of the installed software modules are
+detailed in Appendix \ref{app:hand}.
+
+\subsection{DIBAS Custom software}
+
+The custom dibas control and data acquisition software resides in
+several directories in /opt/dibas/repositories.  These directories are
+git repositories and should be kept up to date with commits when
+changes are made to the software.  Several steps are needed to build
+the software and install it.  They are detailed below.
+
+\subsubsection{DIBAS GUPPI software}
+The DIBAS GUPPI software resides in the git repository
+/opt/dibas/repositories/ guppi\_daq.  The software is built by:
+\begin{itemize}
+\item Source /opt/dibas/dibas.bash
+\item Change to the guppi\_daq directory
+\item Read the README file
+\item Install the Python as instructed in the README file
+\item Change directories to the src directory.
+\item Run 'make; make install'
+\end{itemize}
+
+This will build the code, and install it locally in the guppi\_daq
+directory.  Later on, an install script will be run to install the
+software in the dibas installation.
+
+\subsubsection{DIBAS VEGAS software}
+The DIBAS VEGAS software resides in
+/opt/dibas/repositories/vegas\_devel.  Some of the modulse are not
+needed for dibas.  The modules needed are dibas\_fits\_writer,
+vegas\_data\_monitor, vegas\_hpc.  To build this software''
+\begin{itemize}
+\item export VEGAS /opt/dibas/repositories/vegas\_devel/src
+\item cd \$VEGAS
+\item source vegas\_hpc/vegas\_spec-hpc.bash
+\item cd vegas\_hpc/src
+\item make
+\item cd ../..
+\item cd dibas\_fits\_writer
+\item make
+\item cd ..
+\item cd vegas\_data\_monitor
+\item make
+\end{itemize}
+
+\subsubsection{ROACH personalities (bof files)}
+The fpga personalities loaded into the system reside in the roach root
+filesystem.  They are resident on
+/opt/dibas/fpga/filesystems/dibasr2/boffiles.  The actual files in use
+are specified in the /opt/dibas/etc/config/dibas.config file.  The
+source models are in /opt/dibas/fpga/models.
+
+\subsubsection{Installing}
+
+The following script is in
+/opt/dibas/repositories/vegas\_devel/scripts/install\_dibas.sh that
+will copy all of the files necessary for proper operation of the code
+into the proper directories.  Since the system requires certain
+executable files to be setuid root, the \emph{ script must be run as
+  root }
+
+\begin{verbatim}
+
+# Install script specific to the DIBAS project.
+# Requirements/usage:
+# ./install_dibas $DIBAS_DIR username groupname install_name
+# ./install_dibas /opt/dibas/ dibas dibas test20131016
+
+# Where:
+#    DIBAS_DIR is the installation root (directory must exist)
+#    username is the user name for the ownership of the directory
+#    groupname is the group name to install the directory to
+#    install_name is the name of the installation directory
+#    python executable must be in current PATH
+# Error checking
+#    THIS SCRIPT MUST BE RUN AS ROOT TO PROPERLY SET PERMISSIONS
+
+\end{verbatim}
+
+Once the install script has been run, there will be a new version of
+the software in /opt/dibas/versions.  THe script /opt/dibas/setVersion
+can be run to reset the links of the system to the new version.  The
+links are /opt/dibas/{lib, exec,bin}
+
+\subsubsection{Supervisor Daemon program}
+The supervisor daemon was installed with easy\_install.  There is a
+configuration file that is installed in /etc/supervisord.  This file
+is also in /opt/dibas/etc/sys/ supervisord.conf.  Each HPC machine has
+a copy of this file, but the line with the log file name is different
+for each machine.
+
+\subsection{Running DIBAS}
+
+\subsubsection{Starting DIBAS}
+
+DIBAS probrams are started by the supervisord on each HPC machine.
+The supervisrod programs are started at boot time by the init process.
+Once this is done, control of the ``player'' process on all of the
+HPCs is by a command called ``restart\_players''.
+
+The system is now ready for use.  The observer or operator can now
+load and run scripts to configure and start DIBAS.
+\subsubsection{Running Scans}
+There are several example observation configurations in
+/home/dibas/dibas\_scripts/dibas\_scripts that configure and run DIBAS
+in pulsar modes to take data.  These configurations can be expanded
+upon to provide more observing options for observers, who can also
+write their own configuration scripts.
+
+\section{System testing and evaluation}
+
+\subsection{Spectral Line modes}
+Several different tests were conducted on the spectral line modes.  A
+low-level sine wave was introduced into the analog modules with a
+synthesizer, and the line was observed to appear in the correct
+frequency channel in the output of the spectrometer.  Following this,
+on-sky tests using the 65 meter were performed to demonstrate the
+system using the receiver noise inputs.  Several receivers (S,C, and L
+bands) were used at various times during the week.  The Tcal source
+was controlled manually for the on-sky tests, where we created a data
+set including on, off, and off with Tcal scans.
+
+Note that no synchronous control or monitoring of the cal source is
+provided at the 65 meter.  The Tcal source can be programmed to pulse
+with some receivers.
+\subsubsection{Mode 1 tests}
+
+\subsubsection{Mode 2 tests}
+Mode 2 (16k channels) was tested on the sky at C band.  A Methanol
+maser was observed, and the line appeared where it should be.  The
+bandpass was centered too high to use Mode 3, which would have
+provided better resolution.  SHAO engineers and scientists controlled
+these observations and the Tcal source.
+
+\subsubsection{Mode 3 tests}
+Mode 3 was tested on the sky with X band.  A line at 83XX MHz was
+observed with Banks A and B simultaneously.
+
+We anxiously await results.
+
+\subsection{Incoherent Pulsar modes}
+The initial Incoherent mode tests were done using the pulsed cal
+source in the receiver as an artificial pulsar.  We took data and
+searched for the pulsing cal signal, which we found near the nominal
+setting.  Following that, NRAO tested all of the incoherent modes
+except 8192, which we forgot existed.  The mistake was caught by SHAO,
+and we fixed the configuration file, which worked following the fix.
+
+\subsection{Coherent Pulsar modes}
+NRAO tested all of the Coherent modes at 800 MHz, and all of them
+worked flawlessly, except for the 8192 channel mode.  We also tested
+at 1 GHz bandwidth, and all worked except for 8192 and 256 channel
+modes.  In all cases of failure, the net thread was using more than
+100\% of the CPU assigned to it.
+
+Following this initial testing, SHAO and NRAO tested the system by
+observing several pulsars.  Initially, NRAO controlled the
+observations, and later SHAO controlled the observations using the
+pulsar scripts that were used by NRAO for earlier testing.
+
+Raw mode and coherent search mode suffer due to the limited bandwidth
+available at the disk array, but they function at low data rates.
+
+%\begin{figure}
+%    \centering
+%    \includegraphics[width=3.0in]{myfigure}
+%    \caption{Simulation Results}
+%    \label{simulationfigure}
+%\end{figure}
+
+\section{Conclusion}
+All of the DIBAS hardware tested OK.  The ENOB tests were run on
+dibasr2-2 and dibasr2-3.  The tests showed the same values as were
+originally done in Green Bank.  The tests were repeated on dibasr2-2
+by SHAO, this time using the analog module for an input source.  This
+test resulted in a low ENOB calculated by the test software.
+
+The DIBAS software was upgraded and tested repeatedly during the
+installation and commissioning process.  The dealer and player
+interface was enhanced to support functionality deemed necessary by
+NRAO representatives.
+
+SHAO had done a lot of work on the HPC systems and the Lustre file
+systems.  NRAO configured the DIBAS specific optimizations of the
+operating systems, installed some utilities, and installed the
+software and hardware.
+
+
+\appendix
+\section{Operating System Supported software}
+\label{app:yum}
+The following list shows the packages installed by the NRAO team while
+on site at the SHAO 65 meter telescope while installing and
+configuring DIBAS.
+
+\begin{verbatim}
+Oct 07 15:18:53 : libotf-0.9.9-3.1.el6.x86_64
+Oct 07 15:18:58 : 1:emacs-common-23.1-21.el6_2.3.x86_64
+Oct 07 15:18:59 : m17n-db-datafiles-1.5.5-1.1.el6.noarch
+Oct 07 15:19:01 : 1:emacs-23.1-21.el6_2.3.x86_64
+Oct 07 17:11:42 : 1:perl-Error-0.17015-4.el6.noarch
+Oct 07 17:11:45 : git-1.7.1-2.el6_0.1.x86_64
+Oct 07 17:11:45 : perl-Git-1.7.1-2.el6_0.1.noarch
+Oct 07 17:55:07 : autoconf-2.63-5.1.el6.noarch
+Oct 07 17:55:55 : automake-1.11.1-4.el6.noarch
+Oct 08 10:06:24 : libgfortran-4.4.7-3.el6.x86_64
+Oct 08 10:06:26 : gcc-gfortran-4.4.7-3.el6.x86_64
+Oct 08 10:09:59 : fftw-3.2.1-3.1.el6.x86_64
+Oct 08 10:10:00 : fftw-devel-3.2.1-3.1.el6.x86_64
+Oct 08 10:10:26 : gsl-1.13-1.el6.x86_64
+Oct 08 10:10:27 : gsl-devel-1.13-1.el6.x86_64
+Oct 08 10:10:42 : gnuplot-common-4.2.6-2.el6.x86_64
+Oct 08 10:10:42 : gnuplot-4.2.6-2.el6.x86_64
+Oct 08 10:14:52 : libtool-2.2.6-15.5.el6.x86_64
+Oct 08 10:21:15 : python-devel-2.6.6-36.el6.x86_64
+Oct 08 10:23:25 : atlas-3.8.4-2.el6.x86_64
+Oct 08 10:23:26 : suitesparse-3.4.0-7.el6.x86_64
+Oct 08 10:23:27 : python-setuptools-0.6.10-3.el6.noarch
+Oct 08 10:23:27 : python-nose-0.10.4-3.1.el6.noarch
+Oct 08 10:23:29 : numpy-1.4.1-9.el6.x86_64
+Oct 08 10:23:29 : numpy-f2py-1.4.1-9.el6.x86_64
+Oct 08 10:23:32 : scipy-0.7.2-8.el6.x86_64
+Oct 08 10:25:37 : zlib-devel-1.2.3-29.el6.x86_64
+Oct 08 10:25:37 : 2:libpng-devel-1.2.49-1.el6_2.x86_64
+Oct 08 10:26:27 : libcap-devel-2.16-5.5.el6.x86_64
+Oct 08 10:26:47 : libcap-ng-devel-0.6.4-3.el6_0.1.x86_64
+Oct 08 10:28:52 : xorg-x11-proto-devel-7.6-25.el6.noarch
+Oct 08 10:28:52 : libXau-devel-1.0.6-4.el6.x86_64
+Oct 08 10:28:53 : libxcb-devel-1.8.1-1.el6.x86_64
+Oct 08 10:28:54 : libX11-devel-1.5.0-4.el6.x86_64
+Oct 08 10:48:56 : glib2-devel-2.22.5-7.el6.x86_64
+Oct 08 10:50:30 : libXrender-devel-0.9.7-2.el6.x86_64
+Oct 08 10:50:31 : libXext-devel-1.3.1-2.el6.x86_64
+Oct 08 10:50:32 : freetype-devel-2.3.11-6.el6_2.9.x86_64
+Oct 08 10:50:33 : fontconfig-devel-2.8.0-3.el6.x86_64
+Oct 08 10:50:33 : libXfixes-devel-5.0-3.el6.x86_64
+Oct 08 10:50:33 : libXcursor-devel-1.1.13-2.el6.x86_64
+Oct 08 10:50:34 : libXcomposite-devel-0.4.3-4.el6.x86_64
+Oct 08 10:50:34 : libXft-devel-2.3.1-2.el6.x86_64
+Oct 08 10:50:35 : libXrandr-devel-1.4.0-1.el6.x86_64
+Oct 08 10:50:35 : libXi-devel-1.6.1-3.el6.x86_64
+Oct 08 10:50:36 : libXinerama-devel-1.1.2-2.el6.x86_64
+Oct 08 10:50:36 : pixman-devel-0.26.2-4.el6.x86_64
+Oct 08 10:50:37 : cairo-devel-1.8.8-3.1.el6.x86_64
+Oct 08 10:50:37 : pango-devel-1.28.1-7.el6_3.x86_64
+Oct 08 10:50:39 : docbook-style-xsl-1.75.2-6.el6.noarch
+Oct 08 10:50:40 : lynx-2.8.6-27.el6.x86_64
+Oct 08 10:50:41 : opensp-1.5.2-12.1.el6.x86_64
+Oct 08 10:50:42 : openjade-1.3.2-36.el6.x86_64
+Oct 08 10:50:43 : docbook-style-dsssl-1.79-10.el6.noarch
+Oct 08 10:50:43 : perl-SGMLSpm-1.03ii-21.el6.noarch
+Oct 08 10:50:44 : docbook-utils-0.6.14-25.el6.noarch
+Oct 08 10:50:45 : gtk-doc-1.11-5.1.el6.noarch
+Oct 08 10:50:45 : atk-devel-1.28.0-2.el6.x86_64
+Oct 08 10:50:47 : gtk2-devel-2.18.9-12.el6.x86_64
+Oct 08 12:44:09 : libICE-devel-1.0.6-1.el6.x86_64
+Oct 08 12:44:10 : libSM-devel-1.2.1-2.el6.x86_64
+Oct 08 12:44:11 : libXt-devel-1.1.3-1.el6.x86_64
+Oct 08 12:44:11 : libjpeg-turbo-devel-1.2.1-1.el6.x86_64
+Oct 08 12:44:12 : libdrm-devel-2.4.39-1.el6.x86_64
+Oct 08 12:44:13 : libXxf86vm-devel-1.1.2-2.el6.x86_64
+Oct 08 12:44:13 : libXdamage-devel-1.1.3-4.el6.x86_64
+Oct 08 12:44:14 : mesa-libGL-devel-9.0-0.7.el6.x86_64
+Oct 08 12:44:15 : mesa-libGLU-devel-9.0-0.7.el6.x86_64
+Oct 08 12:44:18 : 1:qt-devel-4.6.2-25.el6.x86_64
+Oct 08 12:47:58 : boost-date-time-1.41.0-11.el6_1.2.x86_64
+Oct 08 12:47:59 : boost-regex-1.41.0-11.el6_1.2.x86_64
+Oct 08 12:47:59 : boost-thread-1.41.0-11.el6_1.2.x86_64
+Oct 08 12:48:00 : boost-wave-1.41.0-11.el6_1.2.x86_64
+Oct 08 12:48:00 : boost-graph-1.41.0-11.el6_1.2.x86_64
+Oct 08 12:48:01 : boost-python-1.41.0-11.el6_1.2.x86_64
+Oct 08 12:48:01 : boost-signals-1.41.0-11.el6_1.2.x86_64
+Oct 08 12:48:02 : boost-serialization-1.41.0-11.el6_1.2.x86_64
+Oct 08 12:48:03 : boost-test-1.41.0-11.el6_1.2.x86_64
+Oct 08 12:48:03 : boost-iostreams-1.41.0-11.el6_1.2.x86_64
+Oct 08 12:48:04 : boost-program-options-1.41.0-11.el6_1.2.x86_64
+Oct 08 12:48:04 : boost-1.41.0-11.el6_1.2.x86_64
+Oct 08 12:48:09 : boost-devel-1.41.0-11.el6_1.2.x86_64
+Oct 08 14:33:31 : 1:telnet-0.17-47.el6_3.1.x86_64
+Oct 08 16:23:46 : mysql-5.1.66-2.el6_3.x86_64
+Oct 08 16:26:09 : MySQL-python-1.2.3-0.3.c1.1.el6.x86_64
+Oct 09 14:28:36 : pytz-2010h-2.el6.noarch
+Oct 09 14:28:38 : python-matplotlib-0.99.1.2-1.el6.x86_64
+Oct 10 10:05:04 : libwmf-lite-0.2.8.4-22.el6.x86_64
+Oct 10 10:05:06 : ImageMagick-6.5.4.7-6.el6_2.x86_64
+Oct 11 10:10:28 : libesmtp-1.0.4-15.el6.x86_64
+Oct 11 10:10:29 : infinipath-psm-3.0.1-115.1015_open.1.el6.x86_64
+Oct 11 10:10:30 : environment-modules-3.2.9c-4.el6.x86_64
+Oct 11 10:10:31 : openmpi-1.5.4-1.el6.x86_64
+Oct 11 10:10:33 : openmpi-devel-1.5.4-1.el6.x86_64
+Oct 11 10:50:56 : plpa-libs-1.3.2-2.1.el6.x86_64
+Oct 11 10:50:57 : compat-openmpi-1.4.3-1.el6.x86_64
+Oct 12 10:29:15 : tigervnc-1.1.0-5.el6.x86_64
+Oct 12 10:30:32 : tigervnc-server-1.1.0-5.el6.x86_64
+Oct 14 10:14:11 : 7:squid-3.1.10-16.el6.x86_64
+Oct 15 14:02:41 : dstat-0.7.0-1.el6.noarch
+\end{verbatim}
+
+\section{Other Software}
+\label{app:hand}
+
+\begin{verbatim}
+btp-2.6.31.5
+features
+fftw-2.1.5
+fftw-3.3.1
+fftw-3.3.1-sse
+gsoap-2.7
+ipython-1.1.0-py2.6.egg
+json_spirit
+libwebsockets
+linux-gpib-3.2.11
+linux-gpib-3.2.16
+linux-gpib-3.2.16.tar.gz
+meld3-0.6.10-py2.6.egg
+nemo_cvs
+qwt-6.0.1
+Starlink2004
+supervisor-3.0-py2.6.egg
+tcl
+apwlib
+cfitsio
+corr-0.6.7
+corr-0.7.3
+cppzmq.git
+h5py-2.2.0
+hdf5-1.8.11
+katcp-0.3.4
+katcp-0.3.5
+katcp-0.5.4
+libxs-1.0.1
+libzmq.git
+protobuf-2.4.1
+protobuf-2.5.0
+pyzmq-13.0.2
+pyzmq-2.2.0
+shm-1.2.2
+zeromq-2.2.0
+
+\end{verbatim}
+
+\end{document}

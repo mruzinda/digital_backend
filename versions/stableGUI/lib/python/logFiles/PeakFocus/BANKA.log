@@ -1,0 +1,920 @@
+New mode specified and/or bandwidth specified!
+set_mode(FLAG_CALCORR_MODE): Creating new BeamformerBackend
+ConfigFE: Adding flagr2-1
+ConfigFE: Adding flagr2-2
+ConfigFE: Adding flagr2-3
+ConfigFE: Adding flagr2-4
+ConfigFE: Adding flagr2-5
+
+ConfigFE: *** Configuring flagr2-1 ***
+ConfigFE: Setting FID as 0...
+ConfigFE: Resetting the GbE cores...
+ConfigFE: Configuring 10 GbE interfaces...
+ConfigFE: Writing fid...
+ConfigFE: Writing xid...
+ConfigFE: Writing destination port as: 60000
+ConfigFE: Writing destination IP addrs...
+ConfigFE: Packet stop enabled
+
+ConfigFE: *** Configuring flagr2-2 ***
+ConfigFE: Setting FID as 1...
+ConfigFE: Resetting the GbE cores...
+ConfigFE: Configuring 10 GbE interfaces...
+ConfigFE: Writing fid...
+ConfigFE: Writing xid...
+ConfigFE: Writing destination port as: 60000
+ConfigFE: Writing destination IP addrs...
+ConfigFE: Packet stop enabled
+
+ConfigFE: *** Configuring flagr2-3 ***
+ConfigFE: Setting FID as 2...
+ConfigFE: Resetting the GbE cores...
+ConfigFE: Configuring 10 GbE interfaces...
+ConfigFE: Writing fid...
+ConfigFE: Writing xid...
+ConfigFE: Writing destination port as: 60000
+ConfigFE: Writing destination IP addrs...
+ConfigFE: Packet stop enabled
+
+ConfigFE: *** Configuring flagr2-4 ***
+ConfigFE: Setting FID as 3...
+ConfigFE: Resetting the GbE cores...
+ConfigFE: Configuring 10 GbE interfaces...
+ConfigFE: Writing fid...
+ConfigFE: Writing xid...
+ConfigFE: Writing destination port as: 60000
+ConfigFE: Writing destination IP addrs...
+ConfigFE: Packet stop enabled
+
+ConfigFE: *** Configuring flagr2-5 ***
+ConfigFE: Setting FID as 4...
+ConfigFE: Resetting the GbE cores...
+ConfigFE: Configuring 10 GbE interfaces...
+ConfigFE: Writing fid...
+ConfigFE: Writing xid...
+ConfigFE: Writing destination port as: 60000
+ConfigFE: Writing destination IP addrs...
+ConfigFE: Packet stop enabled
+BFBE: Backend():: Setting self.frequency to 1500.0
+
+BFBE: FlagPole:: Initializing shmem...
+BFBE: FlagPole:: instance_id=0
+BFBE: FlagPole:: status_key=401997c4
+BFBE: FlagPole:: status_semid: users_mburnett_hashpipe_status_0
+hashpipe -p flag_x -I 0 -o BINDHOST=10.17.16.200 -o BINDPORT=60000 -o XID=0 -o GPUDEV=0 -o DATADIR=/lustre/projects/flag/ -o PROJID=TMP -o MODENAME=FLAG_CALCORR_MODE -o COVMODE=PAF_CAL -c 0 flag_net_thread -c 1 flag_transpose_thread -c 2 flag_correlator_thread
+initing  thread 'flag_net_thread' with databufs 0 and 1
+initing  thread 'flag_transpose_thread' with databufs 1 and 2
+initing  thread 'flag_correlator_thread' with databufs 2 and 3
+starting thread 'flag_correlator_thread' with databufs 2 and 3
+Found device 0: GeForce GTX 980 Ti
+Found device 1: GeForce GTX 980 Ti
+Using device 0: GeForce GTX 980 Ti
+starting thread 'flag_transpose_thread' with databufs 1 and 2
+starting thread 'flag_net_thread' with databufs 0 and 1
+NET: Starting Thread!!!
+BFBE: Command to fits writer >> /home/groups/flag/dibas/exec/x86_64-linux/bfFitsWriter -i 0 -m c
+set_mode(FLAG_CALCORR_MODE): beginning wait for DAQ program
+RUNNING PAF MODE
+/tmp/fits_fifo_mburnett_0
+Using FITS Control FIFO: /tmp/fits_fifo_mburnett_0
+bfFitsWrite started
+set_mode(FLAG_CALCORR_MODE): wait for DAQ program ended.
+[2017, 5, 24, 20, 46, 8, 0]
+BFBE: TSTAMP  2017_05_24_20:46:08
+BFBE: Writing CHANSEL=0
+BFBE: Weight file name unchanged.
+BFBE:  2017-05-24 20:45:35.444049 2017-05-24 20:46:08
+Net: Ending scan after mcnt = 455625
+NET: Moving back to ACQUIRE!
+BFBE: Sleeping for 31.625119 seconds...
+Start observations
+BfFitsThread::run, instance_id = 0
+HPC[20:45:35]:shmget key: 401997c4
+HPC[20:45:35]:vegas_status_attach sem_open w/ /users_mburnett_hashpipe_status_0
+HPC[20:45:35]:bf_databuf shmget key: 801997c4
+HPC[20:45:35]:Setting bank name to A
+status_buf: INSTANCE=                    0                                                  BANKNAM = 'A       '                                                            BINDHOST= '10.17.16.200'                                                        BINDPORT=                60000                                                  XID     = '0       '                                                            GPUDEV  =                    0                                                  DATADIR = '/lustre/projects/flag/'                                              PROJID  = 'TPAF17_1_05'                                                         MODENAME= 'FLAG_CALCORR_MODE'                                                   COVMODE = 'PAF_CAL '                                                            NETSTAT = 'ACQUIRE '                                                            TRASTAT = 'init    '                                                            CORSTAT = 'init    '                                                            INTSTAT = 'start   '                                                            INTSYNC =                    0                                                  REQSTI  = '0.5     '                                                            ACTSTI  =             0.000000                                                  INTCOUNT=                    1                                                  CORREADY=                    1                                                  TRAREADY=                    1                                                  NETREADY=                    T                                                  MISSEDFE=                    0                                                  MISSEDPK=                    0                                                  CLEANA  =                    T                                                  CLEANB  =                    T                                                  NETMCNT =                    0                                                  STRTDMJD= '57897.8653704'                                                       SCANLEN = '30.0    '                                                            TSTAMP  = '2017_05_24_20:46:08'                                                 WFLAG   = '0       '                                                            BWEIFILE= ''                                                                    CHANSEL = '0       '                                                            DISKSTAT= 'Init    '                                                            END                                                                                                                                                                                                                                             
+HPC[20:45:35]:NCHAN not set in status memory
+HPC[20:45:35]:FITS: Received TSTAMP = 2017_05_24_20:46:08
+HPC[20:45:35]:FITS: Filename Stage 1: /lustre/projects/flag//TPAF17_1_05/BF/2017_05_24_20:46:08
+HPC[20:45:35]:FITS: Filename Stage 2: /lustre/projects/flag//TPAF17_1_05/BF/2017_05_24_20:46:08A
+HPC[20:45:35]:FITS: Filename Stage 3: /lustre/projects/flag//TPAF17_1_05/BF/2017_05_24_20:46:08A.fits
+HPC[20:45:35]:Opening file: /lustre/projects/flag//TPAF17_1_05/BF/2017_05_24_20:46:08A.fits
+HPC[20:45:35]:/lustre/projects/flag//TPAF17_1_05/BF/2017_05_24_20:46:08A.fits
+fitsio opened
+SCANLEN: 30
+BFBE: Arming Roaches...
+BFPBE: Sending sync pule to flagr2-1
+BFPBE: Sending sync pule to flagr2-2
+BFPBE: Sending sync pule to flagr2-3
+BFPBE: Sending sync pule to flagr2-4
+BFPBE: Sending sync pule to flagr2-5
+mcnt: 0
+mcnt: 7600
+mcnt: 15200
+mcnt: 22800
+mcnt: 30400
+mcnt: 38000
+mcnt: 45600
+mcnt: 53200
+mcnt: 60800
+mcnt: 68400
+mcnt: 76000
+mcnt: 83600
+mcnt: 91200
+mcnt: 98800
+mcnt: 106400
+mcnt: 114000
+mcnt: 121600
+mcnt: 129200
+mcnt: 136800
+mcnt: 144400
+mcnt: 152000
+mcnt: 159600
+mcnt: 167200
+mcnt: 174800
+mcnt: 182400
+mcnt: 190000
+mcnt: 197600
+mcnt: 205200
+mcnt: 212800
+mcnt: 220400
+mcnt: 228000
+mcnt: 235600
+mcnt: 243200
+mcnt: 250800
+mcnt: 258400
+mcnt: 266000
+mcnt: 273600
+mcnt: 281200
+mcnt: 288800
+mcnt: 296400
+mcnt: 304000
+mcnt: 311600
+mcnt: 319200
+mcnt: 326800
+mcnt: 334400
+mcnt: 342000
+mcnt: 349600
+mcnt: 357200
+mcnt: 364800
+mcnt: 372400
+mcnt: 380000
+mcnt: 387600
+mcnt: 395200
+mcnt: 402800
+mcnt: 410400
+mcnt: 418000
+mcnt: 425600
+mcnt: 433200
+mcnt: 440800
+mcnt: 448400
+NET: CLEANUP condition met!
+31.0
+NET: Informing other threads of cleanup condition
+NET: All other threads have been informed
+TRA: Entering CLEANUP state 
+TRA: Finished CLEANUP, returning to ACQUIRE
+COR: Cleanup condition met!
+COR: In Cleanup
+NET: CLEANUP complete; returning to IDLE
+BFBE: Stop data flow for roach flagr2-1Stop observations
+BfFitsThread::run exiting with scan_finished=1 run=1
+	We wrote 60 lines
+	It took an average of 245173.45 µs to complete each loop
+	It took an average of 2265.83 µs to write each row to FITS
+HPC[20:46:42]:BfFitsIO::close
+FITS: waiting for thread to join...
+FITS: thread has joined!
+bfFitsWriter exiting cleanly at Wed May 24 16:46:42 2017
+
+
+BFBE: Stop data flow for roach flagr2-2
+BFBE: Stop data flow for roach flagr2-3
+BFBE: Stop data flow for roach flagr2-4
+BFBE: Stop data flow for roach flagr2-5
+BFBE: Command to fits writer >> /home/groups/flag/dibas/exec/x86_64-linux/bfFitsWriter -i 0 -m c
+RUNNING PAF MODE
+/tmp/fits_fifo_mburnett_0
+Using FITS Control FIFO: /tmp/fits_fifo_mburnett_0
+bfFitsWrite started
+ [2017, 5, 24, 20, 47, 0, 0]
+BFBE: TSTAMP  2017_05_24_20:47:00
+BFBE: Writing CHANSEL=0
+BFBE: Weight file name unchanged.
+BFBE:  2017-05-24 20:46:48.708254 2017-05-24 20:47:00
+Net: Ending scan after mcnt = 455625
+NET: Moving back to ACQUIRE!
+BFBE: Sleeping for 10.345347 seconds...
+Start observations
+BfFitsThread::run, instance_id = 0
+HPC[20:46:48]:shmget key: 401997c4
+HPC[20:46:48]:vegas_status_attach sem_open w/ /users_mburnett_hashpipe_status_0
+HPC[20:46:48]:bf_databuf shmget key: 801997c4
+HPC[20:46:48]:Setting bank name to A
+status_buf: INSTANCE=                    0                                                  BANKNAM = 'A       '                                                            BINDHOST= '10.17.16.200'                                                        BINDPORT=                60000                                                  XID     = '0       '                                                            GPUDEV  =                    0                                                  DATADIR = '/lustre/projects/flag/'                                              PROJID  = 'TPAF17_1_05'                                                         MODENAME= 'FLAG_CALCORR_MODE'                                                   COVMODE = 'PAF_CAL '                                                            NETSTAT = 'ACQUIRE '                                                            TRASTAT = 'ACQUIRE '                                                            CORSTAT = 'ACQUIRE '                                                            INTSTAT = 'start   '                                                            INTSYNC =                    0                                                  REQSTI  = '0.5     '                                                            ACTSTI  =             0.500412                                                  INTCOUNT=                   38                                                  CORREADY=                    1                                                  TRAREADY=                    1                                                  NETREADY=                    T                                                  MISSEDFE=                    0                                                  MISSEDPK=                    0                                                  CLEANA  =                    T                                                  CLEANB  =                    T                                                  NETMCNT =                    0                                                  STRTDMJD= '57897.8659722'                                                       SCANLEN = '30.0    '                                                            TSTAMP  = '2017_05_24_20:47:00'                                                 WFLAG   = '0       '                                                            BWEIFILE= ''                                                                    CHANSEL = '0       '                                                            DISKSTAT= 'Init    '                                                            DSKBLKIN=                    0                                                  SCANREM = 'scan terminated'                                                     TRAMCNT =               455600                                                  CORMCNT =               455600                                                  NETERR  = 'Late Packet! - 473301'                                               END                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+HPC[20:46:48]:NCHAN not set in status memory
+HPC[20:46:48]:FITS: Received TSTAMP = 2017_05_24_20:47:00
+HPC[20:46:48]:FITS: Filename Stage 1: /lustre/projects/flag//TPAF17_1_05/BF/2017_05_24_20:47:00
+HPC[20:46:48]:FITS: Filename Stage 2: /lustre/projects/flag//TPAF17_1_05/BF/2017_05_24_20:47:00A
+HPC[20:46:48]:FITS: Filename Stage 3: /lustre/projects/flag//TPAF17_1_05/BF/2017_05_24_20:47:00A.fits
+HPC[20:46:48]:Opening file: /lustre/projects/flag//TPAF17_1_05/BF/2017_05_24_20:47:00A.fits
+HPC[20:46:48]:/lustre/projects/flag//TPAF17_1_05/BF/2017_05_24_20:47:00A.fits
+fitsio opened
+SCANLEN: 30
+BFBE: Arming Roaches...
+BFPBE: Sending sync pule to flagr2-1
+BFPBE: Sending sync pule to flagr2-2
+BFPBE: Sending sync pule to flagr2-3
+BFPBE: Sending sync pule to flagr2-4
+BFPBE: Sending sync pule to flagr2-5
+mcnt: 0
+mcnt: 7600
+mcnt: 15200
+mcnt: 22800
+mcnt: 30400
+mcnt: 38000
+mcnt: 45600
+mcnt: 53200
+mcnt: 60800
+mcnt: 68400
+mcnt: 76000
+mcnt: 83600
+mcnt: 91200
+mcnt: 98800
+mcnt: 106400
+mcnt: 114000
+mcnt: 121600
+mcnt: 129200
+mcnt: 136800
+mcnt: 144400
+mcnt: 152000
+mcnt: 159600
+mcnt: 167200
+mcnt: 174800
+mcnt: 182400
+mcnt: 190000
+mcnt: 197600
+mcnt: 205200
+mcnt: 212800
+mcnt: 220400
+mcnt: 228000
+mcnt: 235600
+mcnt: 243200
+mcnt: 250800
+mcnt: 258400
+mcnt: 266000
+mcnt: 273600
+mcnt: 281200
+mcnt: 288800
+mcnt: 296400
+mcnt: 304000
+mcnt: 311600
+mcnt: 319200
+mcnt: 326800
+mcnt: 334400
+mcnt: 342000
+mcnt: 349600
+mcnt: 357200
+mcnt: 364800
+mcnt: 372400
+mcnt: 380000
+mcnt: 387600
+mcnt: 395200
+mcnt: 402800
+mcnt: 410400
+mcnt: 418000
+mcnt: 425600
+mcnt: 433200
+mcnt: 440800
+mcnt: 448400
+NET: CLEANUP condition met!
+31.0
+NET: Informing other threads of cleanup condition
+NET: All other threads have been informed
+TRA: Entering CLEANUP state 
+TRA: Finished CLEANUP, returning to ACQUIRE
+COR: Cleanup condition met!
+COR: In Cleanup
+NET: CLEANUP complete; returning to IDLE
+Stop observations
+FITS: waiting for thread to join...
+BfFitsThread::run exiting with scan_finished=1 run=0
+	We wrote 60 lines
+	It took an average of 245910.34 µs to complete each loop
+	It took an average of 2327.25 µs to write each row to FITS
+HPC[20:47:34]:BfFitsIO::close
+FITS: thread has joined!
+bfFitsWriter exiting cleanly at Wed May 24 16:47:34 2017
+
+BFBE: Stop data flow for roach flagr2-1
+BFBE: Stop data flow for roach flagr2-2
+BFBE: Stop data flow for roach flagr2-3
+BFBE: Stop data flow for roach flagr2-4
+BFBE: Stop data flow for roach flagr2-5
+BFBE: Command to fits writer >> /home/groups/flag/dibas/exec/x86_64-linux/bfFitsWriter -i 0 -m c
+RUNNING PAF MODE
+/tmp/fits_fifo_mburnett_0
+Using FITS Control FIFO: /tmp/fits_fifo_mburnett_0
+bfFitsWrite started
+[2017, 5, 24, 20, 48, 31, 0]
+BFBE: TSTAMP  2017_05_24_20:48:31
+BFBE: Writing CHANSEL=0
+BFBE: Weight file name unchanged.
+BFBE:  2017-05-24 20:48:04.446619 2017-05-24 20:48:31
+Net: Ending scan after mcnt = 455625
+NET: Moving back to ACQUIRE!
+BFBE: Sleeping for 25.613196 seconds...
+Start observations
+BfFitsThread::run, instance_id = 0
+HPC[20:48:4]:shmget key: 401997c4
+HPC[20:48:4]:vegas_status_attach sem_open w/ /users_mburnett_hashpipe_status_0
+HPC[20:48:4]:Found vegas status semaphore locked in vegas_status_chkinit. releasing
+HPC[20:48:4]:bf_databuf shmget key: 801997c4
+HPC[20:48:4]:Setting bank name to A
+status_buf: INSTANCE=                    0                                                  BANKNAM = 'A       '                                                            BINDHOST= '10.17.16.200'                                                        BINDPORT=                60000                                                  XID     = '0       '                                                            GPUDEV  =                    0                                                  DATADIR = '/lustre/projects/flag/'                                              PROJID  = 'TPAF17_1_05'                                                         MODENAME= 'FLAG_CALCORR_MODE'                                                   COVMODE = 'PAF_CAL '                                                            NETSTAT = 'ACQUIRE '                                                            TRASTAT = 'ACQUIRE '                                                            CORSTAT = 'ACQUIRE '                                                            INTSTAT = 'start   '                                                            INTSYNC =                    0                                                  REQSTI  = '0.5     '                                                            ACTSTI  =             0.500412                                                  INTCOUNT=                   38                                                  CORREADY=                    1                                                  TRAREADY=                    1                                                  NETREADY=                    T                                                  MISSEDFE=                    0                                                  MISSEDPK=                    0                                                  CLEANA  =                    T                                                  CLEANB  =                    T                                                  NETMCNT =                    0                                                  STRTDMJD= '57897.8670255'                                                       SCANLEN = '30.0    '                                                            TSTAMP  = '2017_05_24_20:48:31'                                                 WFLAG   = '0       '                                                            BWEIFILE= ''                                                                    CHANSEL = '0       '                                                            DISKSTAT= 'Init    '                                                            DSKBLKIN=                    0                                                  SCANREM = 'scan terminated'                                                     TRAMCNT =               455600                                                  CORMCNT =               455600                                                  NETERR  = 'Late Packet! - 473000'                                               END                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+HPC[20:48:4]:NCHAN not set in status memory
+HPC[20:48:4]:FITS: Received TSTAMP = 2017_05_24_20:48:31
+HPC[20:48:4]:FITS: Filename Stage 1: /lustre/projects/flag//TPAF17_1_05/BF/2017_05_24_20:48:31
+HPC[20:48:4]:FITS: Filename Stage 2: /lustre/projects/flag//TPAF17_1_05/BF/2017_05_24_20:48:31A
+HPC[20:48:4]:FITS: Filename Stage 3: /lustre/projects/flag//TPAF17_1_05/BF/2017_05_24_20:48:31A.fits
+HPC[20:48:4]:Opening file: /lustre/projects/flag//TPAF17_1_05/BF/2017_05_24_20:48:31A.fits
+HPC[20:48:4]:/lustre/projects/flag//TPAF17_1_05/BF/2017_05_24_20:48:31A.fits
+fitsio opened
+SCANLEN: 30
+BFBE: Arming Roaches...
+BFPBE: Sending sync pule to flagr2-1
+BFPBE: Sending sync pule to flagr2-2
+BFPBE: Sending sync pule to flagr2-3
+BFPBE: Sending sync pule to flagr2-4
+BFPBE: Sending sync pule to flagr2-5
+mcnt: 0
+mcnt: 7600
+mcnt: 15200
+mcnt: 22800
+mcnt: 30400
+mcnt: 38000
+mcnt: 45600
+mcnt: 53200
+mcnt: 60800
+mcnt: 68400
+mcnt: 76000
+mcnt: 83600
+mcnt: 91200
+mcnt: 98800
+mcnt: 106400
+mcnt: 114000
+mcnt: 121600
+mcnt: 129200
+mcnt: 136800
+mcnt: 144400
+mcnt: 152000
+mcnt: 159600
+mcnt: 167200
+mcnt: 174800
+mcnt: 182400
+mcnt: 190000
+mcnt: 197600
+mcnt: 205200
+mcnt: 212800
+mcnt: 220400
+mcnt: 228000
+mcnt: 235600
+mcnt: 243200
+mcnt: 250800
+mcnt: 258400
+mcnt: 266000
+mcnt: 273600
+mcnt: 281200
+mcnt: 288800
+mcnt: 296400
+mcnt: 304000
+mcnt: 311600
+mcnt: 319200
+mcnt: 326800
+mcnt: 334400
+mcnt: 342000
+mcnt: 349600
+mcnt: 357200
+mcnt: 364800
+mcnt: 372400
+mcnt: 380000
+mcnt: 387600
+mcnt: 395200
+mcnt: 402800
+mcnt: 410400
+mcnt: 418000
+mcnt: 425600
+mcnt: 433200
+mcnt: 440800
+mcnt: 448400
+NET: CLEANUP condition met!
+31.0
+NET: Informing other threads of cleanup condition
+NET: All other threads have been informed
+TRA: Entering CLEANUP state 
+TRA: Finished CLEANUP, returning to ACQUIRE
+COR: Cleanup condition met!
+COR: In Cleanup
+NET: CLEANUP complete; returning to IDLE
+BFBE: Stop data flow for roach flagr2-1
+Stop observations
+BfFitsThread::run exiting with scan_finished=1 run=1
+	We wrote 60 lines
+	It took an average of 249502.85 µs to complete each loop
+	It took an average of 2824.99 µs to write each row to FITS
+HPC[20:49:5]:BfFitsIO::close
+FITS: waiting for thread to join...
+FITS: thread has joined!
+bfFitsWriter exiting cleanly at Wed May 24 16:49:05 2017
+
+BFBE: Stop data flow for roach flagr2-2
+BFBE: Stop data flow for roach flagr2-3
+BFBE: Stop data flow for roach flagr2-4
+BFBE: Stop data flow for roach flagr2-5
+BFBE: Command to fits writer >> /home/groups/flag/dibas/exec/x86_64-linux/bfFitsWriter -i 0 -m c
+RUNNING PAF MODE
+/tmp/fits_fifo_mburnett_0
+Using FITS Control FIFO: /tmp/fits_fifo_mburnett_0
+bfFitsWrite started
+ [2017, 5, 24, 20, 49, 15, 0]
+BFBE: TSTAMP  2017_05_24_20:49:15
+BFBE: Writing CHANSEL=0
+BFBE: Weight file name unchanged.
+BFBE:  2017-05-24 20:49:07.580423 2017-05-24 20:49:15
+Net: Ending scan after mcnt = 455625
+NET: Moving back to ACQUIRE!
+BFBE: Sleeping for 6.478594 seconds...
+Start observations
+BfFitsThread::run, instance_id = 0
+HPC[20:49:7]:shmget key: 401997c4
+HPC[20:49:7]:vegas_status_attach sem_open w/ /users_mburnett_hashpipe_status_0
+HPC[20:49:7]:bf_databuf shmget key: 801997c4
+HPC[20:49:7]:Setting bank name to A
+status_buf: INSTANCE=                    0                                                  BANKNAM = 'A       '                                                            BINDHOST= '10.17.16.200'                                                        BINDPORT=                60000                                                  XID     = '0       '                                                            GPUDEV  =                    0                                                  DATADIR = '/lustre/projects/flag/'                                              PROJID  = 'TPAF17_1_05'                                                         MODENAME= 'FLAG_CALCORR_MODE'                                                   COVMODE = 'PAF_CAL '                                                            NETSTAT = 'ACQUIRE '                                                            TRASTAT = 'ACQUIRE '                                                            CORSTAT = 'ACQUIRE '                                                            INTSTAT = 'start   '                                                            INTSYNC =                    0                                                  REQSTI  = '0.5     '                                                            ACTSTI  =             0.500412                                                  INTCOUNT=                   38                                                  CORREADY=                    1                                                  TRAREADY=                    1                                                  NETREADY=                    T                                                  MISSEDFE=                    0                                                  MISSEDPK=                    0                                                  CLEANA  =                    T                                                  CLEANB  =                    T                                                  NETMCNT =                    0                                                  STRTDMJD= '57897.8675347'                                                       SCANLEN = '30.0    '                                                            TSTAMP  = '2017_05_24_20:49:15'                                                 WFLAG   = '0       '                                                            BWEIFILE= ''                                                                    CHANSEL = '0       '                                                            DISKSTAT= 'Init    '                                                            DSKBLKIN=                    0                                                  SCANREM = 'scan terminated'                                                     TRAMCNT =               455600                                                  CORMCNT =               455600                                                  NETERR  = 'Late Packet! - 473072'                                               END                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+HPC[20:49:7]:NCHAN not set in status memory
+HPC[20:49:7]:FITS: Received TSTAMP = 2017_05_24_20:49:15
+HPC[20:49:7]:FITS: Filename Stage 1: /lustre/projects/flag//TPAF17_1_05/BF/2017_05_24_20:49:15
+HPC[20:49:7]:FITS: Filename Stage 2: /lustre/projects/flag//TPAF17_1_05/BF/2017_05_24_20:49:15A
+HPC[20:49:7]:FITS: Filename Stage 3: /lustre/projects/flag//TPAF17_1_05/BF/2017_05_24_20:49:15A.fits
+HPC[20:49:7]:Opening file: /lustre/projects/flag//TPAF17_1_05/BF/2017_05_24_20:49:15A.fits
+HPC[20:49:7]:/lustre/projects/flag//TPAF17_1_05/BF/2017_05_24_20:49:15A.fits
+fitsio opened
+SCANLEN: 30
+BFBE: Arming Roaches...
+BFPBE: Sending sync pule to flagr2-1
+BFPBE: Sending sync pule to flagr2-2
+BFPBE: Sending sync pule to flagr2-3
+BFPBE: Sending sync pule to flagr2-4
+BFPBE: Sending sync pule to flagr2-5
+mcnt: 0
+mcnt: 7600
+mcnt: 15200
+mcnt: 22800
+mcnt: 30400
+mcnt: 38000
+mcnt: 45600
+mcnt: 53200
+mcnt: 60800
+mcnt: 68400
+mcnt: 76000
+mcnt: 83600
+mcnt: 91200
+mcnt: 98800
+mcnt: 106400
+mcnt: 114000
+mcnt: 121600
+mcnt: 129200
+mcnt: 136800
+mcnt: 144400
+mcnt: 152000
+mcnt: 159600
+mcnt: 167200
+mcnt: 174800
+mcnt: 182400
+mcnt: 190000
+mcnt: 197600
+mcnt: 205200
+mcnt: 212800
+mcnt: 220400
+mcnt: 228000
+mcnt: 235600
+mcnt: 243200
+mcnt: 250800
+mcnt: 258400
+mcnt: 266000
+mcnt: 273600
+mcnt: 281200
+mcnt: 288800
+mcnt: 296400
+mcnt: 304000
+mcnt: 311600
+mcnt: 319200
+mcnt: 326800
+mcnt: 334400
+mcnt: 342000
+mcnt: 349600
+mcnt: 357200
+mcnt: 364800
+mcnt: 372400
+mcnt: 380000
+mcnt: 387600
+mcnt: 395200
+mcnt: 402800
+mcnt: 410400
+mcnt: 418000
+mcnt: 425600
+mcnt: 433200
+mcnt: 440800
+mcnt: 448400
+NET: CLEANUP condition met!
+31.0
+NET: Informing other threads of cleanup condition
+NET: All other threads have been informed
+TRA: Entering CLEANUP state 
+TRA: Finished CLEANUP, returning to ACQUIRE
+COR: Cleanup condition met!
+COR: In Cleanup
+NET: CLEANUP complete; returning to IDLE
+Stop observations
+BfFitsThread::run exiting with scan_finished=1 run=1
+	We wrote 60 lines
+	It took an average of 248667.65 µs to complete each loop
+	It took an average of 3023.24 µs to write each row to FITS
+HPC[20:49:49]:BfFitsIO::close
+FITS: waiting for thread to join...
+FITS: thread has joined!
+bfFitsWriter exiting cleanly at Wed May 24 16:49:49 2017
+
+BFBE: Stop data flow for roach flagr2-1
+BFBE: Stop data flow for roach flagr2-2
+BFBE: Stop data flow for roach flagr2-3
+BFBE: Stop data flow for roach flagr2-4
+BFBE: Stop data flow for roach flagr2-5
+BFBE: Command to fits writer >> /home/groups/flag/dibas/exec/x86_64-linux/bfFitsWriter -i 0 -m c
+RUNNING PAF MODE
+/tmp/fits_fifo_mburnett_0
+Using FITS Control FIFO: /tmp/fits_fifo_mburnett_0
+bfFitsWrite started
+[2017, 5, 24, 20, 53, 48, 0]
+BFBE: TSTAMP  2017_05_24_20:53:48
+BFBE: Writing CHANSEL=0
+BFBE: Weight file name unchanged.
+BFBE:  2017-05-24 20:53:43.716811 2017-05-24 20:53:48
+Net: Ending scan after mcnt = 911250
+NET: Moving back to ACQUIRE!
+BFBE: Sleeping for 3.342862 seconds...
+Start observations
+BfFitsThread::run, instance_id = 0
+HPC[20:53:43]:shmget key: 401997c4
+HPC[20:53:43]:vegas_status_attach sem_open w/ /users_mburnett_hashpipe_status_0
+HPC[20:53:43]:bf_databuf shmget key: 801997c4
+HPC[20:53:43]:Setting bank name to A
+status_buf: INSTANCE=                    0                                                  BANKNAM = 'A       '                                                            BINDHOST= '10.17.16.200'                                                        BINDPORT=                60000                                                  XID     = '0       '                                                            GPUDEV  =                    0                                                  DATADIR = '/lustre/projects/flag/'                                              PROJID  = 'TPAF17_1_05'                                                         MODENAME= 'FLAG_CALCORR_MODE'                                                   COVMODE = 'PAF_CAL '                                                            NETSTAT = 'ACQUIRE '                                                            TRASTAT = 'ACQUIRE '                                                            CORSTAT = 'ACQUIRE '                                                            INTSTAT = 'start   '                                                            INTSYNC =                    0                                                  REQSTI  = '0.5     '                                                            ACTSTI  =             0.500412                                                  INTCOUNT=                   38                                                  CORREADY=                    1                                                  TRAREADY=                    1                                                  NETREADY=                    T                                                  MISSEDFE=                    0                                                  MISSEDPK=                    0                                                  CLEANA  =                    T                                                  CLEANB  =                    T                                                  NETMCNT =                    0                                                  STRTDMJD= '57897.8706944'                                                       SCANLEN = '60.0    '                                                            TSTAMP  = '2017_05_24_20:53:48'                                                 WFLAG   = '0       '                                                            BWEIFILE= ''                                                                    CHANSEL = '0       '                                                            DISKSTAT= 'Init    '                                                            DSKBLKIN=                    0                                                  SCANREM = 'scan terminated'                                                     TRAMCNT =               455600                                                  CORMCNT =               455600                                                  NETERR  = 'Late Packet! - 472941'                                               END                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+HPC[20:53:43]:NCHAN not set in status memory
+HPC[20:53:43]:FITS: Received TSTAMP = 2017_05_24_20:53:48
+HPC[20:53:43]:FITS: Filename Stage 1: /lustre/projects/flag//TPAF17_1_05/BF/2017_05_24_20:53:48
+HPC[20:53:43]:FITS: Filename Stage 2: /lustre/projects/flag//TPAF17_1_05/BF/2017_05_24_20:53:48A
+HPC[20:53:43]:FITS: Filename Stage 3: /lustre/projects/flag//TPAF17_1_05/BF/2017_05_24_20:53:48A.fits
+HPC[20:53:43]:Opening file: /lustre/projects/flag//TPAF17_1_05/BF/2017_05_24_20:53:48A.fits
+HPC[20:53:43]:/lustre/projects/flag//TPAF17_1_05/BF/2017_05_24_20:53:48A.fits
+fitsio opened
+SCANLEN: 60
+BFBE: Arming Roaches...
+BFPBE: Sending sync pule to flagr2-1
+BFPBE: Sending sync pule to flagr2-2
+BFPBE: Sending sync pule to flagr2-3
+BFPBE: Sending sync pule to flagr2-4
+BFPBE: Sending sync pule to flagr2-5
+mcnt: 0
+mcnt: 7600
+mcnt: 15200
+mcnt: 22800
+mcnt: 30400
+mcnt: 38000
+mcnt: 45600
+mcnt: 53200
+mcnt: 60800
+mcnt: 68400
+mcnt: 76000
+mcnt: 83600
+mcnt: 91200
+mcnt: 98800
+mcnt: 106400
+mcnt: 114000
+mcnt: 121600
+mcnt: 129200
+mcnt: 136800
+mcnt: 144400
+mcnt: 152000
+mcnt: 159600
+mcnt: 167200
+mcnt: 174800
+mcnt: 182400
+mcnt: 190000
+mcnt: 197600
+mcnt: 205200
+mcnt: 212800
+mcnt: 220400
+mcnt: 228000
+mcnt: 235600
+mcnt: 243200
+mcnt: 250800
+mcnt: 258400
+mcnt: 266000
+mcnt: 273600
+mcnt: 281200
+mcnt: 288800
+mcnt: 296400
+mcnt: 304000
+mcnt: 311600
+mcnt: 319200
+mcnt: 326800
+mcnt: 334400
+mcnt: 342000
+mcnt: 349600
+mcnt: 357200
+mcnt: 364800
+mcnt: 372400
+mcnt: 380000
+mcnt: 387600
+mcnt: 395200
+mcnt: 402800
+mcnt: 410400
+mcnt: 418000
+mcnt: 425600
+mcnt: 433200
+mcnt: 440800
+mcnt: 448400
+mcnt: 456000
+mcnt: 463600
+mcnt: 471200
+mcnt: 478800
+mcnt: 486400
+mcnt: 494000
+mcnt: 501600
+mcnt: 509200
+mcnt: 516800
+mcnt: 524400
+mcnt: 532000
+mcnt: 539600
+mcnt: 547200
+mcnt: 554800
+mcnt: 562400
+mcnt: 570000
+mcnt: 577600
+mcnt: 585200
+mcnt: 592800
+mcnt: 600400
+mcnt: 608000
+mcnt: 615600
+mcnt: 623200
+mcnt: 630800
+mcnt: 638400
+mcnt: 646000
+mcnt: 653600
+mcnt: 661200
+mcnt: 668800
+mcnt: 676400
+mcnt: 684000
+mcnt: 691600
+mcnt: 699200
+mcnt: 706800
+mcnt: 714400
+mcnt: 722000
+mcnt: 729600
+mcnt: 737200
+mcnt: 744800
+mcnt: 752400
+mcnt: 760000
+mcnt: 767600
+mcnt: 775200
+mcnt: 782800
+mcnt: 790400
+mcnt: 798000
+mcnt: 805600
+mcnt: 813200
+mcnt: 820800
+mcnt: 828400
+mcnt: 836000
+mcnt: 843600
+mcnt: 851200
+mcnt: 858800
+mcnt: 866400
+mcnt: 874000
+mcnt: 881600
+mcnt: 889200
+mcnt: 896800
+mcnt: 904400
+NET: CLEANUP condition met!
+61.0
+NET: Informing other threads of cleanup condition
+NET: All other threads have been informed
+TRA: Entering CLEANUP state 
+TRA: Finished CLEANUP, returning to ACQUIRE
+COR: Cleanup condition met!
+COR: In Cleanup
+NET: CLEANUP complete; returning to IDLE
+BFBE: Stop data flow for roach flagr2-1
+Stop observations
+BfFitsThread::run exiting with scan_finished=1 run=1
+	We wrote 120 lines
+	It took an average of 248231.68 µs to complete each loop
+	It took an average of 2864.26 µs to write each row to FITS
+HPC[20:54:52]:BfFitsIO::close
+FITS: waiting for thread to join...
+FITS: thread has joined!
+bfFitsWriter exiting cleanly at Wed May 24 16:54:52 2017
+
+BFBE: Stop data flow for roach flagr2-2
+BFBE: Stop data flow for roach flagr2-3
+BFBE: Stop data flow for roach flagr2-4
+BFBE: Stop data flow for roach flagr2-5
+BFBE: Command to fits writer >> /home/groups/flag/dibas/exec/x86_64-linux/bfFitsWriter -i 0 -m c
+RUNNING PAF MODE
+/tmp/fits_fifo_mburnett_0
+Using FITS Control FIFO: /tmp/fits_fifo_mburnett_0
+bfFitsWrite started
+[2017, 5, 24, 21, 8, 20, 0]
+BFBE: TSTAMP  2017_05_24_21:08:20
+BFBE: Writing CHANSEL=0
+BFBE: Weight file name unchanged.
+BFBE:  2017-05-24 21:07:51.206589 2017-05-24 21:08:20
+Net: Ending scan after mcnt = 911250
+NET: Moving back to ACQUIRE!
+Start observations
+BFBE: Sleeping for 27.847624 seconds...
+BfFitsThread::run, instance_id = 0
+HPC[21:7:51]:shmget key: 401997c4
+HPC[21:7:51]:vegas_status_attach sem_open w/ /users_mburnett_hashpipe_status_0
+HPC[21:7:51]:bf_databuf shmget key: 801997c4
+HPC[21:7:51]:Setting bank name to A
+status_buf: INSTANCE=                    0                                                  BANKNAM = 'A       '                                                            BINDHOST= '10.17.16.200'                                                        BINDPORT=                60000                                                  XID     = '0       '                                                            GPUDEV  =                    0                                                  DATADIR = '/lustre/projects/flag/'                                              PROJID  = 'TPAF17_1_05'                                                         MODENAME= 'FLAG_CALCORR_MODE'                                                   COVMODE = 'PAF_CAL '                                                            NETSTAT = 'ACQUIRE '                                                            TRASTAT = 'ACQUIRE '                                                            CORSTAT = 'ACQUIRE '                                                            INTSTAT = 'start   '                                                            INTSYNC =                    0                                                  REQSTI  = '0.5     '                                                            ACTSTI  =             0.500412                                                  INTCOUNT=                   38                                                  CORREADY=                    1                                                  TRAREADY=                    1                                                  NETREADY=                    T                                                  MISSEDFE=                    0                                                  MISSEDPK=                    0                                                  CLEANA  =                    T                                                  CLEANB  =                    T                                                  NETMCNT =                    0                                                  STRTDMJD= '57897.880787'                                                        SCANLEN = '60.0    '                                                            TSTAMP  = '2017_05_24_21:08:20'                                                 WFLAG   = '0       '                                                            BWEIFILE= ''                                                                    CHANSEL = '0       '                                                            DISKSTAT= 'Init    '                                                            DSKBLKIN=                    0                                                  SCANREM = 'scan terminated'                                                     TRAMCNT =               911200                                                  CORMCNT =               911200                                                  NETERR  = 'Late Packet! - 928472'                                               END                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+HPC[21:7:51]:NCHAN not set in status memory
+HPC[21:7:51]:FITS: Received TSTAMP = 2017_05_24_21:08:20
+HPC[21:7:51]:FITS: Filename Stage 1: /lustre/projects/flag//TPAF17_1_05/BF/2017_05_24_21:08:20
+HPC[21:7:51]:FITS: Filename Stage 2: /lustre/projects/flag//TPAF17_1_05/BF/2017_05_24_21:08:20A
+HPC[21:7:51]:FITS: Filename Stage 3: /lustre/projects/flag//TPAF17_1_05/BF/2017_05_24_21:08:20A.fits
+HPC[21:7:51]:Opening file: /lustre/projects/flag//TPAF17_1_05/BF/2017_05_24_21:08:20A.fits
+HPC[21:7:51]:/lustre/projects/flag//TPAF17_1_05/BF/2017_05_24_21:08:20A.fits
+fitsio opened
+SCANLEN: 60
+BFBE: Arming Roaches...
+BFPBE: Sending sync pule to flagr2-1
+BFPBE: Sending sync pule to flagr2-2
+BFPBE: Sending sync pule to flagr2-3
+BFPBE: Sending sync pule to flagr2-4
+BFPBE: Sending sync pule to flagr2-5
+mcnt: 0
+mcnt: 7600
+1.54945054945
+mcnt: 15200
+mcnt: 22800
+mcnt: 30400
+mcnt: 38000
+mcnt: 45600
+mcnt: 53200
+mcnt: 60800
+mcnt: 68400
+mcnt: 76000
+mcnt: 83600
+mcnt: 91200
+mcnt: 98800
+mcnt: 106400
+mcnt: 114000
+mcnt: 121600
+mcnt: 129200
+mcnt: 136800
+mcnt: 144400
+mcnt: 152000
+mcnt: 159600
+mcnt: 167200
+mcnt: 174800
+mcnt: 182400
+mcnt: 190000
+mcnt: 197600
+mcnt: 205200
+mcnt: 212800
+mcnt: 220400
+mcnt: 228000
+mcnt: 235600
+mcnt: 243200
+mcnt: 250800
+mcnt: 258400
+mcnt: 266000
+mcnt: 273600
+mcnt: 281200
+mcnt: 288800
+mcnt: 296400
+mcnt: 304000
+mcnt: 311600
+mcnt: 319200
+mcnt: 326800
+mcnt: 334400
+mcnt: 342000
+mcnt: 349600
+mcnt: 357200
+mcnt: 364800
+mcnt: 372400
+mcnt: 380000
+mcnt: 387600
+mcnt: 395200
+mcnt: 402800
+mcnt: 410400
+mcnt: 418000
+mcnt: 425600
+mcnt: 433200
+mcnt: 440800
+mcnt: 448400
+mcnt: 456000
+mcnt: 463600
+mcnt: 471200
+mcnt: 478800
+mcnt: 486400
+mcnt: 494000
+mcnt: 501600
+mcnt: 509200
+mcnt: 516800
+mcnt: 524400
+mcnt: 532000
+mcnt: 539600
+mcnt: 547200
+mcnt: 554800
+mcnt: 562400
+mcnt: 570000
+mcnt: 577600
+mcnt: 585200
+mcnt: 592800
+mcnt: 600400
+mcnt: 608000
+mcnt: 615600
+mcnt: 623200
+mcnt: 630800
+mcnt: 638400
+mcnt: 646000
+mcnt: 653600
+mcnt: 661200
+mcnt: 668800
+mcnt: 676400
+mcnt: 684000
+mcnt: 691600
+mcnt: 699200
+mcnt: 706800
+mcnt: 714400
+mcnt: 722000
+mcnt: 729600
+mcnt: 737200
+mcnt: 744800
+mcnt: 752400
+mcnt: 760000
+mcnt: 767600
+mcnt: 775200
+mcnt: 782800
+mcnt: 790400
+mcnt: 798000
+mcnt: 805600
+mcnt: 813200
+mcnt: 820800
+mcnt: 828400
+mcnt: 836000
+mcnt: 843600
+mcnt: 851200
+mcnt: 858800
+mcnt: 866400
+mcnt: 874000
+mcnt: 881600
+mcnt: 889200
+mcnt: 896800
+mcnt: 904400
+NET: CLEANUP condition met!
+NET: Informing other threads of cleanup condition
+NET: All other threads have been informed
+TRA: Entering CLEANUP state 
+TRA: Finished CLEANUP, returning to ACQUIRE
+COR: Cleanup condition met!
+COR: In Cleanup
+NET: CLEANUP complete; returning to IDLE
+BFBE: Stop data flow for roach flagr2-1Stop observations
+BfFitsThread::run exiting with scan_finished=1 run=1
+	We wrote 120 lines
+	It took an average of 249612.00 µs to complete each loop
+	It took an average of 2499.80 µs to write each row to FITS
+HPC[21:9:24]:BfFitsIO::close
+FITS: waiting for thread to join...
+FITS: thread has joined!
+bfFitsWriter exiting cleanly at Wed May 24 17:09:24 2017
+
+
+BFBE: Stop data flow for roach flagr2-2
+BFBE: Stop data flow for roach flagr2-3
+BFBE: Stop data flow for roach flagr2-4
+BFBE: Stop data flow for roach flagr2-5
+BFBE: Command to fits writer >> /home/groups/flag/dibas/exec/x86_64-linux/bfFitsWriter -i 0 -m c
+RUNNING PAF MODE
+/tmp/fits_fifo_mburnett_0
+Using FITS Control FIFO: /tmp/fits_fifo_mburnett_0
+bfFitsWrite started
+ZMQJSONProxy.py:: Player rx a QUIT...
+Joined thread 'flag_correlator_thread'
+Joined thread 'flag_transpose_thread'
+Joined thread 'flag_net_thread'

@@ -1,0 +1,5 @@
+Works with sim1 and FLAG-Beamformer-Devel version 4.0.0.
+
+Dealer can run one scan, but not a second (TBF).  FITS thread getting hung up somewhere?
+UPDATE: fixed above bug in FLAG-Beamformer-Devel, so now whats installed is the master commit after 4.0.0, 4.0.1
+
