@@ -1,0 +1,19 @@
+#! /bin/bash
+
+echo "Killing BANKA on flag3"
+ssh -q $USER@flag3 "ps aux | grep -e BANKA | grep -v grep | awk '{print \$2}' | xargs -r kill -SIGINT"
+echo "Killing BANKB on flag3"
+ssh -q $USER@flag3 "ps aux | grep -e BANKB | grep -v grep | awk '{print \$2}' | xargs -r kill -SIGINT"
+echo "Killing BANKC on flag3"
+ssh -q $USER@flag3 "ps aux | grep -e BANKC | grep -v grep | awk '{print \$2}' | xargs -r kill -SIGINT"
+echo "Killing BANKD on flag3"
+ssh -q $USER@flag3 "ps aux | grep -e BANKD | grep -v grep | awk '{print \$2}' | xargs -r kill -SIGINT"
+
+echo "Killing BANKE on flag2"
+ssh -q $USER@flag2 "ps aux | grep -e BANKE | grep -v grep | awk '{print \$2}' | xargs -r kill -SIGINT"
+echo "Killing BANKF on flag2"
+ssh -q $USER@flag2 "ps aux | grep -e BANKF | grep -v grep | awk '{print \$2}' | xargs -r kill -SIGINT"
+echo "Killing BANKG on flag2"
+ssh -q $USER@flag2 "ps aux | grep -e BANKG | grep -v grep | awk '{print \$2}' | xargs -r kill -SIGINT"
+echo "Killing BANKH on flag2"
+ssh -q $USER@flag2 "ps aux | grep -e BANKH | grep -v grep | awk '{print \$2}' | xargs -r kill -SIGINT"

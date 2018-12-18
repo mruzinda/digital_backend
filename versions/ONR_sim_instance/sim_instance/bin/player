@@ -1,0 +1,16 @@
+#! /bin/bash
+if test "${DIBAS_DIR}zz" = zz; then
+	echo "Loading dibas.bash environment..."
+    . /opt/dibas/dibas.bash
+fi
+
+running=$(bashpid=$BASHPID; ps aux | grep -e $@ | grep -v grep | grep -v $$ | grep -v $bashpid | grep -v ssh | grep -v bash | grep -c $@)
+
+zero=0
+if [ "$running" -eq "$zero" ]
+then
+    python $DIBAS_DIR/lib/python/player.py $@ > $HOME/$@.log
+else
+    echo "$@ is already running"
+fi
+

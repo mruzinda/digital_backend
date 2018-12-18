@@ -1,0 +1,12 @@
+#! /bin/bash
+
+ssh -f $USER@flag3 "kill -9 $(ps aux | grep -e BANKA | awk '{print $2}' | xargs -r kill -9)"
+ssh -f $USER@flag3 "kill -9 $(ps aux | grep -e BANKB | awk '{print $2}' | xargs -r kill -9)"
+ssh -f $USER@flag3 "kill -9 $(ps aux | grep -e BANKC | awk '{print $2}' | xargs -r kill -9)"
+ssh -f $USER@flag3 "kill -9 $(ps aux | grep -e BANKD | awk '{print $2}' | xargs -r kill -9)"
+
+ssh -f $USER@flag2 "kill -9 $(ps aux | grep -e BANKE | awk '{print $2}' | xargs -r kill -9)"
+ssh -f $USER@flag2 "kill -9 $(ps aux | grep -e BANKF | awk '{print $2}' | xargs -r kill -9)"
+ssh -f $USER@flag2 "kill -9 $(ps aux | grep -e BANKG | awk '{print $2}' | xargs -r kill -9)"
+ssh -f $USER@flag2 "kill -9 $(ps aux | grep -e BANKH | awk '{print $2}' | xargs -r kill -9)"
+

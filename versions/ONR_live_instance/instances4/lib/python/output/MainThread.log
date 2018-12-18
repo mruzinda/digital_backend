@@ -1,0 +1,25 @@
+Player::Bank()
+Player::Bank(): self.simulate= False
+bank = BANKA filename = /home/groups/flag/dibas/etc/config/dibas.conf
+BankData (name=BANKA, has_roach=False, datahost=None, dataport=60000, dest_ip=168890576,dest_port=60000, katcp_ip=srbsr2-1, katcp_port=7147, synth=none, synth_port=/dev/ttyS1, synth_ref=1, synth_ref_freq=10000000, synth_vco_range=[2200, 4400], synth_rf_level=5, synth_options=[0, 0, 1, 0], mac_base=2207613190144, shmkvpairs={}, roach_kvpairs={}, i_am_master=True)
+tcp://0.0.0.0:6677
+waiting...
+Handling singal 2
+running quit thread
+ending...
+Player::Bank()
+Player::Bank(): self.simulate= False
+bank = BANKA filename = /home/groups/flag/dibas/etc/config/dibas.conf
+BankData (name=BANKA, has_roach=False, datahost=None, dataport=60000, dest_ip=168890576,dest_port=60000, katcp_ip=srbsr2-1, katcp_port=7147, synth=none, synth_port=/dev/ttyS1, synth_ref=1, synth_ref_freq=10000000, synth_vco_range=[2200, 4400], synth_rf_level=5, synth_options=[0, 0, 1, 0], mac_base=2207613190144, shmkvpairs={}, roach_kvpairs={}, i_am_master=True)
+tcp://0.0.0.0:6677
+Handling singal 2
+running quit thread
+ending...
+Player::Bank()
+Player::Bank(): self.simulate= False
+bank = BANKA filename = /home/groups/flag/dibas/etc/config/dibas.conf
+BankData (name=BANKA, has_roach=False, datahost=None, dataport=60000, dest_ip=168890576,dest_port=60000, katcp_ip=srbsr2-1, katcp_port=7147, synth=none, synth_port=/dev/ttyS1, synth_ref=1, synth_ref_freq=10000000, synth_vco_range=[2200, 4400], synth_rf_level=5, synth_options=[0, 0, 1, 0], mac_base=2207613190144, shmkvpairs={}, roach_kvpairs={}, i_am_master=True)
+tcp://0.0.0.0:6677
+Handling singal 2
+running quit thread
+ending...
