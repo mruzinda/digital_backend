@@ -1,9 +1,9 @@
 #!/bin/bash
 
-export DIBAS_DIR=/home/mruzinda/digital_backend/
-export HASHPIPE_DIR=/home/mruzinda/hash
-#export HASH_DIR=$HASHPIPE_DIR
-export HASH_DIR=/usr/local
+export DIBAS_DIR=/home/onr_python/digital_backend/
+export HASHPIPE_DIR=/opt/local/hash
+export HASH_DIR=$HASHPIPE_DIR
+#export HASH_DIR=/usr/local
 
 #export DIBAS_MAIN_DIR=/home/dibas
 #export DIBAS_MAIN_DIR=/home/flag
@@ -20,14 +20,15 @@ export HASH_DIR=/usr/local
 #DIBASLIBS=$DIBAS_DIR/dibaslibs
 #OPT64=$DIBASLIBS
 #export CUDA=/opt/local/cuda75
-export CUDA=/usr/local/cuda
+#export CUDA=/usr/local/cuda
+export CUDA=/opt/local/NVIDIA/cuda-10.0
 
 #export DIBAS_DATA=/export/home/tank/scratch
 #export DIBAS_DATA=/lustre/gbtdata
 #export DIBAS_DATA=/lustre/gbtdata/TGBT16A_508_01/SIM
 #export DIBAS_DATA=/lustre/projects/flag
 #export DIBAS_DATA=/lustre/flag
-export DIBAS_DATA=/home/mruzinda/output
+export DIBAS_DATA=/opt/local/output_data
 #export OVERLORD_DIR=$DIBAS_DIR/lib/python/scanOverlord
 
 # may be needed by various programs & scripts:
@@ -41,7 +42,7 @@ export CONFIG_DIR=$DIBAS_DIR/etc/config
 #export QWTLIB=$GBT1PREFIX/qwt-6.0.1/lib
 #export PATH=$HASHPIPE_DIR/bin:$PSR64/bin:$PRESTO/bin:$DIBAS_DIR/bin:$DIBAS_DIR/bin/x86_64-linux:$OPT64/bin:$DIBAS_DIR/lib/python:$PATH
 #export PATH=$HASHPIPE_DIR/bin:$PSR64/bin:$PRESTO/bin:$DIBAS_DIR/bin:$DIBAS_DIR/bin/x86_64-linux:$OPT64/bin:$DIBAS_MAIN_DIR/dibas-ve/lib/python2.7/site-packages:$DIBAS_DIR/lib/python:$PATH
-export PATH=$HASHPIPE_DIR/bin:$DIBAS_DIR/bin:$DIBAS_DIR/bin/x86_64-linux:/usr/lib/python/dist-packages:$DIBAS_DIR/lib/python:$PATH
+export PATH=$HASHPIPE_DIR/bin:$DIBAS_DIR/bin:$DIBAS_DIR/bin/x86_64-linux:/usr/lib/python/dist-packages:$DIBAS_DIR/lib/python:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/mruzinda/.local/bin:/home/mruzinda/bin:/opt/local/bin:$PATH
 
 #export DIBASPYTHON=$DIBASLIBS/lib/python2.6/site-packages:$DIBASLIBS/lib64/python2.6/site-packages
 

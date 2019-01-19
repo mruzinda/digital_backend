@@ -11,7 +11,7 @@ if test -z "$DIBAS_DIR"; then
     echo "Version not changed"
     exit
 fi
-export DIBAS_VERSIONS_ROOT=$DIBAS_DIR/versions
+export DIBAS_VERSIONS_ROOT=versions # Relative path
 cd $DIBAS_DIR
 
 if test ! -e $DIBAS_VERSIONS_ROOT/$1; then
